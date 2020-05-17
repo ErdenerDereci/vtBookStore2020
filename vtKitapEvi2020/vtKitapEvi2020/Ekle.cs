@@ -29,13 +29,15 @@ namespace vtKitapEvi2020
             if (label21.Text=="ADMİN")
             {
                 personelPanel.Enabled = true;
+                panel1.Enabled = true;
             }
+
            
-            
             depoComboboxLoad();
             turComboboxLoad();
             yayinEviComboboxLoad();
             yazarComboboxLoad();
+            kullaniciLoad();
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
@@ -92,6 +94,14 @@ namespace vtKitapEvi2020
             depo.Text = "";
             turu.Text = "";
             yayinEvi.Text = "";
+
+            depoComboboxLoad();
+            turComboboxLoad();
+            yayinEviComboboxLoad();
+            yazarComboboxLoad();
+            kullaniciLoad();
+
+
         } // tablar arası geçişte textboxlar temizleniyor
         private bool kontrol()
         {
@@ -107,10 +117,19 @@ namespace vtKitapEvi2020
         }
         private void veriTabaniEkle()
         {
-            YazarFonksiyonlari.yazarEkle(yazari.Text);
-            YayinEviFonksiyonlari.yayinEviEkle(yayinEvi.Text);
-            TurFonksiyolari.turEkle(turu.Text);
-            KitapFonksiyolari.KitapEkle(kitapAdi.Text,yazari.Text,yayinEvi.Text,turu.Text,Convert.ToInt32(sayfaSayisi.Text),baskisi.Text,depo.Text,Convert.ToInt32(fiyat.Text), Convert.ToInt32(adet.Text));
+            if(kitapAdi.Text==""|| yazari.Text == "" || yayinEvi.Text == "" || turu.Text == "" || sayfaSayisi.Text == "" || baskisi.Text == "" || depo.Text == "" || fiyat.Text == "" || adet.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır!!");
+            }
+            else
+            {
+                YazarFonksiyonlari.yazarEkle(yazari.Text);
+                YayinEviFonksiyonlari.yayinEviEkle(yayinEvi.Text);
+                TurFonksiyolari.turEkle(turu.Text);
+                KitapFonksiyolari.KitapEkle(kitapAdi.Text, yazari.Text, yayinEvi.Text, turu.Text, Convert.ToInt32(sayfaSayisi.Text), baskisi.Text, depoKoduCek(depo.Text), Convert.ToInt32(fiyat.Text), Convert.ToInt32(adet.Text));
+            }
+
+            
         }
        
         private void button2_Click(object sender, EventArgs e)
@@ -122,13 +141,14 @@ namespace vtKitapEvi2020
             else
             {
                 DepoFonksiyonlari.depoEkle(ekleDepoAdi.Text, ekleDepoAdresi.Text, ekleTelefonNo.Text);
-                MessageBox.Show("Depo başarıyla eklendi..");
+                
             }
            
         }
 
         private void yazarComboboxLoad()
         {
+            yazari.Items.Clear();
             baglanti.Open();
             MySqlCommand komut = new MySqlCommand();
 
@@ -147,6 +167,7 @@ namespace vtKitapEvi2020
         }
         private void turComboboxLoad()
         {
+            turu.Items.Clear();
             baglanti.Open();
             MySqlCommand komut = new MySqlCommand();
 
@@ -165,10 +186,11 @@ namespace vtKitapEvi2020
         }
         private void depoComboboxLoad()
         {
+            depo.Items.Clear();
             baglanti.Open();
             MySqlCommand komut = new MySqlCommand();
 
-            komut.CommandText = "select  depoAdi from depolar";
+            komut.CommandText = "select  depoAdi,depoTelefon from depolar";
             komut.Connection = baglanti;
             komut.CommandType = CommandType.Text;
             MySqlDataReader read;
@@ -176,13 +198,14 @@ namespace vtKitapEvi2020
             read = komut.ExecuteReader();
             while (read.Read())
             {
-                depo.Items.Add(read["depoAdi"]);
+                depo.Items.Add(read["depoTelefon"] + "-" + read["depoAdi"]);
             }
 
             baglanti.Close();
         }
         private void yayinEviComboboxLoad()
         {
+            yayinEvi.Items.Clear();
             baglanti.Open();
             MySqlCommand komut = new MySqlCommand();
 
@@ -198,6 +221,153 @@ namespace vtKitapEvi2020
             }
 
             baglanti.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(personelad.Text=="" || personelcinsiyet.Text=="" || personeltelefon.Text=="" || personeladres.Text=="" || personelmail.Text=="" || personelgorev.Text=="" || personelmaas.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır!!");
+            }
+            else
+            {
+                PersonelKodlari.personelEkle(personelad.Text, personelcinsiyet.Text, personeltelefon.Text, personeladres.Text, personelmail.Text, personelgorev.Text, Convert.ToInt32(personelmaas.Text));
+
+               
+            }
+            
+        }
+
+        private void personeltelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelmaas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelyas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+               && !char.IsSeparator(e.KeyChar); // sadece harf 
+        }
+
+        private void personelcinsiyet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+               && !char.IsSeparator(e.KeyChar);
+        }
+        private void kullaniciLoad()
+        {
+            kullaniciComboBox.Items.Clear();
+            baglanti.Open();
+            MySqlCommand komut = new MySqlCommand();
+            MySqlCommand komut2 = new MySqlCommand();
+            
+            komut.CommandText = "select  personelAdiSoyadi,telefon from personel";
+            komut.Connection = baglanti;
+            komut.CommandType = CommandType.Text;
+            MySqlDataReader read;
+            
+
+            read = komut.ExecuteReader();
+            
+            
+            while (read.Read())
+            {
+                kullaniciComboBox.Items.Add(read["personelAdiSoyadi"] + " - " + read["telefon"]);
+            }
+
+            baglanti.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            bool adminMi = false;
+            string telno = telNoCek(kullaniciComboBox.Text);
+            if (evet.Checked)
+            {
+                adminMi = true;
+            }
+            if (kullaniciAdi.Text==""||sifre.Text==""||sifreTekrari.Text==""||kullaniciComboBox.Text=="")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır.!!");
+            }
+            else
+            {
+                baglanti.Open();
+
+                MySqlCommand command2 = new MySqlCommand("select count(personelKodu) from kullanicilar where kullanicilar.personelKodu='"+telno+"'",baglanti);
+                if (command2.ExecuteScalar().ToString() != "0")
+                {
+                    MessageBox.Show("Bu kullanici zaten atanmış!!");
+                }
+                else
+                {
+                    MySqlCommand command = new MySqlCommand("insert into kullanicilar values('" + kullaniciAdi.Text + "','" + telno + "','" + sifre.Text + "'," + adminMi + ")", baglanti);
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Kullanici eklendi..");
+                }
+                
+                baglanti.Close();
+            }
+            
+        }
+        private string telNoCek(string veri)
+        {
+            string x="";
+            int i;
+            for(i=0; i<veri.Length; i++)
+            {
+                if (veri[i] == '-')
+                {
+                    for (int j = i + 2; j < veri.Length; j++)
+                    {
+                        x += veri[j];
+                    }
+                }
+                
+
+            }
+            return x;
+            
+        }
+        private string depoKoduCek(string veri)
+        {
+            string x = "";
+            for (int i = 0; i < veri.Length; i++)
+            {
+                if (veri[i] == '-')
+                {
+                    break;
+                }
+                x += veri[i];
+
+            }
+            return x;
+        }
+
+        private void sayfaSayisi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void adet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void fiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     } 
     

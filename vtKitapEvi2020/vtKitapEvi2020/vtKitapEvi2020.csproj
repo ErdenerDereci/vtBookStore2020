@@ -55,6 +55,21 @@
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="KitapFonksiyolari.cs" />
+    <Compile Include="MusteriFonksiyonlari.cs" />
+    <Compile Include="PersonelKodlari.cs" />
+    <Compile Include="SilGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SilGuncelle.Designer.cs">
+      <DependentUpon>SilGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisEkle.Designer.cs">
+      <DependentUpon>SiparisEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiparisFonksiyonlari.cs" />
     <Compile Include="TurFonksiyolari.cs" />
     <Compile Include="YayinEviFonksiyonlari.cs" />
     <Compile Include="YazarFonksiyonlari.cs" />
@@ -105,8 +120,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SilGuncelle.resx">
+      <DependentUpon>SilGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SilVeyaGuncelle.resx">
       <DependentUpon>SilVeyaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiparisEkle.resx">
+      <DependentUpon>SiparisEkle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

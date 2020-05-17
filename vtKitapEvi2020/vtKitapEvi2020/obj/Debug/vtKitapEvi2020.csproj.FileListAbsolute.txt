@@ -28,3 +28,5 @@ C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\bin\Debug\MySql.Data.xml
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.exe.config
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.csproj.CopyComplete
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.Giris.resources
+C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.SiparisEkle.resources
+C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.SilGuncelle.resources

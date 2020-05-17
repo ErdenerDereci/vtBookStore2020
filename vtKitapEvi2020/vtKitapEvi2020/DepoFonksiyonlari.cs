@@ -45,8 +45,8 @@ namespace vtKitapEvi2020
                 string komut = "insert into depolar values('" + depoAdi + "','" + depoAdresi + "','"+depoTelefon+"')";
                 MySqlCommand command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
+                MessageBox.Show("Depo başarıyla eklendi..");
 
-                
             }
 
             baglanti.Close();

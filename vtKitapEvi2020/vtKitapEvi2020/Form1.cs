@@ -31,7 +31,7 @@ namespace vtKitapEvi2020
             MySqlCommand command2 = new MySqlCommand();
             command.CommandText = "select adminMi from kullanicilar where userId='" + id.Text + "' and pass='" + sifre.Text + "'";
             command.Connection = baglanti;
-            command2.CommandText = "select personelKodu from kullanicilar where userId='" + id.Text + "' and pass='" + sifre.Text + "'";
+            command2.CommandText = "select personelAdiSoyadi from kullanicilar,personel where userId='" + id.Text + "' and pass='" + sifre.Text + "' and kullanicilar.personelKodu=personel.telefon";
             command2.Connection = baglanti;
                 string sart = Convert.ToString(command.ExecuteScalar());
                 Giris x = new Giris();

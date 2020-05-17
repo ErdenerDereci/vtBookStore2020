@@ -85,11 +85,9 @@ namespace vtKitapEvi2020
 
                 //kitap_depo tablosuna kitap eklendi
 
-                komut = "select depoTelefon from depolar where depoAdi='" + depoAdi + "';";
-                command = new MySqlCommand(komut, baglanti);
-                depoKodu = command.ExecuteScalar().ToString();
+                
 
-                komut = "insert into kitap_depo values('"+kitapKodu+"','"+depoKodu+"',"+taneFiyat+","+adet+");";
+                komut = "insert into kitap_depo values('"+kitapKodu+"','"+depoAdi+"',"+taneFiyat+","+adet+");";
                 command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
 
