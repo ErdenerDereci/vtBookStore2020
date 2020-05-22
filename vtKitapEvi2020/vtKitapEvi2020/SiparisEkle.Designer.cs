@@ -28,148 +28,197 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label6 = new System.Windows.Forms.Label();
-            this.musteriTelNo = new System.Windows.Forms.TextBox();
-            this.musteriAdSoyad = new System.Windows.Forms.TextBox();
-            this.siparisUrun = new System.Windows.Forms.ComboBox();
             this.siparisiAlan = new System.Windows.Forms.ComboBox();
-            this.musteriEkle = new System.Windows.Forms.Button();
             this.verilenPara = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.searchbar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Müşteri telefon no : ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Müşteri adi soyaadi :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ürün :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 182);
+            this.label6.Location = new System.Drawing.Point(9, 267);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Siparisişi alan :";
             // 
-            // musteriTelNo
-            // 
-            this.musteriTelNo.Location = new System.Drawing.Point(153, 46);
-            this.musteriTelNo.Name = "musteriTelNo";
-            this.musteriTelNo.Size = new System.Drawing.Size(114, 20);
-            this.musteriTelNo.TabIndex = 7;
-            this.musteriTelNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mlusteriTelNo_KeyPress);
-            // 
-            // musteriAdSoyad
-            // 
-            this.musteriAdSoyad.Location = new System.Drawing.Point(153, 88);
-            this.musteriAdSoyad.Name = "musteriAdSoyad";
-            this.musteriAdSoyad.Size = new System.Drawing.Size(114, 20);
-            this.musteriAdSoyad.TabIndex = 8;
-            // 
-            // siparisUrun
-            // 
-            this.siparisUrun.FormattingEnabled = true;
-            this.siparisUrun.Location = new System.Drawing.Point(152, 134);
-            this.siparisUrun.Name = "siparisUrun";
-            this.siparisUrun.Size = new System.Drawing.Size(114, 21);
-            this.siparisUrun.TabIndex = 10;
-            // 
             // siparisiAlan
             // 
             this.siparisiAlan.FormattingEnabled = true;
-            this.siparisiAlan.Location = new System.Drawing.Point(153, 179);
+            this.siparisiAlan.Location = new System.Drawing.Point(90, 264);
             this.siparisiAlan.Name = "siparisiAlan";
             this.siparisiAlan.Size = new System.Drawing.Size(114, 21);
             this.siparisiAlan.TabIndex = 12;
             // 
-            // musteriEkle
-            // 
-            this.musteriEkle.Location = new System.Drawing.Point(192, 289);
-            this.musteriEkle.Name = "musteriEkle";
-            this.musteriEkle.Size = new System.Drawing.Size(75, 23);
-            this.musteriEkle.TabIndex = 13;
-            this.musteriEkle.Text = "Ekle";
-            this.musteriEkle.UseVisualStyleBackColor = true;
-            this.musteriEkle.Click += new System.EventHandler(this.musteriEkle_Click);
-            // 
             // verilenPara
             // 
-            this.verilenPara.Location = new System.Drawing.Point(152, 223);
+            this.verilenPara.Location = new System.Drawing.Point(89, 294);
             this.verilenPara.Name = "verilenPara";
-            this.verilenPara.Size = new System.Drawing.Size(114, 20);
+            this.verilenPara.Size = new System.Drawing.Size(115, 20);
             this.verilenPara.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(61, 226);
+            this.label7.Location = new System.Drawing.Point(9, 297);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 13);
+            this.label7.Size = new System.Drawing.Size(75, 13);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Verilen para :";
+            this.label7.Text = "Verilen para   :";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 53);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(241, 195);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // searchbar
+            // 
+            this.searchbar.Location = new System.Drawing.Point(12, 24);
+            this.searchbar.Name = "searchbar";
+            this.searchbar.Size = new System.Drawing.Size(162, 20);
+            this.searchbar.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(180, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "ara";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(349, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Sepet";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(575, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 16);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Fiş";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(323, 262);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 23);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Siparişi Gir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(532, 262);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(121, 23);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "Fişi Yazdır";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.GridColor = System.Drawing.Color.White;
+            this.dataGridView2.Location = new System.Drawing.Point(259, 53);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(241, 195);
+            this.dataGridView2.TabIndex = 25;
+            this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseDoubleClick);
+            // 
+            // listView2
+            // 
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView2.Location = new System.Drawing.Point(506, 53);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(172, 195);
+            this.listView2.TabIndex = 21;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
             // 
             // SiparisEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 360);
+            this.ClientSize = new System.Drawing.Size(712, 353);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchbar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.verilenPara);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.musteriEkle);
             this.Controls.Add(this.siparisiAlan);
-            this.Controls.Add(this.siparisUrun);
-            this.Controls.Add(this.musteriAdSoyad);
-            this.Controls.Add(this.musteriTelNo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "SiparisEkle";
             this.Text = "SiparisEkle";
             this.Load += new System.EventHandler(this.SiparisEkle_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox musteriTelNo;
-        private System.Windows.Forms.TextBox musteriAdSoyad;
-        private System.Windows.Forms.ComboBox siparisUrun;
         private System.Windows.Forms.ComboBox siparisiAlan;
-        private System.Windows.Forms.Button musteriEkle;
         private System.Windows.Forms.TextBox verilenPara;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox searchbar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ListView listView2;
     }
 }

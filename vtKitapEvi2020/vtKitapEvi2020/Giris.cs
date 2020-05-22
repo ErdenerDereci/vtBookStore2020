@@ -62,21 +62,25 @@ namespace vtKitapEvi2020
         private void kitapListele1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = KitapFonksiyolari.kitapListele();
+            xx.Text = "kitap";
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             dataGridView1.DataSource = YazarFonksiyonlari.yazarListele();
+            xx.Text = "yazar";
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DepoFonksiyonlari.depoListele();
+            xx.Text = "depo";
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
             dataGridView1.DataSource = YayinEviFonksiyonlari.yayinEviListele();
+            xx.Text = "yayinevi";
         }
 
         private void personelButton_Click(object sender, EventArgs e)
@@ -107,6 +111,7 @@ namespace vtKitapEvi2020
         private void button6_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = SiparisFonksiyonlari.siparisListele();
+            xx.Text = "siparisler";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -156,6 +161,61 @@ namespace vtKitapEvi2020
                     form.hayir.Checked = true;
                 }
                 form.Show();
+            }else if (xx.Text=="kitap")
+            {
+                form.kitapKoduLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.sgkitapAdi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.kitaplabel.Text= dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.sgyazari.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.sgyayinEvi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                form.sgsayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                form.sgbaskisi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                form.sgturu.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                form.sgdepo.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                form.sgfiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                form.sgadet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                form.Show();
+            }else if (xx.Text == "yazar")
+            {
+                form.label13.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.sgyazaryazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.label16.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.Show();
+            }else if (xx.Text =="depo")
+            {
+                form.depodepo.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.sgdepotextbox.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.depoadresrich.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.depoadreslabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.Show();
+
+            }else if (xx.Text == "yayinevi")
+            {
+                form.sgyayinevikodulabel.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.sgyayinevitext.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.sgyayineviadilabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.Show();
+            }else if (xx.Text == "siparisler")
+            {
+                baglanti.Open();
+                string urun;
+                string siparisiAlan;
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = "select kitapAdi from kitaplar where kitapKodu='"+ dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() + "'";
+                command.Connection = baglanti;
+                urun = command.ExecuteScalar().ToString();
+                command.CommandText = "select personelAdiSoyadi from personel where telefon='" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "'"; 
+                siparisiAlan = command.ExecuteScalar().ToString();
+
+                baglanti.Close();
+                form.sgsipariskodulabel.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.sgmustreritelnotextbox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.sgsiparisalancombobox.Text = siparisiAlan+"-"+dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.sgsiparisuruncombobox.Text = urun+"-"+dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                
+                form.sgverilenparatextbox.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                form.Show();
+
             }
         }
     }

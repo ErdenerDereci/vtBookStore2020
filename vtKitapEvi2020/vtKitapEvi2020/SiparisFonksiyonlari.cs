@@ -48,7 +48,7 @@ namespace vtKitapEvi2020
             }
             else
             {
-                string komut = "insert into siparis values('" + siparisKod + "','" + musteritelNo + "','" + siparisalan + "','" + urunKodu + "'," + tutar + ",'" + DateTime.Now.ToString() + "');";
+                string komut = "insert into siparis values('" + siparisKod + "','" + musteritelNo + "','" + siparisalan + "','" + urunKodu + "'," + verilenPara + ",'"+tutar+ "','" + paraüstü + "','" + DateTime.Now.ToString() + "');";
                 MySqlCommand command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
 
