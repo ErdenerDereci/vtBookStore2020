@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button7 = new System.Windows.Forms.Button();
             this.personelGuncellePanel = new System.Windows.Forms.Panel();
+            this.personelemaillabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.personeltelefon = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -46,8 +45,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.depotelnolabel = new System.Windows.Forms.Label();
             this.kullanicipanel = new System.Windows.Forms.Panel();
+            this.useridlabel = new System.Windows.Forms.Label();
             this.kullanicisart = new System.Windows.Forms.Label();
             this.uyari = new System.Windows.Forms.Label();
             this.hayir = new System.Windows.Forms.RadioButton();
@@ -69,26 +69,21 @@
             this.label8 = new System.Windows.Forms.Label();
             this.sgdepo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.sgbaskisi = new System.Windows.Forms.TextBox();
-            this.sgsayfaSayisi = new System.Windows.Forms.TextBox();
             this.sgkitapAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.kitappanel = new System.Windows.Forms.Panel();
+            this.sgyayinevilabel = new System.Windows.Forms.Label();
+            this.sgyazarilabel = new System.Windows.Forms.Label();
             this.kitapKoduLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.kitaplabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
+            this.depopanel = new System.Windows.Forms.Panel();
+            this.dtlnolabel = new System.Windows.Forms.Label();
+            this.depotelno = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.sgyazaryazar = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.depoadresrich = new System.Windows.Forms.RichTextBox();
             this.depoadreslabel = new System.Windows.Forms.Label();
@@ -96,64 +91,53 @@
             this.button4 = new System.Windows.Forms.Button();
             this.sgdepotextbox = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.sgyayineviadilabel = new System.Windows.Forms.Label();
-            this.sgyayinevikodulabel = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.sgyayinevitext = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.silkitappanel = new System.Windows.Forms.Panel();
+            this.kitapsil = new System.Windows.Forms.Button();
+            this.silYayinEvi = new System.Windows.Forms.Label();
+            this.silYaazari = new System.Windows.Forms.Label();
+            this.silKitapAdi = new System.Windows.Forms.Label();
+            this.silKitapKodu = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.silkullanicipanel = new System.Windows.Forms.Panel();
+            this.silUser = new System.Windows.Forms.Button();
+            this.silpass = new System.Windows.Forms.Label();
+            this.silUserId = new System.Windows.Forms.Label();
+            this.silpersonelKoduUser = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.sgmustreritelnotextbox = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.sgmusteriadisoyadilabel = new System.Windows.Forms.Label();
-            this.sgsipariskodulabel = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.sgmusteriadisoyaditext = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.sgsiparisuruncombobox = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.sgsiparisalancombobox = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.sgverilenparatextbox = new System.Windows.Forms.TextBox();
+            this.sildepopanel = new System.Windows.Forms.Panel();
+            this.sildepoAdres = new System.Windows.Forms.RichTextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.silDepoAdi = new System.Windows.Forms.Label();
+            this.silDepoKodu = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.silpersonelpanel = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.silpersoneladi = new System.Windows.Forms.Label();
+            this.silpersonelKodu = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.silrdbutton = new System.Windows.Forms.RadioButton();
+            this.guncellerdbutton = new System.Windows.Forms.RadioButton();
             this.personelGuncellePanel.SuspendLayout();
             this.kullanicipanel.SuspendLayout();
+            this.kitappanel.SuspendLayout();
+            this.depopanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.silkitappanel.SuspendLayout();
+            this.silkullanicipanel.SuspendLayout();
+            this.sildepopanel.SuspendLayout();
+            this.silpersonelpanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(36, 17);
-            this.radioButton1.TabIndex = 39;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Sil";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(103, 26);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 17);
-            this.radioButton2.TabIndex = 40;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Güncelle";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // button7
             // 
@@ -169,6 +153,7 @@
             // 
             // personelGuncellePanel
             // 
+            this.personelGuncellePanel.Controls.Add(this.personelemaillabel);
             this.personelGuncellePanel.Controls.Add(this.label2);
             this.personelGuncellePanel.Controls.Add(this.personeltelefon);
             this.personelGuncellePanel.Controls.Add(this.button7);
@@ -184,11 +169,20 @@
             this.personelGuncellePanel.Controls.Add(this.label18);
             this.personelGuncellePanel.Controls.Add(this.label17);
             this.personelGuncellePanel.Controls.Add(this.label15);
-            this.personelGuncellePanel.Controls.Add(this.label14);
-            this.personelGuncellePanel.Location = new System.Drawing.Point(12, 66);
+            this.personelGuncellePanel.Controls.Add(this.depotelnolabel);
+            this.personelGuncellePanel.Location = new System.Drawing.Point(13, 14);
             this.personelGuncellePanel.Name = "personelGuncellePanel";
             this.personelGuncellePanel.Size = new System.Drawing.Size(386, 416);
             this.personelGuncellePanel.TabIndex = 43;
+            // 
+            // personelemaillabel
+            // 
+            this.personelemaillabel.AutoSize = true;
+            this.personelemaillabel.Location = new System.Drawing.Point(314, 51);
+            this.personelemaillabel.Name = "personelemaillabel";
+            this.personelemaillabel.Size = new System.Drawing.Size(41, 13);
+            this.personelemaillabel.TabIndex = 44;
+            this.personelemaillabel.Text = "label14";
             // 
             // label2
             // 
@@ -303,17 +297,18 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "Cinsiyeti :";
             // 
-            // label14
+            // depotelnolabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 23);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 13);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Personel Adi : ";
+            this.depotelnolabel.AutoSize = true;
+            this.depotelnolabel.Location = new System.Drawing.Point(28, 23);
+            this.depotelnolabel.Name = "depotelnolabel";
+            this.depotelnolabel.Size = new System.Drawing.Size(75, 13);
+            this.depotelnolabel.TabIndex = 18;
+            this.depotelnolabel.Text = "Personel Adi : ";
             // 
             // kullanicipanel
             // 
+            this.kullanicipanel.Controls.Add(this.useridlabel);
             this.kullanicipanel.Controls.Add(this.kullanicisart);
             this.kullanicipanel.Controls.Add(this.uyari);
             this.kullanicipanel.Controls.Add(this.hayir);
@@ -326,10 +321,19 @@
             this.kullanicipanel.Controls.Add(this.pass);
             this.kullanicipanel.Controls.Add(this.label6);
             this.kullanicipanel.Controls.Add(this.userId);
-            this.kullanicipanel.Location = new System.Drawing.Point(404, 66);
+            this.kullanicipanel.Location = new System.Drawing.Point(13, 14);
             this.kullanicipanel.Name = "kullanicipanel";
             this.kullanicipanel.Size = new System.Drawing.Size(386, 416);
             this.kullanicipanel.TabIndex = 44;
+            // 
+            // useridlabel
+            // 
+            this.useridlabel.AutoSize = true;
+            this.useridlabel.Location = new System.Drawing.Point(323, 51);
+            this.useridlabel.Name = "useridlabel";
+            this.useridlabel.Size = new System.Drawing.Size(35, 13);
+            this.useridlabel.TabIndex = 46;
+            this.useridlabel.Text = "label3";
             // 
             // kullanicisart
             // 
@@ -448,7 +452,7 @@
             this.sgyazari.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sgyazari.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.sgyazari.FormattingEnabled = true;
-            this.sgyazari.Location = new System.Drawing.Point(134, 133);
+            this.sgyazari.Location = new System.Drawing.Point(135, 92);
             this.sgyazari.Name = "sgyazari";
             this.sgyazari.Size = new System.Drawing.Size(99, 21);
             this.sgyazari.TabIndex = 63;
@@ -459,7 +463,7 @@
             this.sgyayinEvi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.sgyayinEvi.BackColor = System.Drawing.Color.White;
             this.sgyayinEvi.FormattingEnabled = true;
-            this.sgyayinEvi.Location = new System.Drawing.Point(134, 215);
+            this.sgyayinEvi.Location = new System.Drawing.Point(134, 138);
             this.sgyayinEvi.Name = "sgyayinEvi";
             this.sgyayinEvi.Size = new System.Drawing.Size(100, 21);
             this.sgyayinEvi.TabIndex = 62;
@@ -469,14 +473,14 @@
             this.sgturu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sgturu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.sgturu.FormattingEnabled = true;
-            this.sgturu.Location = new System.Drawing.Point(134, 92);
+            this.sgturu.Location = new System.Drawing.Point(135, 51);
             this.sgturu.Name = "sgturu";
             this.sgturu.Size = new System.Drawing.Size(100, 21);
             this.sgturu.TabIndex = 61;
             // 
             // sgfiyat
             // 
-            this.sgfiyat.Location = new System.Drawing.Point(134, 297);
+            this.sgfiyat.Location = new System.Drawing.Point(134, 220);
             this.sgfiyat.Name = "sgfiyat";
             this.sgfiyat.Size = new System.Drawing.Size(100, 20);
             this.sgfiyat.TabIndex = 60;
@@ -484,7 +488,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(66, 300);
+            this.label9.Location = new System.Drawing.Point(66, 223);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 13);
             this.label9.TabIndex = 59;
@@ -492,7 +496,7 @@
             // 
             // sgadet
             // 
-            this.sgadet.Location = new System.Drawing.Point(134, 256);
+            this.sgadet.Location = new System.Drawing.Point(134, 179);
             this.sgadet.Name = "sgadet";
             this.sgadet.Size = new System.Drawing.Size(100, 20);
             this.sgadet.TabIndex = 58;
@@ -500,7 +504,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(93, 259);
+            this.label8.Location = new System.Drawing.Point(93, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 57;
@@ -511,7 +515,7 @@
             this.sgdepo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sgdepo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.sgdepo.FormattingEnabled = true;
-            this.sgdepo.Location = new System.Drawing.Point(134, 338);
+            this.sgdepo.Location = new System.Drawing.Point(134, 261);
             this.sgdepo.Name = "sgdepo";
             this.sgdepo.Size = new System.Drawing.Size(100, 21);
             this.sgdepo.TabIndex = 56;
@@ -519,25 +523,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(54, 341);
+            this.label7.Location = new System.Drawing.Point(54, 264);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 55;
             this.label7.Text = "Depo seçiniz :";
-            // 
-            // sgbaskisi
-            // 
-            this.sgbaskisi.Location = new System.Drawing.Point(134, 174);
-            this.sgbaskisi.Name = "sgbaskisi";
-            this.sgbaskisi.Size = new System.Drawing.Size(100, 20);
-            this.sgbaskisi.TabIndex = 53;
-            // 
-            // sgsayfaSayisi
-            // 
-            this.sgsayfaSayisi.Location = new System.Drawing.Point(134, 51);
-            this.sgsayfaSayisi.Name = "sgsayfaSayisi";
-            this.sgsayfaSayisi.Size = new System.Drawing.Size(100, 20);
-            this.sgsayfaSayisi.TabIndex = 52;
             // 
             // sgkitapAdi
             // 
@@ -549,25 +539,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 218);
+            this.label3.Location = new System.Drawing.Point(71, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 50;
             this.label3.Text = "Yayın Evi :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(82, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Baskısı :";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 136);
+            this.label4.Location = new System.Drawing.Point(88, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 48;
@@ -576,20 +557,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(93, 95);
+            this.label10.Location = new System.Drawing.Point(94, 54);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 47;
             this.label10.Text = "Türü :";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(60, 54);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "Sayfa sayisi :";
             // 
             // label12
             // 
@@ -600,38 +572,54 @@
             this.label12.TabIndex = 45;
             this.label12.Text = "Kitap Adi :";
             // 
-            // panel1
+            // kitappanel
             // 
-            this.panel1.Controls.Add(this.kitapKoduLabel);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.kitaplabel);
-            this.panel1.Controls.Add(this.sgyazari);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.sgyayinEvi);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.sgturu);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.sgfiyat);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.sgadet);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.sgkitapAdi);
-            this.panel1.Controls.Add(this.sgdepo);
-            this.panel1.Controls.Add(this.sgsayfaSayisi);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.sgbaskisi);
-            this.panel1.Location = new System.Drawing.Point(796, 66);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 416);
-            this.panel1.TabIndex = 46;
+            this.kitappanel.Controls.Add(this.sgyayinevilabel);
+            this.kitappanel.Controls.Add(this.sgyazarilabel);
+            this.kitappanel.Controls.Add(this.kitapKoduLabel);
+            this.kitappanel.Controls.Add(this.button2);
+            this.kitappanel.Controls.Add(this.kitaplabel);
+            this.kitappanel.Controls.Add(this.sgyazari);
+            this.kitappanel.Controls.Add(this.label12);
+            this.kitappanel.Controls.Add(this.sgyayinEvi);
+            this.kitappanel.Controls.Add(this.sgturu);
+            this.kitappanel.Controls.Add(this.label10);
+            this.kitappanel.Controls.Add(this.sgfiyat);
+            this.kitappanel.Controls.Add(this.label4);
+            this.kitappanel.Controls.Add(this.label9);
+            this.kitappanel.Controls.Add(this.sgadet);
+            this.kitappanel.Controls.Add(this.label3);
+            this.kitappanel.Controls.Add(this.label8);
+            this.kitappanel.Controls.Add(this.sgkitapAdi);
+            this.kitappanel.Controls.Add(this.sgdepo);
+            this.kitappanel.Controls.Add(this.label7);
+            this.kitappanel.Location = new System.Drawing.Point(13, 14);
+            this.kitappanel.Name = "kitappanel";
+            this.kitappanel.Size = new System.Drawing.Size(386, 416);
+            this.kitappanel.TabIndex = 46;
+            // 
+            // sgyayinevilabel
+            // 
+            this.sgyayinevilabel.AutoSize = true;
+            this.sgyayinevilabel.Location = new System.Drawing.Point(323, 100);
+            this.sgyayinevilabel.Name = "sgyayinevilabel";
+            this.sgyayinevilabel.Size = new System.Drawing.Size(35, 13);
+            this.sgyayinevilabel.TabIndex = 66;
+            this.sgyayinevilabel.Text = "label3";
+            // 
+            // sgyazarilabel
+            // 
+            this.sgyazarilabel.AutoSize = true;
+            this.sgyazarilabel.Location = new System.Drawing.Point(323, 76);
+            this.sgyazarilabel.Name = "sgyazarilabel";
+            this.sgyazarilabel.Size = new System.Drawing.Size(35, 13);
+            this.sgyazarilabel.TabIndex = 65;
+            this.sgyazarilabel.Text = "label3";
             // 
             // kitapKoduLabel
             // 
             this.kitapKoduLabel.AutoSize = true;
-            this.kitapKoduLabel.Location = new System.Drawing.Point(323, 51);
+            this.kitapKoduLabel.Location = new System.Drawing.Point(323, 27);
             this.kitapKoduLabel.Name = "kitapKoduLabel";
             this.kitapKoduLabel.Size = new System.Drawing.Size(35, 13);
             this.kitapKoduLabel.TabIndex = 64;
@@ -641,7 +629,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(159, 377);
+            this.button2.Location = new System.Drawing.Point(160, 311);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 46;
@@ -652,83 +640,53 @@
             // kitaplabel
             // 
             this.kitaplabel.AutoSize = true;
-            this.kitaplabel.Location = new System.Drawing.Point(323, 23);
+            this.kitaplabel.Location = new System.Drawing.Point(323, 51);
             this.kitaplabel.Name = "kitaplabel";
             this.kitaplabel.Size = new System.Drawing.Size(35, 13);
             this.kitaplabel.TabIndex = 44;
             this.kitaplabel.Text = "label3";
             // 
-            // panel2
+            // depopanel
             // 
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.sgyazaryazar);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Location = new System.Drawing.Point(9, 431);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(386, 416);
-            this.panel2.TabIndex = 46;
+            this.depopanel.Controls.Add(this.dtlnolabel);
+            this.depopanel.Controls.Add(this.depotelno);
+            this.depopanel.Controls.Add(this.label13);
+            this.depopanel.Controls.Add(this.label23);
+            this.depopanel.Controls.Add(this.depoadresrich);
+            this.depopanel.Controls.Add(this.depoadreslabel);
+            this.depopanel.Controls.Add(this.depodepo);
+            this.depopanel.Controls.Add(this.button4);
+            this.depopanel.Controls.Add(this.sgdepotextbox);
+            this.depopanel.Controls.Add(this.label24);
+            this.depopanel.Location = new System.Drawing.Point(13, 14);
+            this.depopanel.Name = "depopanel";
+            this.depopanel.Size = new System.Drawing.Size(386, 416);
+            this.depopanel.TabIndex = 47;
             // 
-            // label16
+            // dtlnolabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(323, 54);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 13);
-            this.label16.TabIndex = 45;
-            this.label16.Text = "label3";
+            this.dtlnolabel.AutoSize = true;
+            this.dtlnolabel.Location = new System.Drawing.Point(282, 47);
+            this.dtlnolabel.Name = "dtlnolabel";
+            this.dtlnolabel.Size = new System.Drawing.Size(35, 13);
+            this.dtlnolabel.TabIndex = 50;
+            this.dtlnolabel.Text = "label3";
+            // 
+            // depotelno
+            // 
+            this.depotelno.Location = new System.Drawing.Point(112, 47);
+            this.depotelno.Name = "depotelno";
+            this.depotelno.Size = new System.Drawing.Size(100, 20);
+            this.depotelno.TabIndex = 49;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(323, 23);
+            this.label13.Location = new System.Drawing.Point(30, 50);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 13);
-            this.label13.TabIndex = 44;
-            this.label13.Text = "label3";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(136, 135);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "Kaydet";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // sgyazaryazar
-            // 
-            this.sgyazaryazar.Location = new System.Drawing.Point(111, 85);
-            this.sgyazaryazar.Name = "sgyazaryazar";
-            this.sgyazaryazar.Size = new System.Drawing.Size(100, 20);
-            this.sgyazaryazar.TabIndex = 25;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(47, 88);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 13);
-            this.label25.TabIndex = 18;
-            this.label25.Text = "Yazar Adi :";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.depoadresrich);
-            this.panel3.Controls.Add(this.depoadreslabel);
-            this.panel3.Controls.Add(this.depodepo);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.sgdepotextbox);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Location = new System.Drawing.Point(404, 304);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(386, 416);
-            this.panel3.TabIndex = 47;
+            this.label13.Size = new System.Drawing.Size(74, 13);
+            this.label13.TabIndex = 48;
+            this.label13.Text = "Depo telefon :";
             // 
             // label23
             // 
@@ -759,7 +717,7 @@
             // depodepo
             // 
             this.depodepo.AutoSize = true;
-            this.depodepo.Location = new System.Drawing.Point(282, 23);
+            this.depodepo.Location = new System.Drawing.Point(282, 75);
             this.depodepo.Name = "depodepo";
             this.depodepo.Size = new System.Drawing.Size(35, 13);
             this.depodepo.TabIndex = 44;
@@ -793,268 +751,381 @@
             this.label24.TabIndex = 18;
             this.label24.Text = "Depo Adi :";
             // 
-            // panel4
+            // panel1
             // 
-            this.panel4.Controls.Add(this.sgyayineviadilabel);
-            this.panel4.Controls.Add(this.sgyayinevikodulabel);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.sgyayinevitext);
-            this.panel4.Controls.Add(this.label28);
-            this.panel4.Location = new System.Drawing.Point(796, 488);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(386, 416);
-            this.panel4.TabIndex = 47;
+            this.panel1.Controls.Add(this.kullanicipanel);
+            this.panel1.Controls.Add(this.kitappanel);
+            this.panel1.Controls.Add(this.depopanel);
+            this.panel1.Controls.Add(this.personelGuncellePanel);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(344, 448);
+            this.panel1.TabIndex = 48;
             // 
-            // sgyayineviadilabel
+            // silkitappanel
             // 
-            this.sgyayineviadilabel.AutoSize = true;
-            this.sgyayineviadilabel.Location = new System.Drawing.Point(323, 54);
-            this.sgyayineviadilabel.Name = "sgyayineviadilabel";
-            this.sgyayineviadilabel.Size = new System.Drawing.Size(35, 13);
-            this.sgyayineviadilabel.TabIndex = 45;
-            this.sgyayineviadilabel.Text = "label3";
+            this.silkitappanel.Controls.Add(this.kitapsil);
+            this.silkitappanel.Controls.Add(this.silYayinEvi);
+            this.silkitappanel.Controls.Add(this.silYaazari);
+            this.silkitappanel.Controls.Add(this.silKitapAdi);
+            this.silkitappanel.Controls.Add(this.silKitapKodu);
+            this.silkitappanel.Controls.Add(this.label16);
+            this.silkitappanel.Controls.Add(this.label14);
+            this.silkitappanel.Controls.Add(this.label11);
+            this.silkitappanel.Controls.Add(this.label5);
+            this.silkitappanel.Location = new System.Drawing.Point(17, 13);
+            this.silkitappanel.Name = "silkitappanel";
+            this.silkitappanel.Size = new System.Drawing.Size(310, 395);
+            this.silkitappanel.TabIndex = 47;
             // 
-            // sgyayinevikodulabel
+            // kitapsil
             // 
-            this.sgyayinevikodulabel.AutoSize = true;
-            this.sgyayinevikodulabel.Location = new System.Drawing.Point(323, 23);
-            this.sgyayinevikodulabel.Name = "sgyayinevikodulabel";
-            this.sgyayinevikodulabel.Size = new System.Drawing.Size(35, 13);
-            this.sgyayinevikodulabel.TabIndex = 44;
-            this.sgyayinevikodulabel.Text = "label3";
+            this.kitapsil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kitapsil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.kitapsil.Location = new System.Drawing.Point(112, 239);
+            this.kitapsil.Name = "kitapsil";
+            this.kitapsil.Size = new System.Drawing.Size(75, 23);
+            this.kitapsil.TabIndex = 47;
+            this.kitapsil.Text = "Sil";
+            this.kitapsil.UseVisualStyleBackColor = true;
+            this.kitapsil.Click += new System.EventHandler(this.kitapsil_Click);
+            // 
+            // silYayinEvi
+            // 
+            this.silYayinEvi.AutoSize = true;
+            this.silYayinEvi.Location = new System.Drawing.Point(109, 179);
+            this.silYayinEvi.Name = "silYayinEvi";
+            this.silYayinEvi.Size = new System.Drawing.Size(65, 13);
+            this.silYayinEvi.TabIndex = 7;
+            this.silYayinEvi.Text = "Kitap Kodu :";
+            // 
+            // silYaazari
+            // 
+            this.silYaazari.AutoSize = true;
+            this.silYaazari.Location = new System.Drawing.Point(109, 135);
+            this.silYaazari.Name = "silYaazari";
+            this.silYaazari.Size = new System.Drawing.Size(65, 13);
+            this.silYaazari.TabIndex = 6;
+            this.silYaazari.Text = "Kitap Kodu :";
+            // 
+            // silKitapAdi
+            // 
+            this.silKitapAdi.AutoSize = true;
+            this.silKitapAdi.Location = new System.Drawing.Point(109, 91);
+            this.silKitapAdi.Name = "silKitapAdi";
+            this.silKitapAdi.Size = new System.Drawing.Size(65, 13);
+            this.silKitapAdi.TabIndex = 5;
+            this.silKitapAdi.Text = "Kitap Kodu :";
+            // 
+            // silKitapKodu
+            // 
+            this.silKitapKodu.AutoSize = true;
+            this.silKitapKodu.Location = new System.Drawing.Point(109, 47);
+            this.silKitapKodu.Name = "silKitapKodu";
+            this.silKitapKodu.Size = new System.Drawing.Size(65, 13);
+            this.silKitapKodu.TabIndex = 4;
+            this.silKitapKodu.Text = "Kitap Kodu :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(48, 91);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Kitap Adı :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(46, 179);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Yayin Evi :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(61, 135);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Yazarı :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Kitap Kodu :";
+            // 
+            // silkullanicipanel
+            // 
+            this.silkullanicipanel.Controls.Add(this.silUser);
+            this.silkullanicipanel.Controls.Add(this.silpass);
+            this.silkullanicipanel.Controls.Add(this.silUserId);
+            this.silkullanicipanel.Controls.Add(this.silpersonelKoduUser);
+            this.silkullanicipanel.Controls.Add(this.label28);
+            this.silkullanicipanel.Controls.Add(this.label30);
+            this.silkullanicipanel.Controls.Add(this.label31);
+            this.silkullanicipanel.Location = new System.Drawing.Point(17, 13);
+            this.silkullanicipanel.Name = "silkullanicipanel";
+            this.silkullanicipanel.Size = new System.Drawing.Size(310, 395);
+            this.silkullanicipanel.TabIndex = 48;
+            // 
+            // silUser
+            // 
+            this.silUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.silUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.silUser.Location = new System.Drawing.Point(124, 180);
+            this.silUser.Name = "silUser";
+            this.silUser.Size = new System.Drawing.Size(75, 23);
+            this.silUser.TabIndex = 47;
+            this.silUser.Text = "Sil";
+            this.silUser.UseVisualStyleBackColor = true;
+            this.silUser.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // silpass
+            // 
+            this.silpass.AutoSize = true;
+            this.silpass.Location = new System.Drawing.Point(121, 135);
+            this.silpass.Name = "silpass";
+            this.silpass.Size = new System.Drawing.Size(65, 13);
+            this.silpass.TabIndex = 6;
+            this.silpass.Text = "Kitap Kodu :";
+            // 
+            // silUserId
+            // 
+            this.silUserId.AutoSize = true;
+            this.silUserId.Location = new System.Drawing.Point(121, 91);
+            this.silUserId.Name = "silUserId";
+            this.silUserId.Size = new System.Drawing.Size(65, 13);
+            this.silUserId.TabIndex = 5;
+            this.silUserId.Text = "Kitap Kodu :";
+            // 
+            // silpersonelKoduUser
+            // 
+            this.silpersonelKoduUser.AutoSize = true;
+            this.silpersonelKoduUser.Location = new System.Drawing.Point(121, 47);
+            this.silpersonelKoduUser.Name = "silpersonelKoduUser";
+            this.silpersonelKoduUser.Size = new System.Drawing.Size(65, 13);
+            this.silpersonelKoduUser.TabIndex = 4;
+            this.silpersonelKoduUser.Text = "Kitap Kodu :";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(60, 91);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(49, 13);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "User ID :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(73, 135);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(36, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Pass :";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(33, 47);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(82, 13);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Personel Kodu :";
+            // 
+            // sildepopanel
+            // 
+            this.sildepopanel.Controls.Add(this.sildepoAdres);
+            this.sildepopanel.Controls.Add(this.button3);
+            this.sildepopanel.Controls.Add(this.silDepoAdi);
+            this.sildepopanel.Controls.Add(this.silDepoKodu);
+            this.sildepopanel.Controls.Add(this.label27);
+            this.sildepopanel.Controls.Add(this.label29);
+            this.sildepopanel.Controls.Add(this.label32);
+            this.sildepopanel.Location = new System.Drawing.Point(17, 13);
+            this.sildepopanel.Name = "sildepopanel";
+            this.sildepopanel.Size = new System.Drawing.Size(310, 395);
+            this.sildepopanel.TabIndex = 49;
+            // 
+            // sildepoAdres
+            // 
+            this.sildepoAdres.Location = new System.Drawing.Point(121, 132);
+            this.sildepoAdres.Name = "sildepoAdres";
+            this.sildepoAdres.Size = new System.Drawing.Size(100, 96);
+            this.sildepoAdres.TabIndex = 48;
+            this.sildepoAdres.Text = "";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.Location = new System.Drawing.Point(121, 261);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "Sil";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
+            // silDepoAdi
+            // 
+            this.silDepoAdi.AutoSize = true;
+            this.silDepoAdi.Location = new System.Drawing.Point(121, 91);
+            this.silDepoAdi.Name = "silDepoAdi";
+            this.silDepoAdi.Size = new System.Drawing.Size(65, 13);
+            this.silDepoAdi.TabIndex = 5;
+            this.silDepoAdi.Text = "Kitap Kodu :";
+            // 
+            // silDepoKodu
+            // 
+            this.silDepoKodu.AutoSize = true;
+            this.silDepoKodu.Location = new System.Drawing.Point(121, 47);
+            this.silDepoKodu.Name = "silDepoKodu";
+            this.silDepoKodu.Size = new System.Drawing.Size(65, 13);
+            this.silDepoKodu.TabIndex = 4;
+            this.silDepoKodu.Text = "Kitap Kodu :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(60, 91);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 13);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "Depo Adı :";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(44, 135);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(71, 13);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Depo Adresi :";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(48, 47);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(67, 13);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Depo Kodu :";
+            // 
+            // silpersonelpanel
+            // 
+            this.silpersonelpanel.Controls.Add(this.button5);
+            this.silpersonelpanel.Controls.Add(this.silpersoneladi);
+            this.silpersonelpanel.Controls.Add(this.silpersonelKodu);
+            this.silpersonelpanel.Controls.Add(this.label26);
+            this.silpersonelpanel.Controls.Add(this.label34);
+            this.silpersonelpanel.Location = new System.Drawing.Point(17, 13);
+            this.silpersonelpanel.Name = "silpersonelpanel";
+            this.silpersonelpanel.Size = new System.Drawing.Size(310, 395);
+            this.silpersonelpanel.TabIndex = 50;
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.Location = new System.Drawing.Point(136, 135);
+            this.button5.Location = new System.Drawing.Point(122, 133);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 42;
-            this.button5.Text = "Kaydet";
+            this.button5.TabIndex = 47;
+            this.button5.Text = "Sil";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // sgyayinevitext
+            // silpersoneladi
             // 
-            this.sgyayinevitext.Location = new System.Drawing.Point(111, 85);
-            this.sgyayinevitext.Name = "sgyayinevitext";
-            this.sgyayinevitext.Size = new System.Drawing.Size(100, 20);
-            this.sgyayinevitext.TabIndex = 25;
+            this.silpersoneladi.AutoSize = true;
+            this.silpersoneladi.Location = new System.Drawing.Point(119, 91);
+            this.silpersoneladi.Name = "silpersoneladi";
+            this.silpersoneladi.Size = new System.Drawing.Size(65, 13);
+            this.silpersoneladi.TabIndex = 5;
+            this.silpersoneladi.Text = "Kitap Kodu :";
             // 
-            // label28
+            // silpersonelKodu
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(34, 88);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(71, 13);
-            this.label28.TabIndex = 18;
-            this.label28.Text = "Yayinevi Adi :";
+            this.silpersonelKodu.AutoSize = true;
+            this.silpersonelKodu.Location = new System.Drawing.Point(119, 44);
+            this.silpersonelKodu.Name = "silpersonelKodu";
+            this.silpersonelKodu.Size = new System.Drawing.Size(65, 13);
+            this.silpersonelKodu.TabIndex = 4;
+            this.silpersonelKodu.Text = "Kitap Kodu :";
             // 
-            // panel5
+            // label26
             // 
-            this.panel5.Controls.Add(this.sgverilenparatextbox);
-            this.panel5.Controls.Add(this.label27);
-            this.panel5.Controls.Add(this.sgsiparisalancombobox);
-            this.panel5.Controls.Add(this.label32);
-            this.panel5.Controls.Add(this.sgsiparisuruncombobox);
-            this.panel5.Controls.Add(this.label33);
-            this.panel5.Controls.Add(this.sgmusteriadisoyaditext);
-            this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.sgmustreritelnotextbox);
-            this.panel5.Controls.Add(this.label35);
-            this.panel5.Controls.Add(this.sgmusteriadisoyadilabel);
-            this.panel5.Controls.Add(this.sgsipariskodulabel);
-            this.panel5.Location = new System.Drawing.Point(1188, 66);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(386, 416);
-            this.panel5.TabIndex = 48;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(41, 91);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(72, 13);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "Personel Adi :";
             // 
-            // button6
+            // label34
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(216, 273);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 46;
-            this.button6.Text = "Kaydet";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(24, 43);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(93, 13);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Personel Telefon :";
             // 
-            // sgmustreritelnotextbox
+            // panel2
             // 
-            this.sgmustreritelnotextbox.Location = new System.Drawing.Point(179, 48);
-            this.sgmustreritelnotextbox.Name = "sgmustreritelnotextbox";
-            this.sgmustreritelnotextbox.Size = new System.Drawing.Size(114, 20);
-            this.sgmustreritelnotextbox.TabIndex = 50;
+            this.panel2.Controls.Add(this.silpersonelpanel);
+            this.panel2.Controls.Add(this.silkitappanel);
+            this.panel2.Controls.Add(this.sildepopanel);
+            this.panel2.Controls.Add(this.silkullanicipanel);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(344, 448);
+            this.panel2.TabIndex = 49;
+            this.panel2.Visible = false;
             // 
-            // label35
+            // silrdbutton
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(60, 51);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(100, 13);
-            this.label35.TabIndex = 46;
-            this.label35.Text = "Müşteri telefon no : ";
+            this.silrdbutton.AutoSize = true;
+            this.silrdbutton.Location = new System.Drawing.Point(362, 55);
+            this.silrdbutton.Name = "silrdbutton";
+            this.silrdbutton.Size = new System.Drawing.Size(36, 17);
+            this.silrdbutton.TabIndex = 50;
+            this.silrdbutton.Text = "Sil";
+            this.silrdbutton.UseVisualStyleBackColor = true;
+            this.silrdbutton.CheckedChanged += new System.EventHandler(this.silrdbutton_CheckedChanged);
             // 
-            // sgmusteriadisoyadilabel
+            // guncellerdbutton
             // 
-            this.sgmusteriadisoyadilabel.AutoSize = true;
-            this.sgmusteriadisoyadilabel.Location = new System.Drawing.Point(323, 54);
-            this.sgmusteriadisoyadilabel.Name = "sgmusteriadisoyadilabel";
-            this.sgmusteriadisoyadilabel.Size = new System.Drawing.Size(82, 13);
-            this.sgmusteriadisoyadilabel.TabIndex = 45;
-            this.sgmusteriadisoyadilabel.Text = "musteriadSoyad";
-            // 
-            // sgsipariskodulabel
-            // 
-            this.sgsipariskodulabel.AutoSize = true;
-            this.sgsipariskodulabel.Location = new System.Drawing.Point(323, 23);
-            this.sgsipariskodulabel.Name = "sgsipariskodulabel";
-            this.sgsipariskodulabel.Size = new System.Drawing.Size(36, 13);
-            this.sgsipariskodulabel.TabIndex = 44;
-            this.sgsipariskodulabel.Text = "siparis";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label29);
-            this.panel6.Controls.Add(this.label30);
-            this.panel6.Controls.Add(this.button8);
-            this.panel6.Controls.Add(this.textBox2);
-            this.panel6.Controls.Add(this.label31);
-            this.panel6.Location = new System.Drawing.Point(1188, 488);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(386, 416);
-            this.panel6.TabIndex = 48;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(323, 54);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(35, 13);
-            this.label29.TabIndex = 45;
-            this.label29.Text = "label3";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(323, 23);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(35, 13);
-            this.label30.TabIndex = 44;
-            this.label30.Text = "label3";
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button8.Location = new System.Drawing.Point(136, 135);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 42;
-            this.button8.Text = "Kaydet";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(111, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 25;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(34, 88);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(71, 13);
-            this.label31.TabIndex = 18;
-            this.label31.Text = "Yayinevi Adi :";
-            // 
-            // sgmusteriadisoyaditext
-            // 
-            this.sgmusteriadisoyaditext.Location = new System.Drawing.Point(180, 89);
-            this.sgmusteriadisoyaditext.Name = "sgmusteriadisoyaditext";
-            this.sgmusteriadisoyaditext.Size = new System.Drawing.Size(114, 20);
-            this.sgmusteriadisoyaditext.TabIndex = 57;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(63, 92);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(97, 13);
-            this.label21.TabIndex = 56;
-            this.label21.Text = "Musteri adi soyadi :";
-            // 
-            // sgsiparisuruncombobox
-            // 
-            this.sgsiparisuruncombobox.FormattingEnabled = true;
-            this.sgsiparisuruncombobox.Location = new System.Drawing.Point(181, 133);
-            this.sgsiparisuruncombobox.Name = "sgsiparisuruncombobox";
-            this.sgsiparisuruncombobox.Size = new System.Drawing.Size(114, 21);
-            this.sgsiparisuruncombobox.TabIndex = 59;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(123, 136);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(36, 13);
-            this.label33.TabIndex = 58;
-            this.label33.Text = "Ürün :";
-            // 
-            // sgsiparisalancombobox
-            // 
-            this.sgsiparisalancombobox.FormattingEnabled = true;
-            this.sgsiparisalancombobox.Location = new System.Drawing.Point(182, 174);
-            this.sgsiparisalancombobox.Name = "sgsiparisalancombobox";
-            this.sgsiparisalancombobox.Size = new System.Drawing.Size(114, 21);
-            this.sgsiparisalancombobox.TabIndex = 61;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(83, 177);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(76, 13);
-            this.label32.TabIndex = 60;
-            this.label32.Text = "Siparisişi alan :";
-            // 
-            // sgverilenparatextbox
-            // 
-            this.sgverilenparatextbox.Location = new System.Drawing.Point(182, 218);
-            this.sgverilenparatextbox.Name = "sgverilenparatextbox";
-            this.sgverilenparatextbox.Size = new System.Drawing.Size(114, 20);
-            this.sgverilenparatextbox.TabIndex = 63;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(91, 221);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(69, 13);
-            this.label27.TabIndex = 62;
-            this.label27.Text = "Verilen para :";
+            this.guncellerdbutton.AutoSize = true;
+            this.guncellerdbutton.Checked = true;
+            this.guncellerdbutton.Location = new System.Drawing.Point(362, 12);
+            this.guncellerdbutton.Name = "guncellerdbutton";
+            this.guncellerdbutton.Size = new System.Drawing.Size(67, 17);
+            this.guncellerdbutton.TabIndex = 51;
+            this.guncellerdbutton.TabStop = true;
+            this.guncellerdbutton.Text = "Güncelle";
+            this.guncellerdbutton.UseVisualStyleBackColor = true;
+            this.guncellerdbutton.CheckedChanged += new System.EventHandler(this.guncellerdbutton_CheckedChanged);
             // 
             // SilGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1765, 1061);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(439, 480);
+            this.Controls.Add(this.guncellerdbutton);
+            this.Controls.Add(this.silrdbutton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.kullanicipanel);
-            this.Controls.Add(this.personelGuncellePanel);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Name = "SilGuncelle";
             this.Text = "SilGuncelle";
             this.Load += new System.EventHandler(this.SilGuncelle_Load);
@@ -1062,35 +1133,34 @@
             this.personelGuncellePanel.PerformLayout();
             this.kullanicipanel.ResumeLayout(false);
             this.kullanicipanel.PerformLayout();
+            this.kitappanel.ResumeLayout(false);
+            this.kitappanel.PerformLayout();
+            this.depopanel.ResumeLayout(false);
+            this.depopanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.silkitappanel.ResumeLayout(false);
+            this.silkitappanel.PerformLayout();
+            this.silkullanicipanel.ResumeLayout(false);
+            this.silkullanicipanel.PerformLayout();
+            this.sildepopanel.ResumeLayout(false);
+            this.sildepopanel.PerformLayout();
+            this.silpersonelpanel.ResumeLayout(false);
+            this.silpersonelpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Panel personelGuncellePanel;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label depotelnolabel;
         public System.Windows.Forms.TextBox personeltelefon;
         public System.Windows.Forms.RichTextBox personeladres;
         public System.Windows.Forms.TextBox personelgorev;
@@ -1098,7 +1168,6 @@
         public System.Windows.Forms.TextBox personelmaas;
         public System.Windows.Forms.TextBox personelcinsiyet;
         public System.Windows.Forms.TextBox personelad;
-        private System.Windows.Forms.Panel kullanicipanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox passtext;
@@ -1109,17 +1178,14 @@
         private System.Windows.Forms.Label userId;
         public System.Windows.Forms.RadioButton hayir;
         public System.Windows.Forms.RadioButton evet;
-        public System.Windows.Forms.Label uyari;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label kullanicisart;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label kitaplabel;
@@ -1129,50 +1195,62 @@
         public System.Windows.Forms.TextBox sgfiyat;
         public System.Windows.Forms.TextBox sgadet;
         public System.Windows.Forms.ComboBox sgdepo;
-        public System.Windows.Forms.TextBox sgbaskisi;
-        public System.Windows.Forms.TextBox sgsayfaSayisi;
         public System.Windows.Forms.TextBox sgkitapAdi;
-        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel kitappanel;
         public System.Windows.Forms.Label kitapKoduLabel;
-        private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button3;
-        public System.Windows.Forms.TextBox sgyazaryazar;
-        private System.Windows.Forms.Label label25;
-        public System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label depoadreslabel;
         public System.Windows.Forms.Label depodepo;
         private System.Windows.Forms.Button button4;
         public System.Windows.Forms.TextBox sgdepotextbox;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Label sgyayineviadilabel;
-        public System.Windows.Forms.Label sgyayinevikodulabel;
-        private System.Windows.Forms.Button button5;
-        public System.Windows.Forms.TextBox sgyayinevitext;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label23;
         public System.Windows.Forms.RichTextBox depoadresrich;
-        private System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.Label sgmusteriadisoyadilabel;
-        public System.Windows.Forms.Label sgsipariskodulabel;
-        private System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Label label29;
-        public System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button8;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Panel personelGuncellePanel;
+        public System.Windows.Forms.Panel kullanicipanel;
+        public System.Windows.Forms.Panel depopanel;
+        public System.Windows.Forms.TextBox depotelno;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label dtlnolabel;
+        public System.Windows.Forms.Label personelemaillabel;
+        public System.Windows.Forms.Label useridlabel;
+        public System.Windows.Forms.Label sgyayinevilabel;
+        public System.Windows.Forms.Label sgyazarilabel;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel silkitappanel;
+        private System.Windows.Forms.Button kitapsil;
+        public System.Windows.Forms.Label silYayinEvi;
+        public System.Windows.Forms.Label silYaazari;
+        public System.Windows.Forms.Label silKitapAdi;
+        public System.Windows.Forms.Label silKitapKodu;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Panel silkullanicipanel;
+        private System.Windows.Forms.Button silUser;
+        public System.Windows.Forms.Label silpass;
+        public System.Windows.Forms.Label silUserId;
+        public System.Windows.Forms.Label silpersonelKoduUser;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label35;
-        public System.Windows.Forms.TextBox sgmustreritelnotextbox;
-        public System.Windows.Forms.TextBox sgverilenparatextbox;
+        public System.Windows.Forms.Panel sildepopanel;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Label silDepoAdi;
+        public System.Windows.Forms.Label silDepoKodu;
         private System.Windows.Forms.Label label27;
-        public System.Windows.Forms.ComboBox sgsiparisalancombobox;
+        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label32;
-        public System.Windows.Forms.ComboBox sgsiparisuruncombobox;
-        private System.Windows.Forms.Label label33;
-        public System.Windows.Forms.TextBox sgmusteriadisoyaditext;
-        private System.Windows.Forms.Label label21;
+        public System.Windows.Forms.RichTextBox sildepoAdres;
+        public System.Windows.Forms.Panel silpersonelpanel;
+        private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Label silpersoneladi;
+        public System.Windows.Forms.Label silpersonelKodu;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton silrdbutton;
+        private System.Windows.Forms.RadioButton guncellerdbutton;
+        public System.Windows.Forms.Label uyari;
     }
 }

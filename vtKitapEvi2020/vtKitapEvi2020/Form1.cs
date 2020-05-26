@@ -21,7 +21,8 @@ namespace vtKitapEvi2020
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            id.Text = "1";
+            sifre.Text = "1";
         }
 
         private void button2_Click(object sender, EventArgs e)

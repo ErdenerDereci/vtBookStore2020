@@ -25,6 +25,7 @@ namespace vtKitapEvi2020
 
         private void Giris_Load(object sender, EventArgs e)
         {
+
             if (label1.Text != "ADMİN")
             {
                 personelButton.Enabled = false;
@@ -124,10 +125,7 @@ namespace vtKitapEvi2020
            
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+     
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -135,86 +133,128 @@ namespace vtKitapEvi2020
             if (xx.Text == "personel")
             {
                 form.personelad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.silpersoneladi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 form.personeltelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.silpersonelKodu.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 form.label2.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 form.personelcinsiyet.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 form.personeladres.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 form.personelmail.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                form.personelemaillabel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 form.personelgorev.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 form.personelmaas.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+                form.depopanel.Visible = false;
+                form.kullanicipanel.Visible = false;
+                form.kitappanel.Visible = false;
+                form.personelGuncellePanel.Visible = true;
+
+                form.sildepopanel.Visible = false;
+                form.silkullanicipanel.Visible = false;
+                form.silkitappanel.Visible = false;
+                form.silpersonelpanel.Visible = true;
+
                 form.Show();
-            }else if (xx.Text == "kullanici")
+                
+            }
+            else if (xx.Text == "kullanici")
             {
                 form.useridtext.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.silUserId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.useridlabel.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 //form.personelkodtext.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 form.personelkodtext.Enabled = false;
-                form.uyari.Text = "Personel kodu \ngüncellenemez!!";
-                form.kullanicisart.Text= dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.uyari.Visible = true;
+                
+                form.kullanicisart.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.silpersonelKoduUser.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                
                 form.passtext.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                if(Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[3].Value) == true)
+                form.silpass.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                if (Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[3].Value) == true)
                 {
-                    form.evet.Checked=true;
+                    form.evet.Checked = true;
                 }
                 else
                 {
                     form.hayir.Checked = true;
                 }
+                form.depopanel.Visible = false;
+                form.kullanicipanel.Visible = true;
+                form.kitappanel.Visible = false;
+                form.personelGuncellePanel.Visible = false;
+                
+                form.sildepopanel.Visible = false;
+                form.silkullanicipanel.Visible = true;
+                form.silkitappanel.Visible = false;
+                form.silpersonelpanel.Visible = false;
+                
                 form.Show();
-            }else if (xx.Text=="kitap")
+            }
+            else if (xx.Text == "kitap")
             {
                 form.kitapKoduLabel.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.silKitapKodu.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 form.sgkitapAdi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.kitaplabel.Text= dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.kitaplabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.silKitapAdi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 form.sgyazari.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.silYaazari.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.sgyazarilabel.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 form.sgyayinEvi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                form.sgsayfaSayisi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                form.sgbaskisi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                form.silYayinEvi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                form.sgyayinevilabel.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 form.sgturu.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 form.sgdepo.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
                 form.sgfiyat.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
                 form.sgadet.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                
+                form.depopanel.Visible = false;
+                form.kullanicipanel.Visible = false;
+                form.kitappanel.Visible = true;
+                form.personelGuncellePanel.Visible = false;
+
+                form.sildepopanel.Visible = false;
+                form.silkullanicipanel.Visible = false;
+                form.silkitappanel.Visible = true;
+                form.silpersonelpanel.Visible = false;
                 form.Show();
-            }else if (xx.Text == "yazar")
-            {
-                form.label13.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                form.sgyazaryazar.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.label16.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.Show();
-            }else if (xx.Text =="depo")
+            }
+            else if (xx.Text == "depo")
             {
                 form.depodepo.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                form.silDepoAdi.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 form.sgdepotextbox.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 form.depoadresrich.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 form.depoadreslabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.Show();
-
-            }else if (xx.Text == "yayinevi")
-            {
-                form.sgyayinevikodulabel.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                form.sgyayinevitext.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.sgyayineviadilabel.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.Show();
-            }else if (xx.Text == "siparisler")
-            {
-                baglanti.Open();
-                string urun;
-                string siparisiAlan;
-                MySqlCommand command = new MySqlCommand();
-                command.CommandText = "select kitapAdi from kitaplar where kitapKodu='"+ dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() + "'";
-                command.Connection = baglanti;
-                urun = command.ExecuteScalar().ToString();
-                command.CommandText = "select personelAdiSoyadi from personel where telefon='" + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + "'"; 
-                siparisiAlan = command.ExecuteScalar().ToString();
-
-                baglanti.Close();
-                form.sgsipariskodulabel.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                form.sgmustreritelnotextbox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                form.sgsiparisalancombobox.Text = siparisiAlan+"-"+dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                form.sgsiparisuruncombobox.Text = urun+"-"+dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                form.sildepoAdres.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                form.dtlnolabel.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.depotelno.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                form.silDepoKodu.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 
-                form.sgverilenparatextbox.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                form.depopanel.Visible = true;
+                form.kullanicipanel.Visible = false;
+                form.kitappanel.Visible = false;
+                form.personelGuncellePanel.Visible = false;
+
+                form.sildepopanel.Visible = true;
+                form.silkullanicipanel.Visible = false;
+                form.silkitappanel.Visible = false;
+                form.silpersonelpanel.Visible = false;
+
                 form.Show();
+
+            }
+            else if (xx.Text == "siparisler")
+            {
+               
+                
+                
+                SiparisEkle x = new SiparisEkle();
+                x.kitapkodlarilabel.Text= dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                x.kitapTutarLabel.Text= dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                x.Show();
+
 
             }
         }

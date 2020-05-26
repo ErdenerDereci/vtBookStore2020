@@ -16,38 +16,39 @@ namespace vtKitapEvi2020
     {
         static MySqlConnection baglanti = new MySqlConnection("Server=localhost;Database=kitap_evi;Uid=root;Pwd='root';");
 
-        private static bool ayniKitapVarMi(string kitapAdi,string yazari,string yayinEvi)
+        public static bool ayniKitapVarMi(string kitapAdi,string yazari,string yayinEvi)
         {
-
+            baglanti.Open();
 
             string komut = "select count(kitapAdi) from kitaplar where kitapAdi='"+kitapAdi+"' and yazari='"+yazari+"' and yayinEvi='"+yayinEvi+"';";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             if (Convert.ToInt32(command.ExecuteScalar()) == 0)
             {
-
+                baglanti.Close();
                 return false;
             }
             else
             {
-
+                baglanti.Close();
+                MessageBox.Show("Aynı kitap veri tabanında mevcut!");
                 return true;
             }
 
-        } // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
+        } 
         static private string kitapKoduYarat()
         {
-
+            baglanti.Open();
             int sayac;
             string komut = "SELECT * FROM kitapKodlari ORDER BY Kod DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
-
+            baglanti.Close();
             return "kitap" + sayac;
 
         }  // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
         public static void KitapEkle(string kitapAdi,string yazari,string yayinEvi,string turu,int sayfaSayisi,string baskisi,string depoAdi,int taneFiyat,int adet)
         {
-            baglanti.Open();
+            
 
             string kitapKodu = kitapKoduYarat();
             string kodsayi = "";
@@ -57,7 +58,7 @@ namespace vtKitapEvi2020
                 string yazarKodu;
                 string yayinEviKodu;
                 string turKodu;
-                string depoKodu;
+                baglanti.Open();
                 string komut1 = "select yazarKodu from yazarlar where yazarAdiSoyadi='" + yazari + "'";
                 MySqlCommand command1 = new MySqlCommand(komut1,baglanti);
                 yazarKodu = command1.ExecuteScalar().ToString(); // yazar kodu veritabanından çekildi
@@ -100,7 +101,7 @@ namespace vtKitapEvi2020
         {
             baglanti.Open();
 
-            string komut = "select kitaplar.kitapKodu,kitaplar.kitapAdi,yazarlar.yazarAdiSoyadi,yayin_evleri.yayinEviAdi,kitaplar.sayfaSayisi,kitaplar.baskisi,kitap_turleri.turAdi,depolar.depoAdi,kitap_depo.taneFiyat,kitap_depo.adet from kitaplar,kitap_depo,yazarlar,depolar,yayin_evleri,kitap_turleri where kitaplar.kitapKodu = kitap_depo.kitapKodu and kitap_depo.depoKodu = depolar.depoTelefon and kitaplar.turu = kitap_turleri.turKodu and kitaplar.yayinEvi = yayin_evleri.yayinEviKodu and kitaplar.yazari = yazarlar.yazarKodu";
+            string komut = "select kitaplar.kitapKodu,kitaplar.kitapAdi,yazarlar.yazarAdiSoyadi,yayin_evleri.yayinEviAdi,kitaplar.sayfaSayisi,kitaplar.baskisi,kitap_turleri.turAdi,depolar.depoAdi,kitap_depo.satisFiyati,kitap_depo.adet from kitaplar,kitap_depo,yazarlar,depolar,yayin_evleri,kitap_turleri where kitaplar.kitapKodu = kitap_depo.kitapKodu and kitap_depo.depoKodu = depolar.depoTelefon and kitaplar.turu = kitap_turleri.turKodu and kitaplar.yayinEvi = yayin_evleri.yayinEviKodu and kitaplar.yazari = yazarlar.yazarKodu";
             MySqlCommand command = new MySqlCommand(komut,baglanti);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();

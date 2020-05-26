@@ -70,6 +70,12 @@
       <DependentUpon>SiparisEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="SiparisFonksiyonlari.cs" />
+    <Compile Include="SiparisGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiparisGuncelle.Designer.cs">
+      <DependentUpon>SiparisGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="TurFonksiyolari.cs" />
     <Compile Include="YayinEviFonksiyonlari.cs" />
     <Compile Include="YazarFonksiyonlari.cs" />
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SiparisEkle.resx">
       <DependentUpon>SiparisEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiparisGuncelle.resx">
+      <DependentUpon>SiparisGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

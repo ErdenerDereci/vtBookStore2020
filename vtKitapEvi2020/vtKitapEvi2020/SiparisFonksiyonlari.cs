@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
 
 namespace vtKitapEvi2020
 {
@@ -17,40 +18,36 @@ namespace vtKitapEvi2020
         static MySqlConnection baglanti = new MySqlConnection("Server=localhost;Database=kitap_evi;Uid=root;Pwd='root';");
 
       
-        static private string siparisKoduYarat()
+        static public string siparisKoduYarat()
         {
+            
+            baglanti.Open();
 
             int sayac;
             string komut = "SELECT * FROM sipariskodlari ORDER BY Kod DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
-
+            baglanti.Close();
+            
             return "siparis" + sayac;
-
-        }  // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
-        public static void siparisEkle(string musteritelNo, string siparisiAlan,string urunKodu,int verilenPara)
+            
+        }  
+        public static void siparisEkle(string siparisiAlan,string urunKodu, int tutar, int verilenPara,int paraustu,int rowCount)
         {
-            baglanti.Open();
+            
 
-            string komut2 = "select taneFiyat from kitap_depo where kitapKodu='" + urunKodu + "'";
-            MySqlCommand command2 = new MySqlCommand(komut2, baglanti);
-            string komut3 = "select telefon from personel where personelAdiSoyadi='" + siparisiAlan + "'";
-            MySqlCommand command3 = new MySqlCommand(komut3, baglanti);
-            string siparisalan = command3.ExecuteScalar().ToString();
-            int tutar = Convert.ToInt32(command2.ExecuteScalar());
+            
             string siparisKod = siparisKoduYarat();
             string kodsayi = "";
-            int paraüstü = verilenPara - tutar;
+            string x = "";
+            int j = 0;
 
-            if (paraüstü < 0)
-            {
-                MessageBox.Show("Tutardan daha küçük para girişi yaptınız!!");
-            }
-            else
-            {
-                string komut = "insert into siparis values('" + siparisKod + "','" + musteritelNo + "','" + siparisalan + "','" + urunKodu + "'," + verilenPara + ",'"+tutar+ "','" + paraüstü + "','" + DateTime.Now.ToString() + "');";
-                MySqlCommand command = new MySqlCommand(komut, baglanti);
-                command.ExecuteNonQuery();
+
+
+            baglanti.Open();
+            string komut = "insert into siparis values('" + siparisKod + "','" + siparisiAlan + "','" + urunKodu + "','" + tutar + "'," + verilenPara + ",'" + paraustu + "','" + DateTime.Now.ToString() + "','satildi');";
+            MySqlCommand command = new MySqlCommand(komut, baglanti);
+            command.ExecuteNonQuery();
 
                 for (int i = 7; i < siparisKod.Length; i++)
                 {
@@ -59,19 +56,33 @@ namespace vtKitapEvi2020
                 komut = "insert into siparisKodlari values('" + kodsayi + "');";
                 command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
+                baglanti.Close();
 
+            for (int i =0; i<rowCount; i++)
+                {
+                    while(true)
+                    {
+                        if (urunKodu[j] == ',')
+                        {
+                            j++;
+                            break;
+                        }
+                        else
+                        {
+                            x += urunKodu[j];
+                            j++;
+                        }
+                    }
+                    adetSil(x);
+                    x = "";
+                }
 
-
-             
-
-
-
-                MessageBox.Show("Siparis eklendi. Para üstü " + paraüstü + " tl. ");
-            }
+                MessageBox.Show("Siparis eklendi. Para üstü " + paraustu + " tl. ");
             
             
+            
 
-            baglanti.Close();
+            
         }
         public static DataTable siparisListele()
         {
@@ -85,6 +96,19 @@ namespace vtKitapEvi2020
 
             baglanti.Close();
             return dt;
+        }
+        private static void  adetSil(string kitapKodu)
+        {
+            baglanti.Open();
+            MySqlCommand adetcek = new MySqlCommand();
+            adetcek.CommandText = "select adet from kitap_depo where kitapKodu='" + kitapKodu + "'";
+            adetcek.Connection = baglanti;
+            int adet = Convert.ToInt32(adetcek.ExecuteScalar());
+            adet--;
+            adetcek.CommandText = "update kitap_depo set adet='" + adet + "' where kitapKodu='" + kitapKodu + "'";
+            adetcek.Connection = baglanti;
+            adetcek.ExecuteNonQuery();
+            baglanti.Close();
         }
     }
 }
