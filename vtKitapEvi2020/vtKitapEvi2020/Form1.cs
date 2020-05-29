@@ -49,7 +49,7 @@ namespace vtKitapEvi2020
             {
                 
                 x.label1.Text = "KULLANICI";
-                x.label1.BackColor = Color.Blue;
+                x.label1.ForeColor = Color.Blue;
                 x.Show();
                 this.Hide();
             }

@@ -69,11 +69,11 @@ namespace vtKitapEvi2020
 
             baglanti.Close();
         }
-        public static DataTable yazarListele()
+        public static DataTable yazarListele(string sart)
         {
             baglanti.Open();
 
-            string komut = "select * from yazarlar";
+            string komut = "select * from yazarlar where yazarAdiSoyadi like '%" + sart + "%' ";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();

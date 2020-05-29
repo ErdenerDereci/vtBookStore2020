@@ -210,6 +210,7 @@
             // 
             this.depo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.depo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.depo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.depo.FormattingEnabled = true;
             this.depo.Location = new System.Drawing.Point(90, 362);
             this.depo.Name = "depo";

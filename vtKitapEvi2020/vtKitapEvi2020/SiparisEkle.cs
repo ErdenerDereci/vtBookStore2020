@@ -158,7 +158,7 @@ namespace vtKitapEvi2020
             string siparisKodu;
             if (iadeMi.Text == "iade")
             {
-                siparisKodu = sipariskodulabel.Text;
+                siparisKodu = sipariskodulabel.Text+" <";
             }
             else
             {
@@ -252,23 +252,15 @@ namespace vtKitapEvi2020
         private void button1_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            if (veriAyikla(searchbar.Text, "once") == "kitap")
-            {
-                MySqlCommand command = new MySqlCommand();
-                command.CommandText = "select  kitaplar.kitapKodu,kitapAdi,yazari,adet from kitaplar,kitap_depo where kitapAdi like '%" + veriAyikla(searchbar.Text, "sonra") + "%' and kitaplar.kitapKodu=kitap_depo.kitapKodu";
-                command.Connection = baglanti;
-                MySqlDataAdapter da = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
+            
+            datagrid1load();
 
-            }
             baglanti.Close();
         }
         private void datagrid1load()
         {
             MySqlCommand command = new MySqlCommand();
-            command.CommandText = "select  kitaplar.kitapKodu,kitapAdi,yazari,adet from kitaplar,kitap_depo where kitapAdi like '%" + veriAyikla(searchbar.Text, "sonra") + "%' and kitaplar.kitapKodu=kitap_depo.kitapKodu";
+            command.CommandText = "select  kitaplar.kitapKodu,kitapAdi,yazarAdiSoyadi,yayinEviAdi,adet from kitaplar,kitap_depo,yazarlar,yayin_evleri where kitapAdi like '%" + searchbar.Text + "%' and kitaplar.kitapKodu=kitap_depo.kitapKodu and kitaplar.yazari=yazarlar.yazarKodu and kitaplar.yayinevi=yayin_evleri.yayinEviKodu";
             command.Connection = baglanti;
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -325,13 +317,13 @@ namespace vtKitapEvi2020
             if (e.RowIndex >= 0)
             {
                 baglanti.Open();
-                if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "0")
+                if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() == "0")
                 {
                     MessageBox.Show("Ürün stokta yok!");
                 }
                 else
                 {
-                    if (eklenebilirMi(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value)))
+                    if (eklenebilirMi(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value)))
                     {
                         string kitapKodu = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                         string kitapAdi = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -493,6 +485,11 @@ namespace vtKitapEvi2020
             
             
              
+        }
+
+        private void verilenPara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

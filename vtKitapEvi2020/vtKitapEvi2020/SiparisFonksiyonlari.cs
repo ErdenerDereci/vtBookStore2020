@@ -38,7 +38,7 @@ namespace vtKitapEvi2020
             string siparisKod;
             if (iade == "iade")
             {
-                siparisKod = siparisKodux+" - iade";
+                siparisKod = siparisKodux+" <";
             }
             else
             {

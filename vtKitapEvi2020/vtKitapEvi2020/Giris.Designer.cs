@@ -42,24 +42,30 @@
             this.xx = new System.Windows.Forms.Label();
             this.yazarlistele = new System.Windows.Forms.Button();
             this.yayinevilistele = new System.Windows.Forms.Button();
+            this.searcbargiris = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 111);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(918, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(918, 385);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(353, 82);
+            this.button6.Location = new System.Drawing.Point(353, 59);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 17;
@@ -69,7 +75,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(272, 82);
+            this.button4.Location = new System.Drawing.Point(272, 59);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 15;
@@ -79,7 +85,7 @@
             // 
             // kitapListele1
             // 
-            this.kitapListele1.Location = new System.Drawing.Point(12, 82);
+            this.kitapListele1.Location = new System.Drawing.Point(12, 59);
             this.kitapListele1.Name = "kitapListele1";
             this.kitapListele1.Size = new System.Drawing.Size(75, 23);
             this.kitapListele1.TabIndex = 13;
@@ -113,7 +119,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(75, 546);
+            this.label2.Location = new System.Drawing.Point(130, 546);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 25;
@@ -121,7 +127,7 @@
             // 
             // personelButton
             // 
-            this.personelButton.Location = new System.Drawing.Point(500, 82);
+            this.personelButton.Location = new System.Drawing.Point(500, 59);
             this.personelButton.Name = "personelButton";
             this.personelButton.Size = new System.Drawing.Size(75, 23);
             this.personelButton.TabIndex = 26;
@@ -131,7 +137,7 @@
             // 
             // kullaniciButton
             // 
-            this.kullaniciButton.Location = new System.Drawing.Point(581, 82);
+            this.kullaniciButton.Location = new System.Drawing.Point(581, 59);
             this.kullaniciButton.Name = "kullaniciButton";
             this.kullaniciButton.Size = new System.Drawing.Size(75, 23);
             this.kullaniciButton.TabIndex = 27;
@@ -146,9 +152,10 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(10, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(483, 13);
+            this.label3.Size = new System.Drawing.Size(917, 13);
             this.label3.TabIndex = 30;
-            this.label3.Text = "____________________________________________________________________";
+            this.label3.Text = "_________________________________________________________________________________" +
+    "_________________________________________________";
             // 
             // siparisGir
             // 
@@ -163,15 +170,17 @@
             // xx
             // 
             this.xx.AutoSize = true;
-            this.xx.Location = new System.Drawing.Point(457, 551);
+            this.xx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.xx.ForeColor = System.Drawing.Color.Blue;
+            this.xx.Location = new System.Drawing.Point(18, 109);
             this.xx.Name = "xx";
-            this.xx.Size = new System.Drawing.Size(35, 13);
+            this.xx.Size = new System.Drawing.Size(41, 13);
             this.xx.TabIndex = 33;
             this.xx.Text = "label4";
             // 
             // yazarlistele
             // 
-            this.yazarlistele.Location = new System.Drawing.Point(93, 82);
+            this.yazarlistele.Location = new System.Drawing.Point(93, 59);
             this.yazarlistele.Name = "yazarlistele";
             this.yazarlistele.Size = new System.Drawing.Size(75, 23);
             this.yazarlistele.TabIndex = 34;
@@ -181,7 +190,7 @@
             // 
             // yayinevilistele
             // 
-            this.yayinevilistele.Location = new System.Drawing.Point(174, 82);
+            this.yayinevilistele.Location = new System.Drawing.Point(174, 59);
             this.yayinevilistele.Name = "yayinevilistele";
             this.yayinevilistele.Size = new System.Drawing.Size(92, 23);
             this.yayinevilistele.TabIndex = 35;
@@ -189,12 +198,44 @@
             this.yayinevilistele.UseVisualStyleBackColor = true;
             this.yayinevilistele.Click += new System.EventHandler(this.yayinevilistele_Click);
             // 
+            // searcbargiris
+            // 
+            this.searcbargiris.Location = new System.Drawing.Point(93, 105);
+            this.searcbargiris.Name = "searcbargiris";
+            this.searcbargiris.Size = new System.Drawing.Size(173, 20);
+            this.searcbargiris.TabIndex = 36;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(272, 103);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 23);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "ara";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(10, 83);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(917, 13);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "_________________________________________________________________________________" +
+    "_________________________________________________";
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(942, 589);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.searcbargiris);
             this.Controls.Add(this.yayinevilistele);
             this.Controls.Add(this.yazarlistele);
             this.Controls.Add(this.xx);
@@ -234,5 +275,8 @@
         private System.Windows.Forms.Label xx;
         private System.Windows.Forms.Button yazarlistele;
         private System.Windows.Forms.Button yayinevilistele;
+        private System.Windows.Forms.TextBox searcbargiris;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
     }
 }

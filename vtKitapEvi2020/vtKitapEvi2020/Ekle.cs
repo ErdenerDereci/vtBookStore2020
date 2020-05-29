@@ -119,7 +119,7 @@ namespace vtKitapEvi2020
         {
             if(kitapAdi.Text==""|| yazari.Text == "" || yayinEvi.Text == "" || turu.Text == "" || sayfaSayisi.Text == "" || baskisi.Text == "" || depo.Text == "" || fiyat.Text == "" || adet.Text == "")
             {
-                MessageBox.Show("Alanlar doldurulmak zorundadır!!");
+                MessageBox.Show("Alanlar doldurulmak zorundadır!! Depo eklemediyseniz önce depo eklemeniz gerekmektedir.");
             }
             else
             {

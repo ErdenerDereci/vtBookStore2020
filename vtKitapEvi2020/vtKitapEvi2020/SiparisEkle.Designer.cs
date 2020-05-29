@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label6 = new System.Windows.Forms.Label();
             this.siparisiAlan = new System.Windows.Forms.ComboBox();
             this.verilenPara = new System.Windows.Forms.TextBox();
@@ -62,6 +62,7 @@
             // 
             // siparisiAlan
             // 
+            this.siparisiAlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.siparisiAlan.FormattingEnabled = true;
             this.siparisiAlan.Location = new System.Drawing.Point(90, 264);
             this.siparisiAlan.Name = "siparisiAlan";
@@ -74,6 +75,7 @@
             this.verilenPara.Name = "verilenPara";
             this.verilenPara.Size = new System.Drawing.Size(115, 20);
             this.verilenPara.TabIndex = 15;
+            this.verilenPara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.verilenPara_KeyPress);
             // 
             // label7
             // 
@@ -179,7 +181,7 @@
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView2.Location = new System.Drawing.Point(506, 53);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(172, 195);
@@ -213,6 +215,7 @@
             this.sipariskodulabel.Size = new System.Drawing.Size(35, 13);
             this.sipariskodulabel.TabIndex = 29;
             this.sipariskodulabel.Text = "label2";
+            this.sipariskodulabel.Visible = false;
             // 
             // kitapkodlarilabel
             // 
@@ -222,6 +225,7 @@
             this.kitapkodlarilabel.Size = new System.Drawing.Size(35, 13);
             this.kitapkodlarilabel.TabIndex = 28;
             this.kitapkodlarilabel.Text = "label2";
+            this.kitapkodlarilabel.Visible = false;
             // 
             // iadeMi
             // 
@@ -231,6 +235,7 @@
             this.iadeMi.Size = new System.Drawing.Size(35, 13);
             this.iadeMi.TabIndex = 30;
             this.iadeMi.Text = "label2";
+            this.iadeMi.Visible = false;
             // 
             // SiparisEkle
             // 

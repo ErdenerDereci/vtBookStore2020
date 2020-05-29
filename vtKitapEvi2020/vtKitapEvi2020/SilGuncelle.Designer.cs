@@ -194,7 +194,7 @@
             this.personelGuncellePanel.Controls.Add(this.label17);
             this.personelGuncellePanel.Controls.Add(this.label15);
             this.personelGuncellePanel.Controls.Add(this.depotelnolabel);
-            this.personelGuncellePanel.Location = new System.Drawing.Point(13, 14);
+            this.personelGuncellePanel.Location = new System.Drawing.Point(12, 12);
             this.personelGuncellePanel.Name = "personelGuncellePanel";
             this.personelGuncellePanel.Size = new System.Drawing.Size(386, 416);
             this.personelGuncellePanel.TabIndex = 43;
@@ -223,6 +223,7 @@
             this.personeltelefon.Name = "personeltelefon";
             this.personeltelefon.Size = new System.Drawing.Size(100, 20);
             this.personeltelefon.TabIndex = 33;
+            this.personeltelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personeltelefon_KeyPress);
             // 
             // label22
             // 
@@ -261,6 +262,7 @@
             this.personelmaas.Name = "personelmaas";
             this.personelmaas.Size = new System.Drawing.Size(100, 20);
             this.personelmaas.TabIndex = 27;
+            this.personelmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelmaas_KeyPress);
             // 
             // personelcinsiyet
             // 
@@ -345,7 +347,7 @@
             this.kullanicipanel.Controls.Add(this.pass);
             this.kullanicipanel.Controls.Add(this.label6);
             this.kullanicipanel.Controls.Add(this.userId);
-            this.kullanicipanel.Location = new System.Drawing.Point(13, 14);
+            this.kullanicipanel.Location = new System.Drawing.Point(13, 7);
             this.kullanicipanel.Name = "kullanicipanel";
             this.kullanicipanel.Size = new System.Drawing.Size(386, 416);
             this.kullanicipanel.TabIndex = 44;
@@ -508,6 +510,7 @@
             this.sgfiyat.Name = "sgfiyat";
             this.sgfiyat.Size = new System.Drawing.Size(100, 20);
             this.sgfiyat.TabIndex = 60;
+            this.sgfiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sgfiyat_KeyPress);
             // 
             // label9
             // 
@@ -524,6 +527,7 @@
             this.sgadet.Name = "sgadet";
             this.sgadet.Size = new System.Drawing.Size(100, 20);
             this.sgadet.TabIndex = 58;
+            this.sgadet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sgadet_KeyPress);
             // 
             // label8
             // 
@@ -538,6 +542,7 @@
             // 
             this.sgdepo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sgdepo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sgdepo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sgdepo.FormattingEnabled = true;
             this.sgdepo.Location = new System.Drawing.Point(134, 261);
             this.sgdepo.Name = "sgdepo";
@@ -617,7 +622,7 @@
             this.kitappanel.Controls.Add(this.sgkitapAdi);
             this.kitappanel.Controls.Add(this.sgdepo);
             this.kitappanel.Controls.Add(this.label7);
-            this.kitappanel.Location = new System.Drawing.Point(13, 14);
+            this.kitappanel.Location = new System.Drawing.Point(12, 12);
             this.kitappanel.Name = "kitappanel";
             this.kitappanel.Size = new System.Drawing.Size(386, 416);
             this.kitappanel.TabIndex = 46;
@@ -677,12 +682,10 @@
             this.depopanel.Controls.Add(this.label13);
             this.depopanel.Controls.Add(this.label23);
             this.depopanel.Controls.Add(this.depoadresrich);
-            this.depopanel.Controls.Add(this.depoadreslabel);
-            this.depopanel.Controls.Add(this.depodepo);
             this.depopanel.Controls.Add(this.button4);
             this.depopanel.Controls.Add(this.sgdepotextbox);
             this.depopanel.Controls.Add(this.label24);
-            this.depopanel.Location = new System.Drawing.Point(13, 14);
+            this.depopanel.Location = new System.Drawing.Point(12, 9);
             this.depopanel.Name = "depopanel";
             this.depopanel.Size = new System.Drawing.Size(386, 416);
             this.depopanel.TabIndex = 47;
@@ -702,6 +705,7 @@
             this.depotelno.Name = "depotelno";
             this.depotelno.Size = new System.Drawing.Size(100, 20);
             this.depotelno.TabIndex = 49;
+            this.depotelno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depotelno_KeyPress);
             // 
             // label13
             // 
@@ -732,20 +736,22 @@
             // depoadreslabel
             // 
             this.depoadreslabel.AutoSize = true;
-            this.depoadreslabel.Location = new System.Drawing.Point(282, 103);
+            this.depoadreslabel.Location = new System.Drawing.Point(322, 127);
             this.depoadreslabel.Name = "depoadreslabel";
             this.depoadreslabel.Size = new System.Drawing.Size(35, 13);
             this.depoadreslabel.TabIndex = 45;
             this.depoadreslabel.Text = "label3";
+            this.depoadreslabel.Visible = false;
             // 
             // depodepo
             // 
             this.depodepo.AutoSize = true;
-            this.depodepo.Location = new System.Drawing.Point(282, 75);
+            this.depodepo.Location = new System.Drawing.Point(322, 100);
             this.depodepo.Name = "depodepo";
             this.depodepo.Size = new System.Drawing.Size(35, 13);
             this.depodepo.TabIndex = 44;
             this.depodepo.Text = "label3";
+            this.depodepo.Visible = false;
             // 
             // button4
             // 
@@ -778,11 +784,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.guncelleyayinevipanel);
-            this.panel1.Controls.Add(this.kullanicipanel);
             this.panel1.Controls.Add(this.yazarguncellepanel);
-            this.panel1.Controls.Add(this.kitappanel);
             this.panel1.Controls.Add(this.depopanel);
+            this.panel1.Controls.Add(this.kullanicipanel);
             this.panel1.Controls.Add(this.personelGuncellePanel);
+            this.panel1.Controls.Add(this.kitappanel);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 448);
@@ -793,7 +799,7 @@
             this.guncelleyayinevipanel.Controls.Add(this.yayineviaditextbox);
             this.guncelleyayinevipanel.Controls.Add(this.button10);
             this.guncelleyayinevipanel.Controls.Add(this.label39);
-            this.guncelleyayinevipanel.Location = new System.Drawing.Point(13, 14);
+            this.guncelleyayinevipanel.Location = new System.Drawing.Point(12, 7);
             this.guncelleyayinevipanel.Name = "guncelleyayinevipanel";
             this.guncelleyayinevipanel.Size = new System.Drawing.Size(310, 395);
             this.guncelleyayinevipanel.TabIndex = 53;
@@ -831,7 +837,7 @@
             this.yazarguncellepanel.Controls.Add(this.guncelletextboxyazar);
             this.yazarguncellepanel.Controls.Add(this.button8);
             this.yazarguncellepanel.Controls.Add(this.label36);
-            this.yazarguncellepanel.Location = new System.Drawing.Point(13, 14);
+            this.yazarguncellepanel.Location = new System.Drawing.Point(12, 7);
             this.yazarguncellepanel.Name = "yazarguncellepanel";
             this.yazarguncellepanel.Size = new System.Drawing.Size(310, 395);
             this.yazarguncellepanel.TabIndex = 52;
@@ -1345,9 +1351,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 478);
+            this.ClientSize = new System.Drawing.Size(364, 424);
             this.Controls.Add(this.guncellerdbutton);
             this.Controls.Add(this.silrdbutton);
+            this.Controls.Add(this.depodepo);
+            this.Controls.Add(this.depoadreslabel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SilGuncelle";
