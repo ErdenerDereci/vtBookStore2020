@@ -19,9 +19,11 @@ namespace vtKitapEvi2020
         {
             InitializeComponent();
         }
+        List<string> liste = new List<string>();
 
         private void SiparisEkle_Load(object sender, EventArgs e)
         {
+            
             ColumnHeader header = new ColumnHeader();
             header.Text = "";
             header.Name = "col1";
@@ -41,6 +43,14 @@ namespace vtKitapEvi2020
             //urunLoad();
             veriAyikla("kitap,erdener", "once");
             veriAyikla("kitap,erdener", "sonra");
+            if (iadeMi.Text == "iade")
+            {
+                datagrid1load();
+            }
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                liste.Add(dataGridView2.Rows[i].Cells[0].Value.ToString());
+            }
         }
         private void sepetGuncelle(string veri)
         {
@@ -145,10 +155,21 @@ namespace vtKitapEvi2020
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            if(dataGridView2.Rows.Count == 0)
+            string siparisKodu;
+            if (iadeMi.Text == "iade")
+            {
+                siparisKodu = sipariskodulabel.Text;
+            }
+            else
+            {
+                siparisKodu = SiparisFonksiyonlari.siparisKoduYarat();
+            }
+            if(dataGridView2.Rows.Count == 0 && iadeMi.Text!="iade")
             {
                 MessageBox.Show("Kitap seçiniz!");
+            }else if (sepetAyniMi())
+            {
+                MessageBox.Show("Sepette değişiklik yapılmadı!");
             }
             else if (siparisiAlan.Text == "" || verilenPara.Text == "")
             {
@@ -218,7 +239,7 @@ namespace vtKitapEvi2020
                 listView2.Items.Add("");
                 listView2.Items.Add("Para üstü: " +(Convert.ToInt32(verilenPara.Text)-Convert.ToInt32(toplamtext.Text)));
                 listView2.Items.Add("");
-                listView2.Items.Add("sp_no: "+SiparisFonksiyonlari.siparisKoduYarat());
+                listView2.Items.Add("sp_no: "+siparisKodu);
                 listView2.Items.Add("");
                 listView2.Items.Add("Siparisi alan: " + siparisiAlan.Text);
                 listView2.Items.Add("");
@@ -288,46 +309,54 @@ namespace vtKitapEvi2020
 
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            toplamtext.Text = (Convert.ToInt32(toplamtext.Text) - (Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString()))).ToString();
-            adetArttir(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
-            dataGridView2.Rows.RemoveAt(e.RowIndex);
+            if (e.RowIndex >= 0)
+            {
+                toplamtext.Text = (Convert.ToInt32(toplamtext.Text) - (Convert.ToInt32(dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString()))).ToString();
+                adetArttir(dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
+                dataGridView2.Rows.RemoveAt(e.RowIndex);
+
+                datagrid1load();
+            }
             
-            datagrid1load();
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            baglanti.Open();
-            if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "0")
+            if (e.RowIndex >= 0)
             {
-                MessageBox.Show("Ürün stokta yok!");
-            }
-            else
-            {
-                if (eklenebilirMi(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value)))
+                baglanti.Open();
+                if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "0")
                 {
-                    string kitapKodu = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    string kitapAdi = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                  
-                    int tutar = 0;
-                    MySqlCommand command = new MySqlCommand();
-                    command.CommandText = "select satisFiyati from kitap_depo where kitapKodu = '" + kitapKodu + "'";
-                    command.Connection = baglanti;
-                    tutar = Convert.ToInt32(command.ExecuteScalar());
-                    dataGridView2.Rows.Add(kitapKodu, kitapAdi, tutar);
-                    toplamtext.Text = (Convert.ToInt32(toplamtext.Text) + tutar).ToString();
-                    adettAzalt(kitapKodu);
-                    datagrid1load();
-
+                    MessageBox.Show("Ürün stokta yok!");
                 }
                 else
                 {
-                    MessageBox.Show("Daha fazla bu üründen ekleyemezsiniz. Stokta kalmıyor.");
+                    if (eklenebilirMi(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value)))
+                    {
+                        string kitapKodu = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        string kitapAdi = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                        int tutar = 0;
+                        MySqlCommand command = new MySqlCommand();
+                        command.CommandText = "select satisFiyati from kitap_depo where kitapKodu = '" + kitapKodu + "'";
+                        command.Connection = baglanti;
+                        tutar = Convert.ToInt32(command.ExecuteScalar());
+                        dataGridView2.Rows.Add(kitapKodu, kitapAdi, tutar);
+                        toplamtext.Text = (Convert.ToInt32(toplamtext.Text) + tutar).ToString();
+                        adettAzalt(kitapKodu);
+                        datagrid1load();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Daha fazla bu üründen ekleyemezsiniz. Stokta kalmıyor.");
+                    }
+
                 }
-                
+
+                baglanti.Close();
             }
             
-            baglanti.Close();
         }
         private void adettAzalt(string kitapKodu)
         {
@@ -356,7 +385,7 @@ namespace vtKitapEvi2020
         private void button3_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            if (listView2.Items.Count == 0)
+            if (listView2.Items.Count == 1)
             {
                 MessageBox.Show("Fiş boş!");
                 baglanti.Close();
@@ -367,7 +396,14 @@ namespace vtKitapEvi2020
                 emin = MessageBox.Show("Emin misiniz ?", "Uyari", MessageBoxButtons.YesNo);
                 if (emin == DialogResult.Yes)
                 {
-                    SiparisFonksiyonlari.siparisEkle(personelKoduCek(siparisiAlan.Text), kitapKodlariniDondur(), Convert.ToInt32(toplamtext.Text), Convert.ToInt32(verilenPara.Text), Convert.ToInt32(verilenPara.Text) - Convert.ToInt32(toplamtext.Text), dataGridView2.Rows.Count);
+                    SiparisFonksiyonlari.siparisEkle(personelKoduCek(siparisiAlan.Text), kitapKodlariniDondur(), Convert.ToInt32(toplamtext.Text), Convert.ToInt32(verilenPara.Text), Convert.ToInt32(verilenPara.Text) - Convert.ToInt32(toplamtext.Text), dataGridView2.Rows.Count,iadeMi.Text,sipariskodulabel.Text);
+                }
+                if (iadeMi.Text == "iade")
+                {
+                    MySqlCommand command = new MySqlCommand();
+                    command.CommandText = "update siparis set durum='iade' where siparisNo='" + sipariskodulabel.Text + "'";
+                    command.Connection = baglanti;
+                    command.ExecuteNonQuery();
                 }
                 baglanti.Close();
                 button1_Click(sender, e);
@@ -396,6 +432,7 @@ namespace vtKitapEvi2020
             }
             return donecek;
         }
+        
         private bool eklenebilirMi(string kitapKodu,int adet)
         {
             int sayac = 0;
@@ -414,6 +451,48 @@ namespace vtKitapEvi2020
             {
                 return true;
             }
+        }
+        private bool sepetAyniMi()
+        {
+            List<string> temp = new List<string>();
+            foreach(string xz in liste)
+            {
+                temp.Add(xz);
+            }
+            List<string> temp2 = new List<string>();
+            for(int i=0; i< dataGridView2.Rows.Count; i++)
+            {
+                temp2.Add(dataGridView2.Rows[i].Cells[0].Value.ToString());
+            }
+
+            int sayac = 0;
+            if (temp2.Count == temp.Count)
+            {
+                for(int i=0; i < temp.Count; i++)
+                {
+                    for(int j = 0; j < temp2.Count; j++)
+                    {
+                        if (temp2[i]==temp[j] && temp[i]!="")
+                        {
+                            sayac++;
+                            temp2[i] = "";
+                            temp[j] = "";
+                        }
+                    }
+                }
+            }
+            if (sayac == temp2.Count && sayac==temp.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+            
+            
+             
         }
     }
 }

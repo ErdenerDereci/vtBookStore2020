@@ -32,12 +32,19 @@ namespace vtKitapEvi2020
             return "siparis" + sayac;
             
         }  
-        public static void siparisEkle(string siparisiAlan,string urunKodu, int tutar, int verilenPara,int paraustu,int rowCount)
+        public static void siparisEkle(string siparisiAlan,string urunKodu, int tutar, int verilenPara,int paraustu,int rowCount,string iade,string siparisKodux)
         {
-            
 
-            
-            string siparisKod = siparisKoduYarat();
+            string siparisKod;
+            if (iade == "iade")
+            {
+                siparisKod = siparisKodux+" - iade";
+            }
+            else
+            {
+                siparisKod = siparisKoduYarat();
+            }
+             
             string kodsayi = "";
             string x = "";
             int j = 0;
@@ -49,6 +56,8 @@ namespace vtKitapEvi2020
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             command.ExecuteNonQuery();
 
+            if (iade != "iade")
+            {
                 for (int i = 7; i < siparisKod.Length; i++)
                 {
                     kodsayi += siparisKod[i];
@@ -56,6 +65,8 @@ namespace vtKitapEvi2020
                 komut = "insert into siparisKodlari values('" + kodsayi + "');";
                 command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
+            }
+                
                 baglanti.Close();
 
             for (int i =0; i<rowCount; i++)

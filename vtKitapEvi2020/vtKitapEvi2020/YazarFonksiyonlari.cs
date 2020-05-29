@@ -17,42 +17,43 @@ namespace vtKitapEvi2020
 
         static private string yazarKoduYarat()
         {
-            
+            baglanti.Open();
             int sayac;
             string komut = "SELECT * FROM yazarKodlari ORDER BY kod DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut,baglanti);
             sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
-           
+            baglanti.Close();
             return "yazar" + sayac;
 
         }  // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
-        private static bool ayniYazarVarMi(string yazarAdi)
+        public static bool ayniYazarVarMi(string yazarAdi)
         {
 
-
+            baglanti.Open();
             string komut = "select count(yazarAdiSoyadi) from yazarlar where yazarAdiSoyadi='"+ yazarAdi+"'";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
+            
             if (Convert.ToInt32(command.ExecuteScalar()) == 0)
             {
-
+                baglanti.Close();
                 return false;
             }
             else
             {
-
+                baglanti.Close();
                 return true;
             }
 
         } // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
         public static void yazarEkle(string yazarAdi)
         {
-            baglanti.Open();
+            
 
             string yazarKodu = yazarKoduYarat();
             string kodsayi = "";
             if (!ayniYazarVarMi(yazarAdi))
             {
-
+                baglanti.Open();
                 string komut = "insert into yazarlar values('" + yazarKodu + "','" + yazarAdi + "')";
                 MySqlCommand command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
@@ -65,7 +66,7 @@ namespace vtKitapEvi2020
                 command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
             }
-           
+
             baglanti.Close();
         }
         public static DataTable yazarListele()

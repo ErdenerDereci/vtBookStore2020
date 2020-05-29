@@ -18,42 +18,42 @@ namespace vtKitapEvi2020
 
         static private string yayinEviKoduYarat()
         {
-
+            baglanti.Open();
             int sayac;
             string komut = "SELECT * FROM yayinEviKodlari ORDER BY Kod DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
-
+            baglanti.Close();
             return "yayinEvi" + sayac;
 
         }  // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
-        private static bool ayniYayinEviVarMi(string yayinEviAdi)
+        public static bool ayniYayinEviVarMi(string yayinEviAdi)
         {
 
-
+            baglanti.Open();
             string komut = "select count(yayinEviAdi) from yayin_evleri where yayinEviAdi='" + yayinEviAdi + "'";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             if (Convert.ToInt32(command.ExecuteScalar()) == 0)
             {
-
+                baglanti.Close();
                 return false;
             }
             else
             {
-
+                baglanti.Close();
                 return true;
             }
 
         } // baglanti open kullanmadık çünkü yazarekle fonksiyonunda zaten kullanıyoruz.
         public static void yayinEviEkle(string yayinEviAdi)
         {
-            baglanti.Open();
+            
 
             string yayinEviKodu = yayinEviKoduYarat();
             string kodsayi = "";
             if (!ayniYayinEviVarMi(yayinEviAdi))
             {
-
+                baglanti.Open();
                 string komut = "insert into yayin_evleri values('" + yayinEviKodu + "','" + yayinEviAdi + "')";
                 MySqlCommand command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();

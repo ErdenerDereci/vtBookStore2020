@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.label6 = new System.Windows.Forms.Label();
             this.siparisiAlan = new System.Windows.Forms.ComboBox();
             this.verilenPara = new System.Windows.Forms.TextBox();
@@ -44,9 +44,9 @@
             this.listView2 = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.toplamtext = new System.Windows.Forms.Label();
+            this.sipariskodulabel = new System.Windows.Forms.Label();
             this.kitapkodlarilabel = new System.Windows.Forms.Label();
-            this.kitapTutarLabel = new System.Windows.Forms.Label();
-            this.kitapAdiLabel = new System.Windows.Forms.Label();
+            this.iadeMi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 53);
@@ -178,7 +179,7 @@
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView2.Location = new System.Drawing.Point(506, 53);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(172, 195);
@@ -204,40 +205,40 @@
             this.toplamtext.TabIndex = 27;
             this.toplamtext.Text = "0";
             // 
+            // sipariskodulabel
+            // 
+            this.sipariskodulabel.AutoSize = true;
+            this.sipariskodulabel.Location = new System.Drawing.Point(231, 32);
+            this.sipariskodulabel.Name = "sipariskodulabel";
+            this.sipariskodulabel.Size = new System.Drawing.Size(35, 13);
+            this.sipariskodulabel.TabIndex = 29;
+            this.sipariskodulabel.Text = "label2";
+            // 
             // kitapkodlarilabel
             // 
             this.kitapkodlarilabel.AutoSize = true;
-            this.kitapkodlarilabel.Location = new System.Drawing.Point(465, 9);
+            this.kitapkodlarilabel.Location = new System.Drawing.Point(231, 9);
             this.kitapkodlarilabel.Name = "kitapkodlarilabel";
             this.kitapkodlarilabel.Size = new System.Drawing.Size(35, 13);
             this.kitapkodlarilabel.TabIndex = 28;
             this.kitapkodlarilabel.Text = "label2";
             // 
-            // kitapTutarLabel
+            // iadeMi
             // 
-            this.kitapTutarLabel.AutoSize = true;
-            this.kitapTutarLabel.Location = new System.Drawing.Point(465, 27);
-            this.kitapTutarLabel.Name = "kitapTutarLabel";
-            this.kitapTutarLabel.Size = new System.Drawing.Size(35, 13);
-            this.kitapTutarLabel.TabIndex = 29;
-            this.kitapTutarLabel.Text = "label2";
-            // 
-            // kitapAdiLabel
-            // 
-            this.kitapAdiLabel.AutoSize = true;
-            this.kitapAdiLabel.Location = new System.Drawing.Point(503, 9);
-            this.kitapAdiLabel.Name = "kitapAdiLabel";
-            this.kitapAdiLabel.Size = new System.Drawing.Size(35, 13);
-            this.kitapAdiLabel.TabIndex = 30;
-            this.kitapAdiLabel.Text = "label2";
+            this.iadeMi.AutoSize = true;
+            this.iadeMi.Location = new System.Drawing.Point(503, 9);
+            this.iadeMi.Name = "iadeMi";
+            this.iadeMi.Size = new System.Drawing.Size(35, 13);
+            this.iadeMi.TabIndex = 30;
+            this.iadeMi.Text = "label2";
             // 
             // SiparisEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 353);
-            this.Controls.Add(this.kitapAdiLabel);
-            this.Controls.Add(this.kitapTutarLabel);
+            this.Controls.Add(this.iadeMi);
+            this.Controls.Add(this.sipariskodulabel);
             this.Controls.Add(this.kitapkodlarilabel);
             this.Controls.Add(this.toplamtext);
             this.Controls.Add(this.label1);
@@ -280,8 +281,8 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label toplamtext;
+        public System.Windows.Forms.Label sipariskodulabel;
         public System.Windows.Forms.Label kitapkodlarilabel;
-        public System.Windows.Forms.Label kitapTutarLabel;
-        public System.Windows.Forms.Label kitapAdiLabel;
+        public System.Windows.Forms.Label iadeMi;
     }
 }

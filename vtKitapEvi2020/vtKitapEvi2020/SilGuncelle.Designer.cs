@@ -92,6 +92,14 @@
             this.sgdepotextbox = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guncelleyayinevipanel = new System.Windows.Forms.Panel();
+            this.yayineviaditextbox = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.yazarguncellepanel = new System.Windows.Forms.Panel();
+            this.guncelletextboxyazar = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
             this.silkitappanel = new System.Windows.Forms.Panel();
             this.kitapsil = new System.Windows.Forms.Button();
             this.silYayinEvi = new System.Windows.Forms.Label();
@@ -125,6 +133,18 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.silyayinevipanel = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.silyayineviadilabel = new System.Windows.Forms.Label();
+            this.silyayinevikodulabel = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.yazarsilpanel = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.yazarAdiLabel = new System.Windows.Forms.Label();
+            this.silyazarkodulabel = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.silrdbutton = new System.Windows.Forms.RadioButton();
             this.guncellerdbutton = new System.Windows.Forms.RadioButton();
             this.personelGuncellePanel.SuspendLayout();
@@ -132,11 +152,15 @@
             this.kitappanel.SuspendLayout();
             this.depopanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.guncelleyayinevipanel.SuspendLayout();
+            this.yazarguncellepanel.SuspendLayout();
             this.silkitappanel.SuspendLayout();
             this.silkullanicipanel.SuspendLayout();
             this.sildepopanel.SuspendLayout();
             this.silpersonelpanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.silyayinevipanel.SuspendLayout();
+            this.yazarsilpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // button7
@@ -753,14 +777,92 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guncelleyayinevipanel);
             this.panel1.Controls.Add(this.kullanicipanel);
+            this.panel1.Controls.Add(this.yazarguncellepanel);
             this.panel1.Controls.Add(this.kitappanel);
             this.panel1.Controls.Add(this.depopanel);
             this.panel1.Controls.Add(this.personelGuncellePanel);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 448);
+            this.panel1.Size = new System.Drawing.Size(301, 448);
             this.panel1.TabIndex = 48;
+            // 
+            // guncelleyayinevipanel
+            // 
+            this.guncelleyayinevipanel.Controls.Add(this.yayineviaditextbox);
+            this.guncelleyayinevipanel.Controls.Add(this.button10);
+            this.guncelleyayinevipanel.Controls.Add(this.label39);
+            this.guncelleyayinevipanel.Location = new System.Drawing.Point(13, 14);
+            this.guncelleyayinevipanel.Name = "guncelleyayinevipanel";
+            this.guncelleyayinevipanel.Size = new System.Drawing.Size(310, 395);
+            this.guncelleyayinevipanel.TabIndex = 53;
+            // 
+            // yayineviaditextbox
+            // 
+            this.yayineviaditextbox.Location = new System.Drawing.Point(110, 64);
+            this.yayineviaditextbox.Name = "yayineviaditextbox";
+            this.yayineviaditextbox.Size = new System.Drawing.Size(100, 20);
+            this.yayineviaditextbox.TabIndex = 48;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(135, 112);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 47;
+            this.button10.Text = "Guncelle";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(24, 67);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(80, 13);
+            this.label39.TabIndex = 3;
+            this.label39.Text = "Yayınevi kodu :";
+            // 
+            // yazarguncellepanel
+            // 
+            this.yazarguncellepanel.Controls.Add(this.guncelletextboxyazar);
+            this.yazarguncellepanel.Controls.Add(this.button8);
+            this.yazarguncellepanel.Controls.Add(this.label36);
+            this.yazarguncellepanel.Location = new System.Drawing.Point(13, 14);
+            this.yazarguncellepanel.Name = "yazarguncellepanel";
+            this.yazarguncellepanel.Size = new System.Drawing.Size(310, 395);
+            this.yazarguncellepanel.TabIndex = 52;
+            // 
+            // guncelletextboxyazar
+            // 
+            this.guncelletextboxyazar.Location = new System.Drawing.Point(110, 64);
+            this.guncelletextboxyazar.Name = "guncelletextboxyazar";
+            this.guncelletextboxyazar.Size = new System.Drawing.Size(100, 20);
+            this.guncelletextboxyazar.TabIndex = 48;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button8.Location = new System.Drawing.Point(135, 112);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 47;
+            this.button8.Text = "Guncelle";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(46, 67);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(58, 13);
+            this.label36.TabIndex = 3;
+            this.label36.Text = "Yazar Adı :";
             // 
             // silkitappanel
             // 
@@ -1084,19 +1186,141 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.silpersonelpanel);
+            this.panel2.Controls.Add(this.silyayinevipanel);
+            this.panel2.Controls.Add(this.yazarsilpanel);
             this.panel2.Controls.Add(this.silkitappanel);
             this.panel2.Controls.Add(this.sildepopanel);
             this.panel2.Controls.Add(this.silkullanicipanel);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 448);
+            this.panel2.Size = new System.Drawing.Size(304, 448);
             this.panel2.TabIndex = 49;
             this.panel2.Visible = false;
+            // 
+            // silyayinevipanel
+            // 
+            this.silyayinevipanel.Controls.Add(this.button9);
+            this.silyayinevipanel.Controls.Add(this.silyayineviadilabel);
+            this.silyayinevipanel.Controls.Add(this.silyayinevikodulabel);
+            this.silyayinevipanel.Controls.Add(this.label37);
+            this.silyayinevipanel.Controls.Add(this.label38);
+            this.silyayinevipanel.Location = new System.Drawing.Point(17, 13);
+            this.silyayinevipanel.Name = "silyayinevipanel";
+            this.silyayinevipanel.Size = new System.Drawing.Size(310, 395);
+            this.silyayinevipanel.TabIndex = 52;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button9.Location = new System.Drawing.Point(122, 133);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 47;
+            this.button9.Text = "Sil";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // silyayineviadilabel
+            // 
+            this.silyayineviadilabel.AutoSize = true;
+            this.silyayineviadilabel.Location = new System.Drawing.Point(119, 92);
+            this.silyayineviadilabel.Name = "silyayineviadilabel";
+            this.silyayineviadilabel.Size = new System.Drawing.Size(65, 13);
+            this.silyayineviadilabel.TabIndex = 5;
+            this.silyayineviadilabel.Text = "Kitap Kodu :";
+            // 
+            // silyayinevikodulabel
+            // 
+            this.silyayinevikodulabel.AutoSize = true;
+            this.silyayinevikodulabel.Location = new System.Drawing.Point(119, 44);
+            this.silyayinevikodulabel.Name = "silyayinevikodulabel";
+            this.silyayinevikodulabel.Size = new System.Drawing.Size(65, 13);
+            this.silyayinevikodulabel.TabIndex = 4;
+            this.silyayinevikodulabel.Text = "Kitap Kodu :";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(40, 92);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(73, 13);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Yayın evi adı :";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(30, 44);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(83, 13);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Yayın evi kodu :";
+            // 
+            // yazarsilpanel
+            // 
+            this.yazarsilpanel.Controls.Add(this.button6);
+            this.yazarsilpanel.Controls.Add(this.yazarAdiLabel);
+            this.yazarsilpanel.Controls.Add(this.silyazarkodulabel);
+            this.yazarsilpanel.Controls.Add(this.label33);
+            this.yazarsilpanel.Controls.Add(this.label35);
+            this.yazarsilpanel.Location = new System.Drawing.Point(14, 10);
+            this.yazarsilpanel.Name = "yazarsilpanel";
+            this.yazarsilpanel.Size = new System.Drawing.Size(310, 395);
+            this.yazarsilpanel.TabIndex = 51;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.Location = new System.Drawing.Point(122, 133);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 47;
+            this.button6.Text = "Sil";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // yazarAdiLabel
+            // 
+            this.yazarAdiLabel.AutoSize = true;
+            this.yazarAdiLabel.Location = new System.Drawing.Point(119, 92);
+            this.yazarAdiLabel.Name = "yazarAdiLabel";
+            this.yazarAdiLabel.Size = new System.Drawing.Size(65, 13);
+            this.yazarAdiLabel.TabIndex = 5;
+            this.yazarAdiLabel.Text = "Kitap Kodu :";
+            // 
+            // silyazarkodulabel
+            // 
+            this.silyazarkodulabel.AutoSize = true;
+            this.silyazarkodulabel.Location = new System.Drawing.Point(119, 44);
+            this.silyazarkodulabel.Name = "silyazarkodulabel";
+            this.silyazarkodulabel.Size = new System.Drawing.Size(65, 13);
+            this.silyazarkodulabel.TabIndex = 4;
+            this.silyazarkodulabel.Text = "Kitap Kodu :";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(46, 92);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(58, 13);
+            this.label33.TabIndex = 3;
+            this.label33.Text = "Yazar Adı :";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(43, 44);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(70, 13);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Yazar kodu : ";
             // 
             // silrdbutton
             // 
             this.silrdbutton.AutoSize = true;
-            this.silrdbutton.Location = new System.Drawing.Point(362, 55);
+            this.silrdbutton.Location = new System.Drawing.Point(296, 62);
             this.silrdbutton.Name = "silrdbutton";
             this.silrdbutton.Size = new System.Drawing.Size(36, 17);
             this.silrdbutton.TabIndex = 50;
@@ -1108,7 +1332,7 @@
             // 
             this.guncellerdbutton.AutoSize = true;
             this.guncellerdbutton.Checked = true;
-            this.guncellerdbutton.Location = new System.Drawing.Point(362, 12);
+            this.guncellerdbutton.Location = new System.Drawing.Point(296, 19);
             this.guncellerdbutton.Name = "guncellerdbutton";
             this.guncellerdbutton.Size = new System.Drawing.Size(67, 17);
             this.guncellerdbutton.TabIndex = 51;
@@ -1121,7 +1345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 480);
+            this.ClientSize = new System.Drawing.Size(370, 478);
             this.Controls.Add(this.guncellerdbutton);
             this.Controls.Add(this.silrdbutton);
             this.Controls.Add(this.panel2);
@@ -1138,6 +1362,10 @@
             this.depopanel.ResumeLayout(false);
             this.depopanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.guncelleyayinevipanel.ResumeLayout(false);
+            this.guncelleyayinevipanel.PerformLayout();
+            this.yazarguncellepanel.ResumeLayout(false);
+            this.yazarguncellepanel.PerformLayout();
             this.silkitappanel.ResumeLayout(false);
             this.silkitappanel.PerformLayout();
             this.silkullanicipanel.ResumeLayout(false);
@@ -1147,6 +1375,10 @@
             this.silpersonelpanel.ResumeLayout(false);
             this.silpersonelpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.silyayinevipanel.ResumeLayout(false);
+            this.silyayinevipanel.PerformLayout();
+            this.yazarsilpanel.ResumeLayout(false);
+            this.yazarsilpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1252,5 +1484,25 @@
         private System.Windows.Forms.RadioButton silrdbutton;
         private System.Windows.Forms.RadioButton guncellerdbutton;
         public System.Windows.Forms.Label uyari;
+        public System.Windows.Forms.Panel yazarsilpanel;
+        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.Label yazarAdiLabel;
+        public System.Windows.Forms.Label silyazarkodulabel;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        public System.Windows.Forms.Panel yazarguncellepanel;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label36;
+        public System.Windows.Forms.TextBox guncelletextboxyazar;
+        public System.Windows.Forms.Panel silyayinevipanel;
+        private System.Windows.Forms.Button button9;
+        public System.Windows.Forms.Label silyayineviadilabel;
+        public System.Windows.Forms.Label silyayinevikodulabel;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        public System.Windows.Forms.Panel guncelleyayinevipanel;
+        public System.Windows.Forms.TextBox yayineviaditextbox;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label39;
     }
 }

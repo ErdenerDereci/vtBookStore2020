@@ -39,13 +39,15 @@
             this.kullaniciButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.siparisGir = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.xx = new System.Windows.Forms.Label();
+            this.yazarlistele = new System.Windows.Forms.Button();
+            this.yayinevilistele = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 111);
@@ -57,7 +59,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(174, 82);
+            this.button6.Location = new System.Drawing.Point(353, 82);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 17;
@@ -67,7 +69,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(93, 82);
+            this.button4.Location = new System.Drawing.Point(272, 82);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 15;
@@ -89,7 +91,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 23);
+            this.button1.Size = new System.Drawing.Size(233, 23);
             this.button1.TabIndex = 12;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
@@ -119,7 +121,7 @@
             // 
             // personelButton
             // 
-            this.personelButton.Location = new System.Drawing.Point(336, 82);
+            this.personelButton.Location = new System.Drawing.Point(500, 82);
             this.personelButton.Name = "personelButton";
             this.personelButton.Size = new System.Drawing.Size(75, 23);
             this.personelButton.TabIndex = 26;
@@ -129,7 +131,7 @@
             // 
             // kullaniciButton
             // 
-            this.kullaniciButton.Location = new System.Drawing.Point(417, 82);
+            this.kullaniciButton.Location = new System.Drawing.Point(581, 82);
             this.kullaniciButton.Name = "kullaniciButton";
             this.kullaniciButton.Size = new System.Drawing.Size(75, 23);
             this.kullaniciButton.TabIndex = 27;
@@ -150,23 +152,13 @@
             // 
             // siparisGir
             // 
-            this.siparisGir.Location = new System.Drawing.Point(336, 9);
+            this.siparisGir.Location = new System.Drawing.Point(272, 9);
             this.siparisGir.Name = "siparisGir";
-            this.siparisGir.Size = new System.Drawing.Size(156, 23);
+            this.siparisGir.Size = new System.Drawing.Size(220, 23);
             this.siparisGir.TabIndex = 31;
             this.siparisGir.Text = "Siparis gir";
             this.siparisGir.UseVisualStyleBackColor = true;
             this.siparisGir.Click += new System.EventHandler(this.siparisGir_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(174, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 23);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Güncelle/Sil";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // xx
             // 
@@ -177,14 +169,35 @@
             this.xx.TabIndex = 33;
             this.xx.Text = "label4";
             // 
+            // yazarlistele
+            // 
+            this.yazarlistele.Location = new System.Drawing.Point(93, 82);
+            this.yazarlistele.Name = "yazarlistele";
+            this.yazarlistele.Size = new System.Drawing.Size(75, 23);
+            this.yazarlistele.TabIndex = 34;
+            this.yazarlistele.Text = "Yazar listele";
+            this.yazarlistele.UseVisualStyleBackColor = true;
+            this.yazarlistele.Click += new System.EventHandler(this.yazarlistele_Click);
+            // 
+            // yayinevilistele
+            // 
+            this.yayinevilistele.Location = new System.Drawing.Point(174, 82);
+            this.yayinevilistele.Name = "yayinevilistele";
+            this.yayinevilistele.Size = new System.Drawing.Size(92, 23);
+            this.yayinevilistele.TabIndex = 35;
+            this.yayinevilistele.Text = "Yayinevi liste";
+            this.yayinevilistele.UseVisualStyleBackColor = true;
+            this.yayinevilistele.Click += new System.EventHandler(this.yayinevilistele_Click);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(942, 589);
+            this.Controls.Add(this.yayinevilistele);
+            this.Controls.Add(this.yazarlistele);
             this.Controls.Add(this.xx);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.siparisGir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.kullaniciButton);
@@ -218,7 +231,8 @@
         private System.Windows.Forms.Button kullaniciButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button siparisGir;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label xx;
+        private System.Windows.Forms.Button yazarlistele;
+        private System.Windows.Forms.Button yayinevilistele;
     }
 }

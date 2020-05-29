@@ -738,5 +738,100 @@ namespace vtKitapEvi2020
             panel1.Visible = false;
             panel2.Visible = true;
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            baglanti.Open();
+
+            DialogResult secenek = MessageBox.Show("Bu yazari silmek istediğinizden emin misiniz? İlgili tüm kitaplar da silinecek!!", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (secenek == DialogResult.Yes)
+            {
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = "delete from yazarlar where yazarKodu='" + silyazarkodulabel.Text + "'";
+                command.Connection = baglanti;
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Yazar silindi!");
+                this.Close();
+                baglanti.Close();
+            }
+
+
+            baglanti.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+            if (yazarAdiLabel.Text==guncelletextboxyazar.Text || !YazarFonksiyonlari.ayniYazarVarMi(guncelletextboxyazar.Text) )
+            {
+               
+                DialogResult secenek = MessageBox.Show("Bu yazar güncellenecek! Devam edilsin mi?", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (secenek == DialogResult.Yes)
+                {
+                    baglanti.Open();
+                    MySqlCommand command = new MySqlCommand();
+                    command.CommandText = "update yazarlar set yazarAdiSoyadi='" + guncelletextboxyazar.Text + "' where yazarKodu='" + silyazarkodulabel.Text + "'";
+                    command.Connection = baglanti;
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Yazar güncellendi!!");
+                    baglanti.Close();
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Aynı yazar veritabanında mevcut güncelleme başarısız!");
+            }
+
+
+            
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+
+            DialogResult secenek = MessageBox.Show("Bu yayinevini silmek istediğinizden emin misiniz? İlgili tüm kitaplar da silinecek!!", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (secenek == DialogResult.Yes)
+            {
+                MySqlCommand command = new MySqlCommand();
+                command.CommandText = "delete from yayin_evleri where yayinEviKodu='" + silyayinevikodulabel.Text + "'";
+                command.Connection = baglanti;
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Yayınevi silindi!");
+                this.Close();
+                baglanti.Close();
+            }
+
+
+            baglanti.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (yayineviaditextbox.Text == silyayineviadilabel.Text || !YayinEviFonksiyonlari.ayniYayinEviVarMi(yayineviaditextbox.Text))
+            {
+                
+                DialogResult secenek = MessageBox.Show("Bu yayinevi güncellenecek! Devam edilsin mi?", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (secenek == DialogResult.Yes)
+                {
+                    baglanti.Open();
+                    MySqlCommand command = new MySqlCommand();
+                    command.CommandText = "update yayin_evleri set yayinEviAdi='" + yayineviaditextbox.Text + "' where yayinEviKodu='" + silyayinevikodulabel.Text + "'";
+                    command.Connection = baglanti;
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Yayinevi güncellendi!!");
+                    baglanti.Close();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Aynı yayinevi veritabanında mevcut güncelleme başarısız!");
+            }
+        }
     }
 }
