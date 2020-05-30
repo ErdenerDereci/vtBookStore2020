@@ -48,8 +48,7 @@ namespace vtKitapEvi2020
 
         private void kaydet_Click(object sender, EventArgs e)
         {
-            veriTabaniEkle();
-
+            
             //if (kontrol())
             //{
             //    MessageBox.Show("Alanlar boş geçilemez!");
@@ -134,15 +133,7 @@ namespace vtKitapEvi2020
        
         private void button2_Click(object sender, EventArgs e)
         {
-            if(ekleDepoAdi.Text=="" || ekleDepoAdresi.Text=="" || ekleTelefonNo.Text == "")
-            {
-                MessageBox.Show("Alanlar doldurulmak zorundadır!!!");
-            }
-            else
-            {
-                DepoFonksiyonlari.depoEkle(ekleDepoAdi.Text, ekleDepoAdresi.Text, ekleTelefonNo.Text);
-                
-            }
+            
            
         }
 
@@ -225,16 +216,7 @@ namespace vtKitapEvi2020
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(personelad.Text=="" || personelcinsiyet.Text=="" || personeltelefon.Text=="" || personeladres.Text=="" || personelmail.Text=="" || personelgorev.Text=="" || personelmaas.Text == "")
-            {
-                MessageBox.Show("Alanlar doldurulmak zorundadır!!");
-            }
-            else
-            {
-                PersonelKodlari.personelEkle(personelad.Text, personelcinsiyet.Text, personeltelefon.Text, personeladres.Text, personelmail.Text, personelgorev.Text, Convert.ToInt32(personelmaas.Text));
-
-               
-            }
+            
             
         }
 
@@ -290,35 +272,7 @@ namespace vtKitapEvi2020
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bool adminMi = false;
-            string telno = telNoCek(kullaniciComboBox.Text);
-            if (evet.Checked)
-            {
-                adminMi = true;
-            }
-            if (kullaniciAdi.Text==""||sifre.Text==""||sifreTekrari.Text==""||kullaniciComboBox.Text=="")
-            {
-                MessageBox.Show("Alanlar doldurulmak zorundadır.!!");
-            }
-            else
-            {
-                baglanti.Open();
-
-                MySqlCommand command2 = new MySqlCommand("select count(personelKodu) from kullanicilar where kullanicilar.personelKodu='"+telno+"'",baglanti);
-                if (command2.ExecuteScalar().ToString() != "0")
-                {
-                    MessageBox.Show("Bu kullanici zaten atanmış!!");
-                }
-                else
-                {
-                    MySqlCommand command = new MySqlCommand("insert into kullanicilar values('" + kullaniciAdi.Text + "','" + telno + "','" + sifre.Text + "'," + adminMi + ")", baglanti);
-                    command.ExecuteNonQuery();
-
-                    MessageBox.Show("Kullanici eklendi..");
-                }
-                
-                baglanti.Close();
-            }
+            
             
         }
         private string telNoCek(string veri)
@@ -368,6 +322,116 @@ namespace vtKitapEvi2020
         private void fiyat_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void kaydet_Click_1(object sender, EventArgs e)
+        {
+            veriTabaniEkle();
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (ekleDepoAdi.Text == "" || ekleDepoAdresi.Text == "" || ekleTelefonNo.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır!!!");
+            }
+            else
+            {
+                DepoFonksiyonlari.depoEkle(ekleDepoAdi.Text, ekleDepoAdresi.Text, ekleTelefonNo.Text);
+
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (personelad.Text == "" || personelcinsiyet.Text == "" || personeltelefon.Text == "" || personeladres.Text == "" || personelmail.Text == "" || personelgorev.Text == "" || personelmaas.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır!!");
+            }
+            else
+            {
+                PersonelKodlari.personelEkle(personelad.Text, personelcinsiyet.Text, personeltelefon.Text, personeladres.Text, personelmail.Text, personelgorev.Text, Convert.ToInt32(personelmaas.Text));
+
+
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            bool adminMi = false;
+            string telno = telNoCek(kullaniciComboBox.Text);
+            if (evet.Checked)
+            {
+                adminMi = true;
+            }
+            if (kullaniciAdi.Text == "" || sifre.Text == "" || sifreTekrari.Text == "" || kullaniciComboBox.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır.!!");
+            }
+            else
+            {
+                baglanti.Open();
+
+                MySqlCommand command2 = new MySqlCommand("select count(personelKodu) from kullanicilar where kullanicilar.personelKodu='" + telno + "'", baglanti);
+                if (command2.ExecuteScalar().ToString() != "0")
+                {
+                    MessageBox.Show("Bu kullanici zaten atanmış!!");
+                }
+                else
+                {
+                    if (sifre.Text != sifreTekrari.Text)
+                    {
+                        MessageBox.Show("Şifreler eşleşmedi yeniden deneyiniz..");
+                    }
+                    else
+                    {
+                        MySqlCommand command = new MySqlCommand("insert into kullanicilar values('" + kullaniciAdi.Text + "','" + telno + "','" + sifre.Text + "'," + adminMi + ")", baglanti);
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Kullanici eklendi..");
+                    }
+
+                }
+
+                baglanti.Close();
+            }
+        }
+
+        private void fiyat_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void adet_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void ekleTelefonNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personeltelefon_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void sayfaSayisi_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelmaas_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
         }
     } 
     

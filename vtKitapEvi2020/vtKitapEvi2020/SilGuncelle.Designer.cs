@@ -30,16 +30,18 @@
         {
             this.button7 = new System.Windows.Forms.Button();
             this.personelGuncellePanel = new System.Windows.Forms.Panel();
-            this.personelemaillabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.personeltelefon = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.personeladres = new System.Windows.Forms.RichTextBox();
-            this.personelgorev = new System.Windows.Forms.TextBox();
-            this.personelmail = new System.Windows.Forms.TextBox();
             this.personelmaas = new System.Windows.Forms.TextBox();
+            this.guncelledurum = new System.Windows.Forms.ComboBox();
+            this.personelgorev = new System.Windows.Forms.TextBox();
+            this.personeladres = new System.Windows.Forms.RichTextBox();
+            this.personeltelefon = new System.Windows.Forms.TextBox();
+            this.personelmail = new System.Windows.Forms.TextBox();
             this.personelcinsiyet = new System.Windows.Forms.TextBox();
             this.personelad = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.personelemaillabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -60,37 +62,37 @@
             this.pass = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.userId = new System.Windows.Forms.Label();
-            this.sgyazari = new System.Windows.Forms.ComboBox();
-            this.sgyayinEvi = new System.Windows.Forms.ComboBox();
-            this.sgturu = new System.Windows.Forms.ComboBox();
-            this.sgfiyat = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.sgadet = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.sgdepo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.sgkitapAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.kitappanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.sgdepo = new System.Windows.Forms.ComboBox();
+            this.sgfiyat = new System.Windows.Forms.TextBox();
+            this.sgadet = new System.Windows.Forms.TextBox();
+            this.sgyayinEvi = new System.Windows.Forms.ComboBox();
+            this.sgyazari = new System.Windows.Forms.ComboBox();
+            this.sgturu = new System.Windows.Forms.ComboBox();
+            this.sgkitapAdi = new System.Windows.Forms.TextBox();
             this.sgyayinevilabel = new System.Windows.Forms.Label();
             this.sgyazarilabel = new System.Windows.Forms.Label();
             this.kitapKoduLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.kitaplabel = new System.Windows.Forms.Label();
             this.depopanel = new System.Windows.Forms.Panel();
-            this.dtlnolabel = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.depoadresrich = new System.Windows.Forms.RichTextBox();
+            this.sgdepotextbox = new System.Windows.Forms.TextBox();
             this.depotelno = new System.Windows.Forms.TextBox();
+            this.dtlnolabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.depoadresrich = new System.Windows.Forms.RichTextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.depoadreslabel = new System.Windows.Forms.Label();
             this.depodepo = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.sgdepotextbox = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guncelleyayinevipanel = new System.Windows.Forms.Panel();
             this.yayineviaditextbox = new System.Windows.Forms.TextBox();
@@ -177,27 +179,100 @@
             // 
             // personelGuncellePanel
             // 
-            this.personelGuncellePanel.Controls.Add(this.personelemaillabel);
-            this.personelGuncellePanel.Controls.Add(this.label2);
-            this.personelGuncellePanel.Controls.Add(this.personeltelefon);
-            this.personelGuncellePanel.Controls.Add(this.button7);
-            this.personelGuncellePanel.Controls.Add(this.label22);
-            this.personelGuncellePanel.Controls.Add(this.personeladres);
-            this.personelGuncellePanel.Controls.Add(this.personelgorev);
-            this.personelGuncellePanel.Controls.Add(this.personelmail);
             this.personelGuncellePanel.Controls.Add(this.personelmaas);
+            this.personelGuncellePanel.Controls.Add(this.guncelledurum);
+            this.personelGuncellePanel.Controls.Add(this.personelgorev);
+            this.personelGuncellePanel.Controls.Add(this.personeladres);
+            this.personelGuncellePanel.Controls.Add(this.personeltelefon);
+            this.personelGuncellePanel.Controls.Add(this.personelmail);
             this.personelGuncellePanel.Controls.Add(this.personelcinsiyet);
             this.personelGuncellePanel.Controls.Add(this.personelad);
+            this.personelGuncellePanel.Controls.Add(this.label21);
+            this.personelGuncellePanel.Controls.Add(this.personelemaillabel);
+            this.personelGuncellePanel.Controls.Add(this.label2);
+            this.personelGuncellePanel.Controls.Add(this.button7);
+            this.personelGuncellePanel.Controls.Add(this.label22);
             this.personelGuncellePanel.Controls.Add(this.label20);
             this.personelGuncellePanel.Controls.Add(this.label19);
             this.personelGuncellePanel.Controls.Add(this.label18);
             this.personelGuncellePanel.Controls.Add(this.label17);
             this.personelGuncellePanel.Controls.Add(this.label15);
             this.personelGuncellePanel.Controls.Add(this.depotelnolabel);
-            this.personelGuncellePanel.Location = new System.Drawing.Point(12, 12);
+            this.personelGuncellePanel.Location = new System.Drawing.Point(3, 2);
             this.personelGuncellePanel.Name = "personelGuncellePanel";
             this.personelGuncellePanel.Size = new System.Drawing.Size(386, 416);
             this.personelGuncellePanel.TabIndex = 43;
+            // 
+            // personelmaas
+            // 
+            this.personelmaas.Location = new System.Drawing.Point(108, 286);
+            this.personelmaas.Name = "personelmaas";
+            this.personelmaas.Size = new System.Drawing.Size(100, 20);
+            this.personelmaas.TabIndex = 54;
+            this.personelmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelmaas_KeyPress_1);
+            // 
+            // guncelledurum
+            // 
+            this.guncelledurum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guncelledurum.FormattingEnabled = true;
+            this.guncelledurum.Location = new System.Drawing.Point(109, 248);
+            this.guncelledurum.Name = "guncelledurum";
+            this.guncelledurum.Size = new System.Drawing.Size(99, 21);
+            this.guncelledurum.TabIndex = 53;
+            // 
+            // personelgorev
+            // 
+            this.personelgorev.Location = new System.Drawing.Point(108, 210);
+            this.personelgorev.Name = "personelgorev";
+            this.personelgorev.Size = new System.Drawing.Size(100, 20);
+            this.personelgorev.TabIndex = 52;
+            // 
+            // personeladres
+            // 
+            this.personeladres.Location = new System.Drawing.Point(108, 161);
+            this.personeladres.Name = "personeladres";
+            this.personeladres.Size = new System.Drawing.Size(100, 38);
+            this.personeladres.TabIndex = 51;
+            this.personeladres.Text = "";
+            // 
+            // personeltelefon
+            // 
+            this.personeltelefon.Location = new System.Drawing.Point(108, 134);
+            this.personeltelefon.Name = "personeltelefon";
+            this.personeltelefon.Size = new System.Drawing.Size(100, 20);
+            this.personeltelefon.TabIndex = 50;
+            this.personeltelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personeltelefon_KeyPress_1);
+            // 
+            // personelmail
+            // 
+            this.personelmail.Location = new System.Drawing.Point(108, 96);
+            this.personelmail.Name = "personelmail";
+            this.personelmail.Size = new System.Drawing.Size(100, 20);
+            this.personelmail.TabIndex = 49;
+            // 
+            // personelcinsiyet
+            // 
+            this.personelcinsiyet.Location = new System.Drawing.Point(108, 58);
+            this.personelcinsiyet.Name = "personelcinsiyet";
+            this.personelcinsiyet.Size = new System.Drawing.Size(100, 20);
+            this.personelcinsiyet.TabIndex = 48;
+            // 
+            // personelad
+            // 
+            this.personelad.Location = new System.Drawing.Point(108, 20);
+            this.personelad.Name = "personelad";
+            this.personelad.Size = new System.Drawing.Size(100, 20);
+            this.personelad.TabIndex = 47;
+            this.personelad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelad_KeyPress);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(59, 251);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(44, 13);
+            this.label21.TabIndex = 45;
+            this.label21.Text = "Durum :";
             // 
             // personelemaillabel
             // 
@@ -217,71 +292,19 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "label2";
             // 
-            // personeltelefon
-            // 
-            this.personeltelefon.Location = new System.Drawing.Point(109, 140);
-            this.personeltelefon.Name = "personeltelefon";
-            this.personeltelefon.Size = new System.Drawing.Size(100, 20);
-            this.personeltelefon.TabIndex = 33;
-            this.personeltelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personeltelefon_KeyPress);
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(54, 143);
+            this.label22.Location = new System.Drawing.Point(54, 137);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 32;
             this.label22.Text = "Telefon :";
             // 
-            // personeladres
-            // 
-            this.personeladres.Location = new System.Drawing.Point(109, 173);
-            this.personeladres.Name = "personeladres";
-            this.personeladres.Size = new System.Drawing.Size(100, 38);
-            this.personeladres.TabIndex = 31;
-            this.personeladres.Text = "";
-            // 
-            // personelgorev
-            // 
-            this.personelgorev.Location = new System.Drawing.Point(109, 217);
-            this.personelgorev.Name = "personelgorev";
-            this.personelgorev.Size = new System.Drawing.Size(100, 20);
-            this.personelgorev.TabIndex = 30;
-            // 
-            // personelmail
-            // 
-            this.personelmail.Location = new System.Drawing.Point(109, 100);
-            this.personelmail.Name = "personelmail";
-            this.personelmail.Size = new System.Drawing.Size(100, 20);
-            this.personelmail.TabIndex = 29;
-            // 
-            // personelmaas
-            // 
-            this.personelmaas.Location = new System.Drawing.Point(109, 280);
-            this.personelmaas.Name = "personelmaas";
-            this.personelmaas.Size = new System.Drawing.Size(100, 20);
-            this.personelmaas.TabIndex = 27;
-            this.personelmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelmaas_KeyPress);
-            // 
-            // personelcinsiyet
-            // 
-            this.personelcinsiyet.Location = new System.Drawing.Point(109, 60);
-            this.personelcinsiyet.Name = "personelcinsiyet";
-            this.personelcinsiyet.Size = new System.Drawing.Size(100, 20);
-            this.personelcinsiyet.TabIndex = 26;
-            // 
-            // personelad
-            // 
-            this.personelad.Location = new System.Drawing.Point(109, 20);
-            this.personelad.Name = "personelad";
-            this.personelad.Size = new System.Drawing.Size(100, 20);
-            this.personelad.TabIndex = 25;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(62, 103);
+            this.label20.Location = new System.Drawing.Point(62, 99);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(41, 13);
             this.label20.TabIndex = 24;
@@ -290,7 +313,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(59, 220);
+            this.label19.Location = new System.Drawing.Point(59, 213);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(44, 13);
             this.label19.TabIndex = 23;
@@ -299,7 +322,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(61, 180);
+            this.label18.Location = new System.Drawing.Point(61, 175);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 13);
             this.label18.TabIndex = 22;
@@ -308,7 +331,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(62, 283);
+            this.label17.Location = new System.Drawing.Point(64, 289);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 21;
@@ -317,7 +340,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(52, 63);
+            this.label15.Location = new System.Drawing.Point(52, 61);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(51, 13);
             this.label15.TabIndex = 19;
@@ -347,7 +370,7 @@
             this.kullanicipanel.Controls.Add(this.pass);
             this.kullanicipanel.Controls.Add(this.label6);
             this.kullanicipanel.Controls.Add(this.userId);
-            this.kullanicipanel.Location = new System.Drawing.Point(13, 7);
+            this.kullanicipanel.Location = new System.Drawing.Point(6, 6);
             this.kullanicipanel.Name = "kullanicipanel";
             this.kullanicipanel.Size = new System.Drawing.Size(386, 416);
             this.kullanicipanel.TabIndex = 44;
@@ -473,45 +496,6 @@
             this.userId.TabIndex = 18;
             this.userId.Text = "User ID :";
             // 
-            // sgyazari
-            // 
-            this.sgyazari.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.sgyazari.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.sgyazari.FormattingEnabled = true;
-            this.sgyazari.Location = new System.Drawing.Point(135, 92);
-            this.sgyazari.Name = "sgyazari";
-            this.sgyazari.Size = new System.Drawing.Size(99, 21);
-            this.sgyazari.TabIndex = 63;
-            // 
-            // sgyayinEvi
-            // 
-            this.sgyayinEvi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.sgyayinEvi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.sgyayinEvi.BackColor = System.Drawing.Color.White;
-            this.sgyayinEvi.FormattingEnabled = true;
-            this.sgyayinEvi.Location = new System.Drawing.Point(134, 138);
-            this.sgyayinEvi.Name = "sgyayinEvi";
-            this.sgyayinEvi.Size = new System.Drawing.Size(100, 21);
-            this.sgyayinEvi.TabIndex = 62;
-            // 
-            // sgturu
-            // 
-            this.sgturu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.sgturu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.sgturu.FormattingEnabled = true;
-            this.sgturu.Location = new System.Drawing.Point(135, 51);
-            this.sgturu.Name = "sgturu";
-            this.sgturu.Size = new System.Drawing.Size(100, 21);
-            this.sgturu.TabIndex = 61;
-            // 
-            // sgfiyat
-            // 
-            this.sgfiyat.Location = new System.Drawing.Point(134, 220);
-            this.sgfiyat.Name = "sgfiyat";
-            this.sgfiyat.Size = new System.Drawing.Size(100, 20);
-            this.sgfiyat.TabIndex = 60;
-            this.sgfiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sgfiyat_KeyPress);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -520,14 +504,6 @@
             this.label9.Size = new System.Drawing.Size(62, 13);
             this.label9.TabIndex = 59;
             this.label9.Text = "Tane fiyatı :";
-            // 
-            // sgadet
-            // 
-            this.sgadet.Location = new System.Drawing.Point(134, 179);
-            this.sgadet.Name = "sgadet";
-            this.sgadet.Size = new System.Drawing.Size(100, 20);
-            this.sgadet.TabIndex = 58;
-            this.sgadet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sgadet_KeyPress);
             // 
             // label8
             // 
@@ -538,17 +514,6 @@
             this.label8.TabIndex = 57;
             this.label8.Text = "Adet :";
             // 
-            // sgdepo
-            // 
-            this.sgdepo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.sgdepo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.sgdepo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sgdepo.FormattingEnabled = true;
-            this.sgdepo.Location = new System.Drawing.Point(134, 261);
-            this.sgdepo.Name = "sgdepo";
-            this.sgdepo.Size = new System.Drawing.Size(100, 21);
-            this.sgdepo.TabIndex = 56;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -557,13 +522,6 @@
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 55;
             this.label7.Text = "Depo seçiniz :";
-            // 
-            // sgkitapAdi
-            // 
-            this.sgkitapAdi.Location = new System.Drawing.Point(134, 10);
-            this.sgkitapAdi.Name = "sgkitapAdi";
-            this.sgkitapAdi.Size = new System.Drawing.Size(100, 20);
-            this.sgkitapAdi.TabIndex = 51;
             // 
             // label3
             // 
@@ -603,29 +561,106 @@
             // 
             // kitappanel
             // 
+            this.kitappanel.Controls.Add(this.button2);
+            this.kitappanel.Controls.Add(this.sgdepo);
+            this.kitappanel.Controls.Add(this.sgfiyat);
+            this.kitappanel.Controls.Add(this.sgadet);
+            this.kitappanel.Controls.Add(this.sgyayinEvi);
+            this.kitappanel.Controls.Add(this.sgyazari);
+            this.kitappanel.Controls.Add(this.sgturu);
+            this.kitappanel.Controls.Add(this.sgkitapAdi);
             this.kitappanel.Controls.Add(this.sgyayinevilabel);
             this.kitappanel.Controls.Add(this.sgyazarilabel);
             this.kitappanel.Controls.Add(this.kitapKoduLabel);
-            this.kitappanel.Controls.Add(this.button2);
             this.kitappanel.Controls.Add(this.kitaplabel);
-            this.kitappanel.Controls.Add(this.sgyazari);
             this.kitappanel.Controls.Add(this.label12);
-            this.kitappanel.Controls.Add(this.sgyayinEvi);
-            this.kitappanel.Controls.Add(this.sgturu);
             this.kitappanel.Controls.Add(this.label10);
-            this.kitappanel.Controls.Add(this.sgfiyat);
             this.kitappanel.Controls.Add(this.label4);
             this.kitappanel.Controls.Add(this.label9);
-            this.kitappanel.Controls.Add(this.sgadet);
             this.kitappanel.Controls.Add(this.label3);
             this.kitappanel.Controls.Add(this.label8);
-            this.kitappanel.Controls.Add(this.sgkitapAdi);
-            this.kitappanel.Controls.Add(this.sgdepo);
             this.kitappanel.Controls.Add(this.label7);
-            this.kitappanel.Location = new System.Drawing.Point(12, 12);
+            this.kitappanel.Location = new System.Drawing.Point(6, 3);
             this.kitappanel.Name = "kitappanel";
             this.kitappanel.Size = new System.Drawing.Size(386, 416);
             this.kitappanel.TabIndex = 46;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(159, 302);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 74;
+            this.button2.Text = "Kaydet";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // sgdepo
+            // 
+            this.sgdepo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.sgdepo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sgdepo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sgdepo.FormattingEnabled = true;
+            this.sgdepo.Location = new System.Drawing.Point(132, 261);
+            this.sgdepo.Name = "sgdepo";
+            this.sgdepo.Size = new System.Drawing.Size(100, 21);
+            this.sgdepo.TabIndex = 73;
+            // 
+            // sgfiyat
+            // 
+            this.sgfiyat.Location = new System.Drawing.Point(132, 220);
+            this.sgfiyat.Name = "sgfiyat";
+            this.sgfiyat.Size = new System.Drawing.Size(100, 20);
+            this.sgfiyat.TabIndex = 72;
+            this.sgfiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sgfiyat_KeyPress_1);
+            // 
+            // sgadet
+            // 
+            this.sgadet.Location = new System.Drawing.Point(132, 179);
+            this.sgadet.Name = "sgadet";
+            this.sgadet.Size = new System.Drawing.Size(100, 20);
+            this.sgadet.TabIndex = 71;
+            this.sgadet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sgadet_KeyPress_1);
+            // 
+            // sgyayinEvi
+            // 
+            this.sgyayinEvi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.sgyayinEvi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sgyayinEvi.BackColor = System.Drawing.Color.White;
+            this.sgyayinEvi.FormattingEnabled = true;
+            this.sgyayinEvi.Location = new System.Drawing.Point(132, 138);
+            this.sgyayinEvi.Name = "sgyayinEvi";
+            this.sgyayinEvi.Size = new System.Drawing.Size(100, 21);
+            this.sgyayinEvi.TabIndex = 70;
+            // 
+            // sgyazari
+            // 
+            this.sgyazari.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.sgyazari.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sgyazari.FormattingEnabled = true;
+            this.sgyazari.Location = new System.Drawing.Point(133, 92);
+            this.sgyazari.Name = "sgyazari";
+            this.sgyazari.Size = new System.Drawing.Size(99, 21);
+            this.sgyazari.TabIndex = 69;
+            // 
+            // sgturu
+            // 
+            this.sgturu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.sgturu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.sgturu.FormattingEnabled = true;
+            this.sgturu.Location = new System.Drawing.Point(133, 51);
+            this.sgturu.Name = "sgturu";
+            this.sgturu.Size = new System.Drawing.Size(100, 21);
+            this.sgturu.TabIndex = 68;
+            // 
+            // sgkitapAdi
+            // 
+            this.sgkitapAdi.Location = new System.Drawing.Point(134, 10);
+            this.sgkitapAdi.Name = "sgkitapAdi";
+            this.sgkitapAdi.Size = new System.Drawing.Size(100, 20);
+            this.sgkitapAdi.TabIndex = 67;
             // 
             // sgyayinevilabel
             // 
@@ -654,18 +689,6 @@
             this.kitapKoduLabel.TabIndex = 64;
             this.kitapKoduLabel.Text = "label3";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(160, 311);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Kaydet";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // kitaplabel
             // 
             this.kitaplabel.AutoSize = true;
@@ -677,18 +700,53 @@
             // 
             // depopanel
             // 
-            this.depopanel.Controls.Add(this.dtlnolabel);
+            this.depopanel.Controls.Add(this.button4);
+            this.depopanel.Controls.Add(this.depoadresrich);
+            this.depopanel.Controls.Add(this.sgdepotextbox);
             this.depopanel.Controls.Add(this.depotelno);
+            this.depopanel.Controls.Add(this.dtlnolabel);
             this.depopanel.Controls.Add(this.label13);
             this.depopanel.Controls.Add(this.label23);
-            this.depopanel.Controls.Add(this.depoadresrich);
-            this.depopanel.Controls.Add(this.button4);
-            this.depopanel.Controls.Add(this.sgdepotextbox);
             this.depopanel.Controls.Add(this.label24);
-            this.depopanel.Location = new System.Drawing.Point(12, 9);
+            this.depopanel.Location = new System.Drawing.Point(9, 2);
             this.depopanel.Name = "depopanel";
             this.depopanel.Size = new System.Drawing.Size(386, 416);
             this.depopanel.TabIndex = 47;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.Location = new System.Drawing.Point(135, 217);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 54;
+            this.button4.Text = "Kaydet";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // depoadresrich
+            // 
+            this.depoadresrich.Location = new System.Drawing.Point(111, 121);
+            this.depoadresrich.Name = "depoadresrich";
+            this.depoadresrich.Size = new System.Drawing.Size(100, 73);
+            this.depoadresrich.TabIndex = 53;
+            this.depoadresrich.Text = "";
+            // 
+            // sgdepotextbox
+            // 
+            this.sgdepotextbox.Location = new System.Drawing.Point(110, 85);
+            this.sgdepotextbox.Name = "sgdepotextbox";
+            this.sgdepotextbox.Size = new System.Drawing.Size(100, 20);
+            this.sgdepotextbox.TabIndex = 52;
+            // 
+            // depotelno
+            // 
+            this.depotelno.Location = new System.Drawing.Point(110, 47);
+            this.depotelno.Name = "depotelno";
+            this.depotelno.Size = new System.Drawing.Size(100, 20);
+            this.depotelno.TabIndex = 51;
+            this.depotelno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depotelno_KeyPress_1);
             // 
             // dtlnolabel
             // 
@@ -698,14 +756,6 @@
             this.dtlnolabel.Size = new System.Drawing.Size(35, 13);
             this.dtlnolabel.TabIndex = 50;
             this.dtlnolabel.Text = "label3";
-            // 
-            // depotelno
-            // 
-            this.depotelno.Location = new System.Drawing.Point(112, 47);
-            this.depotelno.Name = "depotelno";
-            this.depotelno.Size = new System.Drawing.Size(100, 20);
-            this.depotelno.TabIndex = 49;
-            this.depotelno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depotelno_KeyPress);
             // 
             // label13
             // 
@@ -725,53 +775,6 @@
             this.label23.TabIndex = 47;
             this.label23.Text = "Depo Adresi :";
             // 
-            // depoadresrich
-            // 
-            this.depoadresrich.Location = new System.Drawing.Point(111, 121);
-            this.depoadresrich.Name = "depoadresrich";
-            this.depoadresrich.Size = new System.Drawing.Size(100, 73);
-            this.depoadresrich.TabIndex = 46;
-            this.depoadresrich.Text = "";
-            // 
-            // depoadreslabel
-            // 
-            this.depoadreslabel.AutoSize = true;
-            this.depoadreslabel.Location = new System.Drawing.Point(322, 127);
-            this.depoadreslabel.Name = "depoadreslabel";
-            this.depoadreslabel.Size = new System.Drawing.Size(35, 13);
-            this.depoadreslabel.TabIndex = 45;
-            this.depoadreslabel.Text = "label3";
-            this.depoadreslabel.Visible = false;
-            // 
-            // depodepo
-            // 
-            this.depodepo.AutoSize = true;
-            this.depodepo.Location = new System.Drawing.Point(322, 100);
-            this.depodepo.Name = "depodepo";
-            this.depodepo.Size = new System.Drawing.Size(35, 13);
-            this.depodepo.TabIndex = 44;
-            this.depodepo.Text = "label3";
-            this.depodepo.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(136, 226);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Kaydet";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // sgdepotextbox
-            // 
-            this.sgdepotextbox.Location = new System.Drawing.Point(111, 85);
-            this.sgdepotextbox.Name = "sgdepotextbox";
-            this.sgdepotextbox.Size = new System.Drawing.Size(100, 20);
-            this.sgdepotextbox.TabIndex = 25;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -781,15 +784,35 @@
             this.label24.TabIndex = 18;
             this.label24.Text = "Depo Adi :";
             // 
+            // depoadreslabel
+            // 
+            this.depoadreslabel.AutoSize = true;
+            this.depoadreslabel.Location = new System.Drawing.Point(319, 158);
+            this.depoadreslabel.Name = "depoadreslabel";
+            this.depoadreslabel.Size = new System.Drawing.Size(35, 13);
+            this.depoadreslabel.TabIndex = 45;
+            this.depoadreslabel.Text = "label3";
+            this.depoadreslabel.Visible = false;
+            // 
+            // depodepo
+            // 
+            this.depodepo.AutoSize = true;
+            this.depodepo.Location = new System.Drawing.Point(319, 131);
+            this.depodepo.Name = "depodepo";
+            this.depodepo.Size = new System.Drawing.Size(35, 13);
+            this.depodepo.TabIndex = 44;
+            this.depodepo.Text = "label3";
+            this.depodepo.Visible = false;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.guncelleyayinevipanel);
-            this.panel1.Controls.Add(this.yazarguncellepanel);
-            this.panel1.Controls.Add(this.depopanel);
-            this.panel1.Controls.Add(this.kullanicipanel);
             this.panel1.Controls.Add(this.personelGuncellePanel);
             this.panel1.Controls.Add(this.kitappanel);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Controls.Add(this.depopanel);
+            this.panel1.Controls.Add(this.guncelleyayinevipanel);
+            this.panel1.Controls.Add(this.kullanicipanel);
+            this.panel1.Controls.Add(this.yazarguncellepanel);
+            this.panel1.Location = new System.Drawing.Point(9, 43);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 448);
             this.panel1.TabIndex = 48;
@@ -799,7 +822,7 @@
             this.guncelleyayinevipanel.Controls.Add(this.yayineviaditextbox);
             this.guncelleyayinevipanel.Controls.Add(this.button10);
             this.guncelleyayinevipanel.Controls.Add(this.label39);
-            this.guncelleyayinevipanel.Location = new System.Drawing.Point(12, 7);
+            this.guncelleyayinevipanel.Location = new System.Drawing.Point(9, 0);
             this.guncelleyayinevipanel.Name = "guncelleyayinevipanel";
             this.guncelleyayinevipanel.Size = new System.Drawing.Size(310, 395);
             this.guncelleyayinevipanel.TabIndex = 53;
@@ -837,7 +860,7 @@
             this.yazarguncellepanel.Controls.Add(this.guncelletextboxyazar);
             this.yazarguncellepanel.Controls.Add(this.button8);
             this.yazarguncellepanel.Controls.Add(this.label36);
-            this.yazarguncellepanel.Location = new System.Drawing.Point(12, 7);
+            this.yazarguncellepanel.Location = new System.Drawing.Point(3, 10);
             this.yazarguncellepanel.Name = "yazarguncellepanel";
             this.yazarguncellepanel.Size = new System.Drawing.Size(310, 395);
             this.yazarguncellepanel.TabIndex = 52;
@@ -1136,7 +1159,7 @@
             this.silpersonelpanel.Controls.Add(this.silpersonelKodu);
             this.silpersonelpanel.Controls.Add(this.label26);
             this.silpersonelpanel.Controls.Add(this.label34);
-            this.silpersonelpanel.Location = new System.Drawing.Point(17, 13);
+            this.silpersonelpanel.Location = new System.Drawing.Point(14, 6);
             this.silpersonelpanel.Name = "silpersonelpanel";
             this.silpersonelpanel.Size = new System.Drawing.Size(310, 395);
             this.silpersonelpanel.TabIndex = 50;
@@ -1191,13 +1214,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.silpersonelpanel);
             this.panel2.Controls.Add(this.silyayinevipanel);
+            this.panel2.Controls.Add(this.silpersonelpanel);
             this.panel2.Controls.Add(this.yazarsilpanel);
             this.panel2.Controls.Add(this.silkitappanel);
             this.panel2.Controls.Add(this.sildepopanel);
             this.panel2.Controls.Add(this.silkullanicipanel);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(9, 40);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(304, 448);
             this.panel2.TabIndex = 49;
@@ -1210,7 +1233,7 @@
             this.silyayinevipanel.Controls.Add(this.silyayinevikodulabel);
             this.silyayinevipanel.Controls.Add(this.label37);
             this.silyayinevipanel.Controls.Add(this.label38);
-            this.silyayinevipanel.Location = new System.Drawing.Point(17, 13);
+            this.silyayinevipanel.Location = new System.Drawing.Point(11, 3);
             this.silyayinevipanel.Name = "silyayinevipanel";
             this.silyayinevipanel.Size = new System.Drawing.Size(310, 395);
             this.silyayinevipanel.TabIndex = 52;
@@ -1326,7 +1349,7 @@
             // silrdbutton
             // 
             this.silrdbutton.AutoSize = true;
-            this.silrdbutton.Location = new System.Drawing.Point(296, 62);
+            this.silrdbutton.Location = new System.Drawing.Point(224, 12);
             this.silrdbutton.Name = "silrdbutton";
             this.silrdbutton.Size = new System.Drawing.Size(36, 17);
             this.silrdbutton.TabIndex = 50;
@@ -1338,7 +1361,7 @@
             // 
             this.guncellerdbutton.AutoSize = true;
             this.guncellerdbutton.Checked = true;
-            this.guncellerdbutton.Location = new System.Drawing.Point(296, 19);
+            this.guncellerdbutton.Location = new System.Drawing.Point(48, 12);
             this.guncellerdbutton.Name = "guncellerdbutton";
             this.guncellerdbutton.Size = new System.Drawing.Size(67, 17);
             this.guncellerdbutton.TabIndex = 51;
@@ -1351,7 +1374,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 424);
+            this.ClientSize = new System.Drawing.Size(317, 506);
             this.Controls.Add(this.guncellerdbutton);
             this.Controls.Add(this.silrdbutton);
             this.Controls.Add(this.depodepo);
@@ -1401,13 +1424,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label depotelnolabel;
-        public System.Windows.Forms.TextBox personeltelefon;
-        public System.Windows.Forms.RichTextBox personeladres;
-        public System.Windows.Forms.TextBox personelgorev;
-        public System.Windows.Forms.TextBox personelmail;
-        public System.Windows.Forms.TextBox personelmaas;
-        public System.Windows.Forms.TextBox personelcinsiyet;
-        public System.Windows.Forms.TextBox personelad;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox passtext;
@@ -1427,28 +1443,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label kitaplabel;
-        public System.Windows.Forms.ComboBox sgyazari;
-        public System.Windows.Forms.ComboBox sgyayinEvi;
-        public System.Windows.Forms.ComboBox sgturu;
-        public System.Windows.Forms.TextBox sgfiyat;
-        public System.Windows.Forms.TextBox sgadet;
-        public System.Windows.Forms.ComboBox sgdepo;
-        public System.Windows.Forms.TextBox sgkitapAdi;
         public System.Windows.Forms.Panel kitappanel;
         public System.Windows.Forms.Label kitapKoduLabel;
         public System.Windows.Forms.Label depoadreslabel;
         public System.Windows.Forms.Label depodepo;
-        private System.Windows.Forms.Button button4;
-        public System.Windows.Forms.TextBox sgdepotextbox;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
-        public System.Windows.Forms.RichTextBox depoadresrich;
         public System.Windows.Forms.Panel personelGuncellePanel;
         public System.Windows.Forms.Panel kullanicipanel;
         public System.Windows.Forms.Panel depopanel;
-        public System.Windows.Forms.TextBox depotelno;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label dtlnolabel;
         public System.Windows.Forms.Label personelemaillabel;
@@ -1512,5 +1516,26 @@
         public System.Windows.Forms.TextBox yayineviaditextbox;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TextBox personelmaas;
+        public System.Windows.Forms.ComboBox guncelledurum;
+        public System.Windows.Forms.TextBox personelgorev;
+        public System.Windows.Forms.RichTextBox personeladres;
+        public System.Windows.Forms.TextBox personeltelefon;
+        public System.Windows.Forms.TextBox personelmail;
+        public System.Windows.Forms.TextBox personelcinsiyet;
+        public System.Windows.Forms.TextBox personelad;
+        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.ComboBox sgdepo;
+        public System.Windows.Forms.TextBox sgfiyat;
+        public System.Windows.Forms.TextBox sgadet;
+        public System.Windows.Forms.ComboBox sgyayinEvi;
+        public System.Windows.Forms.ComboBox sgyazari;
+        public System.Windows.Forms.ComboBox sgturu;
+        public System.Windows.Forms.TextBox sgkitapAdi;
+        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.RichTextBox depoadresrich;
+        public System.Windows.Forms.TextBox sgdepotextbox;
+        public System.Windows.Forms.TextBox depotelno;
     }
 }

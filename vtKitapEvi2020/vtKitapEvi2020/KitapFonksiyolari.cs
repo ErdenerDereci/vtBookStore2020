@@ -39,9 +39,16 @@ namespace vtKitapEvi2020
         {
             baglanti.Open();
             int sayac;
-            string komut = "SELECT * FROM kitapKodlari ORDER BY Kod DESC LIMIT 1;";
+            string komut = "SELECT kitap FROM kodlar ORDER BY kitap DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
-            sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
+            if (command.ExecuteScalar() == null){
+                sayac = 1;
+            }
+            else
+            {
+                sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
+            }
+            
             baglanti.Close();
             return "kitap" + sayac;
 
@@ -111,7 +118,7 @@ namespace vtKitapEvi2020
                     {
                         kodsayi += kitapKodu[i];
                     }
-                    komut = "insert into kitapKodlari values('" + kodsayi + "');";
+                    komut = "insert into kodlar  values('" + kodsayi + "',0,0,0,0);";
                     command = new MySqlCommand(komut, baglanti);
                     command.ExecuteNonQuery();// kitap kodu kitap_kodları tablosuna eklendi
                     komut = "insert into kitap_depo values('" + kitapKodu + "','" + depoAdi + "'," + taneFiyat + "," + adet + ");";
@@ -119,6 +126,8 @@ namespace vtKitapEvi2020
                     command.ExecuteNonQuery();//kitap_depo tablosuna kitap eklendi
                     baglanti.Close();
                     MessageBox.Show("Kitap başarıyla eklendi!!..");
+
+                    
                 }
             }
         }

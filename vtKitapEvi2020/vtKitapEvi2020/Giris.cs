@@ -25,6 +25,7 @@ namespace vtKitapEvi2020
 
         private void Giris_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = KitapFonksiyolari.kitapListele("");
             xx.Text = "Kitaplar";
             if (label1.Text != "ADMİN")
@@ -63,39 +64,45 @@ namespace vtKitapEvi2020
 
         private void kitapListele1_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = KitapFonksiyolari.kitapListele("");
             xx.Text = "Kitaplar";
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = YazarFonksiyonlari.yazarListele(searcbargiris.Text);
             xx.Text = "Yazarlar";
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DepoFonksiyonlari.depoListele();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = DepoFonksiyonlari.depoListele("");
             xx.Text = "Depolar";
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = YayinEviFonksiyonlari.yayinEviListele("");
             xx.Text = "Yayinevleri";
         }
 
         private void personelButton_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = PersonelKodlari.personelListele();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = PersonelKodlari.personelListele("");
             xx.Text = "Personeller";
         }
 
         private void kullaniciButton_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             baglanti.Open();
             xx.Text = "Kullanicilar";
-            string komut = "select * from kullanicilar";
+            string komut = "select personelKodu,personelAdiSoyadi,userId,pass,adminMi from kullanicilar,personel where personel.telefon=kullanicilar.personelKodu ";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -114,7 +121,8 @@ namespace vtKitapEvi2020
 
         private void button6_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = SiparisFonksiyonlari.siparisListele();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = SiparisFonksiyonlari.siparisListele("");
             xx.Text = "Siparisler";
         }
 
@@ -148,7 +156,8 @@ namespace vtKitapEvi2020
                     form.personelemaillabel.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                     form.personelgorev.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                     form.personelmaas.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-
+                    form.guncelledurum.Text= dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    
                     form.depopanel.Visible = false;
                     form.kullanicipanel.Visible = false;
                     form.kitappanel.Visible = false;
@@ -169,18 +178,18 @@ namespace vtKitapEvi2020
                 }
                 else if (xx.Text == "Kullanicilar")
                 {
-                    form.useridtext.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    form.silUserId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    form.useridlabel.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    form.useridtext.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    form.silUserId.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    form.useridlabel.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                     //form.personelkodtext.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                     form.personelkodtext.Enabled = false;
 
-                    form.kullanicisart.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    form.silpersonelKoduUser.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    form.kullanicisart.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    form.silpersonelKoduUser.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                    form.passtext.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    form.silpass.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    if (Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[3].Value) == true)
+                    form.passtext.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    form.silpass.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    if (Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[4].Value) == true)
                     {
                         form.evet.Checked = true;
                     }
@@ -348,7 +357,7 @@ namespace vtKitapEvi2020
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            MySqlCommand command = new MySqlCommand();
+            
             
             
             if (xx.Text == "Kitaplar")
@@ -360,6 +369,28 @@ namespace vtKitapEvi2020
             }else if (xx.Text == "Yayinevleri")
             {
                 dataGridView1.DataSource = YayinEviFonksiyonlari.yayinEviListele(searcbargiris.Text);
+            }else if (xx.Text == "Depolar")
+            {
+                dataGridView1.DataSource = DepoFonksiyonlari.depoListele(searcbargiris.Text);
+            }else if (xx.Text == "Siparisler")
+            {
+                dataGridView1.DataSource = SiparisFonksiyonlari.siparisListele(searcbargiris.Text);
+            }else if (xx.Text == "Personeller")
+            {
+                dataGridView1.DataSource = PersonelKodlari.personelListele(searcbargiris.Text);
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+                baglanti.Open();
+                
+                string komut = "select personelKodu,personelAdiSoyadi,userId,pass,adminMi from kullanicilar,personel where kullanicilar.personelKodu=personel.telefon and personel.personelAdiSoyadi like '%" + searcbargiris.Text + "%'";
+                MySqlCommand command = new MySqlCommand(komut, baglanti);
+                MySqlDataAdapter da = new MySqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                baglanti.Close();
             }
             
         }

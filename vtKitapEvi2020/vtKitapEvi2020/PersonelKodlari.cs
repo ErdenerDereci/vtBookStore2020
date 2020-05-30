@@ -48,22 +48,15 @@ namespace vtKitapEvi2020
         {
             baglanti.Open();
 
-            string personelKodu = personelKoduYarat();
-            string kodsayi = "";
+            
             if (!ayniPersonelVarMi(telefon))
             {
 
-                string komut = "insert into personel values('" + telefon + "','" + personelAdiSoyadi + "','"+cinsiyeti+"','"+adres+"','"+mail+"','"+gorevi+ "',"+maasi+")";
+                string komut = "insert into personel values('" + telefon + "','" + personelAdiSoyadi + "','"+cinsiyeti+"','"+adres+"','"+mail+"','"+gorevi+ "',"+maasi+",'calisiyor')";
                 MySqlCommand command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
 
-                for (int i = 8; i < personelKodu.Length; i++)
-                {
-                    kodsayi += personelKodu[i];
-                }
-                komut = "insert into personelKodlari values('" + kodsayi + "');";
-                command = new MySqlCommand(komut, baglanti);
-                command.ExecuteNonQuery();
+                
                 MessageBox.Show("Personel eklendi..");
             }
             else
@@ -73,11 +66,11 @@ namespace vtKitapEvi2020
 
             baglanti.Close();
         }
-        public static DataTable personelListele()
+        public static DataTable personelListele(string sart)
         {
             baglanti.Open();
 
-            string komut = "select * from personel";
+            string komut = "select * from personel where personelAdiSoyadi like '%" + sart + "%'";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();

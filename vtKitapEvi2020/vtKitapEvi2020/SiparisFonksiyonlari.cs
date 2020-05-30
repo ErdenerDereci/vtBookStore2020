@@ -24,7 +24,7 @@ namespace vtKitapEvi2020
             baglanti.Open();
 
             int sayac;
-            string komut = "SELECT * FROM sipariskodlari ORDER BY Kod DESC LIMIT 1;";
+            string komut = "SELECT siparis FROM kodlar ORDER BY siparis DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
             baglanti.Close();
@@ -62,7 +62,7 @@ namespace vtKitapEvi2020
                 {
                     kodsayi += siparisKod[i];
                 }
-                komut = "insert into siparisKodlari values('" + kodsayi + "');";
+                komut = "insert into kodlar  values(0,0,0,0,'" + kodsayi + "');";
                 command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
             }
@@ -95,11 +95,11 @@ namespace vtKitapEvi2020
 
             
         }
-        public static DataTable siparisListele()
+        public static DataTable siparisListele(string sart)
         {
             baglanti.Open();
 
-            string komut = "select * from siparis";
+            string komut = "select siparisNo,personelAdiSoyadi,urun,tutar,verilenPara,paraUstu,tarih,siparis.durum from siparis,personel where siparisNo like '%" + sart + "%' and siparis.siparisiAlan=personel.telefon";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();

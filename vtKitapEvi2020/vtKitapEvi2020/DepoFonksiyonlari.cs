@@ -51,11 +51,11 @@ namespace vtKitapEvi2020
 
             baglanti.Close();
         } // Depo eklendi
-        public static DataTable depoListele()
+        public static DataTable depoListele(string sart)
         {
             baglanti.Open();
 
-            string komut = "select * from depolar";
+            string komut = "select * from depolar where depoAdi like '%" + sart + "%'";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             MySqlDataAdapter da = new MySqlDataAdapter(command);
             DataTable dt = new DataTable();

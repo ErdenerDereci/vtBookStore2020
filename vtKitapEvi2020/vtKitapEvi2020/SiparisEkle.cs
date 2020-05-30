@@ -34,19 +34,16 @@ namespace vtKitapEvi2020
             listView2.View = View.Details;
             
             dataGridView2.ColumnCount = 3;
-            searchbar.Text = "kitap,";
+            
             dataGridView2.Columns[0].Name = "KitapKodu";
             dataGridView2.Columns[1].Name = "KitapAdi";
             dataGridView2.Columns[2].Name = "Tutar";
             personelLoad();
             sepetGuncelle(kitapkodlarilabel.Text);
             //urunLoad();
-            veriAyikla("kitap,erdener", "once");
-            veriAyikla("kitap,erdener", "sonra");
-            if (iadeMi.Text == "iade")
-            {
-                datagrid1load();
-            }
+            
+            datagrid1load();
+            
             for (int i = 0; i < dataGridView2.Rows.Count; i++)
             {
                 liste.Add(dataGridView2.Rows[i].Cells[0].Value.ToString());

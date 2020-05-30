@@ -35,7 +35,7 @@ namespace vtKitapEvi2020
         }
         private bool personelBosMu()
         {
-            if(personelad.Text=="" || personelcinsiyet.Text == "" || personeladres.Text == "" || personelmail.Text == "" || personelmaas.Text == "" || personelgorev.Text == "" || personeltelefon.Text == "")
+            if(personelad.Text=="" || personelcinsiyet.Text == "" || personeladres.Text == "" || personelmail.Text == "" || personelmaas.Text == "" || personelgorev.Text == "" || personeltelefon.Text == "" || guncelledurum.Text=="")
             {
                 return true;
             }
@@ -61,7 +61,7 @@ namespace vtKitapEvi2020
                         if (secenek == DialogResult.Yes)
                         {
                             MySqlCommand command = new MySqlCommand();
-                            command.CommandText = "update personel set personelAdiSoyadi='" + personelad.Text + "',telefon='" + personeltelefon.Text + "',cinsiyeti='" + personelcinsiyet.Text + "',adres='" + personeladres.Text + "',email='" + personelmail.Text + "',gorevi='" + personelgorev.Text + "',maas=" + Convert.ToInt32(personelmaas.Text) + " where telefon='" + label2.Text + "'";
+                            command.CommandText = "update personel set personelAdiSoyadi='" + personelad.Text + "',telefon='" + personeltelefon.Text + "',cinsiyeti='" + personelcinsiyet.Text + "',adres='" + personeladres.Text + "',email='" + personelmail.Text + "',gorevi='" + personelgorev.Text + "',maas=" + Convert.ToInt32(personelmaas.Text) + ",durum='"+guncelledurum.Text+"' where telefon='" + label2.Text + "'";
                             command.Connection = baglanti;
                             command.ExecuteNonQuery();
                             MessageBox.Show("Güncelleme başarılı!!");
@@ -211,7 +211,11 @@ namespace vtKitapEvi2020
             turComboboxLoad();
             depoComboboxLoad();
             yayinEviComboboxLoad();
-           
+            depotelno.MaxLength = 10;
+            personelkodtext.MaxLength = 10;
+            personeltelefon.MaxLength = 10;
+            guncelledurum.Items.Add("çalışıyor");
+            guncelledurum.Items.Add("ayrıldı");
             //kullaniciLoad();
         }
         private void yazarComboboxLoad()
@@ -445,56 +449,7 @@ namespace vtKitapEvi2020
 
         private void button4_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            if (depotelno.Text == "" || depoadresrich.Text == "" || sgdepotextbox.Text == "")
-            {
-                MessageBox.Show("Alanlar doldurulmak zorundadır.");
-            }
-            else
-            {
-                if (depotelno.Text == dtlnolabel.Text || !depoTelVarMi(depotelno.Text))
-                {
-                    //telno değişir
-                    if (depoadreslabel.Text == depoadresrich.Text || !depoAdresiVarMi(depoadresrich.Text))
-                    {
-                        //telno ve adresi değişir
-                        if (sgdepotextbox.Text == depodepo.Text || !depoAdiVarMi(sgdepotextbox.Text))
-                        {
-                            DialogResult secenek = MessageBox.Show("Emin misiniz ?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                            if (secenek == DialogResult.Yes)
-                            {
-                                MySqlCommand command = new MySqlCommand();
-                                command.CommandText = "update depolar set depoAdi='" + sgdepotextbox.Text + "',depoAdresi='" + depoadresrich.Text + "',depoTelefon='" + depotelno.Text + "' where depoTelefon='" + dtlnolabel.Text + "'";
-                                command.Connection = baglanti;
-                                command.ExecuteNonQuery();
-
-                                MessageBox.Show("Güncelleme başarılı!!");
-                            }
-                        }
-                        else
-                        {
-                            DialogResult secenek = MessageBox.Show("Bu depo adi veri tabanında mevcut yine de eklensin mi?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                            if (secenek == DialogResult.Yes)
-                            {
-                                MySqlCommand command = new MySqlCommand();
-                                command.CommandText = "update depolar set depoAdi='" + sgdepotextbox.Text + "',depoAdresi='" + depoadresrich.Text + "',depoTelefon='" + depotelno.Text + "' where depoTelefon='" + dtlnolabel.Text + "'";
-                                command.Connection = baglanti;
-                                command.ExecuteNonQuery();
-
-                                MessageBox.Show("Güncelleme başarılı!!");
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Depo adresi mevcut güncelleme başarısız.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Depo telno  mevcut güncelleme başarısız.");
-                }
-            }
+            
             
 
             //if (depoadresrich.Text != depoadreslabel.Text)
@@ -714,7 +669,7 @@ namespace vtKitapEvi2020
             if (secenek == DialogResult.Yes)
             {
                 MySqlCommand command = new MySqlCommand();
-                command.CommandText = "delete from personel where telefon='" + silpersonelKodu.Text + "'";
+                command.CommandText = "update personel set durum='ayrildi' where telefon='" + silpersonelKodu.Text + "'";
                 command.Connection = baglanti;
                 command.ExecuteNonQuery();
 
@@ -737,6 +692,7 @@ namespace vtKitapEvi2020
         {
             panel1.Visible = false;
             panel2.Visible = true;
+           
         }
 
         private void button6_Click_1(object sender, EventArgs e)
@@ -857,6 +813,176 @@ namespace vtKitapEvi2020
         private void personeltelefon_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (sgkitapAdi.Text == "" || sgturu.Text == "" || sgyayinEvi.Text == "" || sgyazari.Text == "" || sgfiyat.Text == "" || sgadet.Text == "" || sgdepo.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır!");
+            }
+            else
+            {
+                baglanti.Open();
+                MySqlCommand command = new MySqlCommand();
+                MySqlCommand command2 = new MySqlCommand();
+                command2.CommandText = "select count(kitapAdi) from kitaplar where kitapAdi='" + sgkitapAdi.Text + "'";
+                command2.Connection = baglanti;
+                int sart = Convert.ToInt32(command2.ExecuteScalar());
+                if (sgkitapAdi.Text == kitaplabel.Text && sgyazari.Text == sgyazarilabel.Text && sgyayinEvi.Text == sgyayinevilabel.Text)
+                {
+                    DialogResult secenek = MessageBox.Show("Emin misiniz?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (secenek == DialogResult.Yes)
+                    {
+                        YazarFonksiyonlari.yazarEkle(sgyazari.Text);
+                        YayinEviFonksiyonlari.yayinEviEkle(sgyayinEvi.Text);
+                        TurFonksiyolari.turEkle(sgturu.Text);
+
+                        command.CommandText = "update kitaplar set kitapAdi='" + sgkitapAdi.Text + "',yazari='" + yazarKoduCek(sgyazari.Text) + "',yayinEvi='" + yayinEviKoduCek(sgyayinEvi.Text) + "',turu='" + turKoduCek(sgturu.Text) + "' where kitapKodu='" + kitapKoduLabel.Text + "'";
+                        command.Connection = baglanti;
+                        command.ExecuteNonQuery();
+                        command.CommandText = "update kitap_depo set depoKodu='" + depoKoduCek(sgdepo.Text) + "',satisFiyati=" + Convert.ToInt32(sgfiyat.Text) + ",adet=" + Convert.ToInt32(sgadet.Text) + " where kitapKodu='" + kitapKoduLabel.Text + "'";
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Güncelleme başarılı!!");
+                    }
+                }
+                else if (!KitapFonksiyolari.ayniKitapVarMi(sgkitapAdi.Text, yazarKoduCek(sgyazari.Text), yayinEviKoduCek(sgyayinEvi.Text)))
+                {
+
+
+
+                    if (sgkitapAdi.Text != kitaplabel.Text && sart > 0)
+                    {
+                        DialogResult secenek = MessageBox.Show("Bu kitap adi zaten veritabanında mevcut!! Yine de değiştirmek istediğinizden emin misiniz?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (secenek == DialogResult.Yes)
+                        {
+                            YazarFonksiyonlari.yazarEkle(sgyazari.Text);
+                            YayinEviFonksiyonlari.yayinEviEkle(sgyayinEvi.Text);
+                            TurFonksiyolari.turEkle(sgturu.Text);
+
+                            command.CommandText = "update kitaplar set kitapAdi='" + sgkitapAdi.Text + "',yazari='" + yazarKoduCek(sgyazari.Text) + "',yayinEvi='" + yayinEviKoduCek(sgyayinEvi.Text) + "',turu='" + turKoduCek(sgturu.Text) + "' where kitapKodu='" + kitapKoduLabel.Text + "'";
+                            command.Connection = baglanti;
+                            command.ExecuteNonQuery();
+                            command.CommandText = "update kitap_depo set depoKodu='" + depoKoduCek(sgdepo.Text) + "',satisFiyati=" + Convert.ToInt32(sgfiyat.Text) + ",adet=" + Convert.ToInt32(sgadet.Text) + " where kitapKodu='" + kitapKoduLabel.Text + "'";
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Güncelleme başarılı!!");
+                        }
+                    }
+                    else
+                    {
+                        DialogResult secenek = MessageBox.Show("Emin misiniz?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (secenek == DialogResult.Yes)
+                        {
+                            YazarFonksiyonlari.yazarEkle(sgyazari.Text);
+                            YayinEviFonksiyonlari.yayinEviEkle(sgyayinEvi.Text);
+                            TurFonksiyolari.turEkle(sgturu.Text);
+
+                            command.CommandText = "update kitaplar set kitapAdi='" + sgkitapAdi.Text + "',yazari='" + yazarKoduCek(sgyazari.Text) + "',yayinEvi='" + yayinEviKoduCek(sgyayinEvi.Text) + "',turu='" + turKoduCek(sgturu.Text) + "' where kitapKodu='" + kitapKoduLabel.Text + "'";
+                            command.Connection = baglanti;
+                            command.ExecuteNonQuery();
+                            command.CommandText = "update kitap_depo set depoKodu='" + depoKoduCek(sgdepo.Text) + "',satisFiyati=" + Convert.ToInt32(sgfiyat.Text) + ",adet=" + Convert.ToInt32(sgadet.Text) + " where kitapKodu='" + kitapKoduLabel.Text + "'";
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Güncelleme başarılı!!");
+                        }
+                    }
+
+                }
+
+
+
+                baglanti.Close();
+            }
+
+
+
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            if (depotelno.Text == "" || depoadresrich.Text == "" || sgdepotextbox.Text == "")
+            {
+                MessageBox.Show("Alanlar doldurulmak zorundadır.");
+            }
+            else
+            {
+                if (depotelno.Text == dtlnolabel.Text || !depoTelVarMi(depotelno.Text))
+                {
+                    //telno değişir
+                    if (depoadreslabel.Text == depoadresrich.Text || !depoAdresiVarMi(depoadresrich.Text))
+                    {
+                        //telno ve adresi değişir
+                        if (sgdepotextbox.Text == depodepo.Text || !depoAdiVarMi(sgdepotextbox.Text))
+                        {
+                            DialogResult secenek = MessageBox.Show("Emin misiniz ?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            if (secenek == DialogResult.Yes)
+                            {
+                                MySqlCommand command = new MySqlCommand();
+                                command.CommandText = "update depolar set depoAdi='" + sgdepotextbox.Text + "',depoAdresi='" + depoadresrich.Text + "',depoTelefon='" + depotelno.Text + "' where depoTelefon='" + dtlnolabel.Text + "'";
+                                command.Connection = baglanti;
+                                command.ExecuteNonQuery();
+
+                                MessageBox.Show("Güncelleme başarılı!!");
+                            }
+                        }
+                        else
+                        {
+                            DialogResult secenek = MessageBox.Show("Bu depo adi veri tabanında mevcut yine de eklensin mi?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            if (secenek == DialogResult.Yes)
+                            {
+                                MySqlCommand command = new MySqlCommand();
+                                command.CommandText = "update depolar set depoAdi='" + sgdepotextbox.Text + "',depoAdresi='" + depoadresrich.Text + "',depoTelefon='" + depotelno.Text + "' where depoTelefon='" + dtlnolabel.Text + "'";
+                                command.Connection = baglanti;
+                                command.ExecuteNonQuery();
+
+                                MessageBox.Show("Güncelleme başarılı!!");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Depo adresi mevcut güncelleme başarısız.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Depo telno  mevcut güncelleme başarısız.");
+                }
+            }
+
+            baglanti.Close();
+        }
+
+        private void personeltelefon_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelmaas_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void sgadet_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void sgfiyat_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void depotelno_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void personelad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
         }
     }
 }

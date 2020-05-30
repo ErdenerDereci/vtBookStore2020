@@ -30,19 +30,19 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.yazari = new System.Windows.Forms.ComboBox();
-            this.yayinEvi = new System.Windows.Forms.ComboBox();
-            this.turu = new System.Windows.Forms.ComboBox();
-            this.fiyat = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.adet = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.depo = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.kaydet = new System.Windows.Forms.Button();
+            this.depo = new System.Windows.Forms.ComboBox();
+            this.fiyat = new System.Windows.Forms.TextBox();
+            this.adet = new System.Windows.Forms.TextBox();
+            this.yayinEvi = new System.Windows.Forms.ComboBox();
             this.baskisi = new System.Windows.Forms.TextBox();
+            this.yazari = new System.Windows.Forms.ComboBox();
+            this.turu = new System.Windows.Forms.ComboBox();
             this.sayfaSayisi = new System.Windows.Forms.TextBox();
             this.kitapAdi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,24 +50,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ekleDepoAdresi = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.ekleTelefonNo = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.ekleDepoAdresi = new System.Windows.Forms.RichTextBox();
             this.ekleDepoAdi = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.personelPanel = new System.Windows.Forms.Panel();
-            this.personeltelefon = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.personeladres = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.personelgorev = new System.Windows.Forms.TextBox();
-            this.personelmail = new System.Windows.Forms.TextBox();
             this.personelmaas = new System.Windows.Forms.TextBox();
+            this.personelgorev = new System.Windows.Forms.TextBox();
+            this.personeladres = new System.Windows.Forms.RichTextBox();
+            this.personeltelefon = new System.Windows.Forms.TextBox();
+            this.personelmail = new System.Windows.Forms.TextBox();
             this.personelcinsiyet = new System.Windows.Forms.TextBox();
             this.personelad = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -76,17 +76,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.hayir = new System.Windows.Forms.RadioButton();
             this.evet = new System.Windows.Forms.RadioButton();
             this.sifreTekrari = new System.Windows.Forms.TextBox();
             this.sifre = new System.Windows.Forms.TextBox();
             this.kullaniciAdi = new System.Windows.Forms.TextBox();
+            this.kullaniciComboBox = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.kullaniciComboBox = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -115,19 +115,19 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage1.Controls.Add(this.yazari);
-            this.tabPage1.Controls.Add(this.yayinEvi);
-            this.tabPage1.Controls.Add(this.turu);
-            this.tabPage1.Controls.Add(this.fiyat);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.adet);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.depo);
-            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.kaydet);
+            this.tabPage1.Controls.Add(this.depo);
+            this.tabPage1.Controls.Add(this.fiyat);
+            this.tabPage1.Controls.Add(this.adet);
+            this.tabPage1.Controls.Add(this.yayinEvi);
             this.tabPage1.Controls.Add(this.baskisi);
+            this.tabPage1.Controls.Add(this.yazari);
+            this.tabPage1.Controls.Add(this.turu);
             this.tabPage1.Controls.Add(this.sayfaSayisi);
             this.tabPage1.Controls.Add(this.kitapAdi);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -141,15 +141,42 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Kitap ekle";
             // 
-            // yazari
+            // kaydet
             // 
-            this.yazari.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.yazari.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.yazari.FormattingEnabled = true;
-            this.yazari.Location = new System.Drawing.Point(90, 157);
-            this.yazari.Name = "yazari";
-            this.yazari.Size = new System.Drawing.Size(99, 21);
-            this.yazari.TabIndex = 21;
+            this.kaydet.Location = new System.Drawing.Point(114, 399);
+            this.kaydet.Name = "kaydet";
+            this.kaydet.Size = new System.Drawing.Size(75, 23);
+            this.kaydet.TabIndex = 31;
+            this.kaydet.Text = "Kaydet";
+            this.kaydet.UseVisualStyleBackColor = true;
+            this.kaydet.Click += new System.EventHandler(this.kaydet_Click_1);
+            // 
+            // depo
+            // 
+            this.depo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.depo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.depo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.depo.FormattingEnabled = true;
+            this.depo.Location = new System.Drawing.Point(88, 362);
+            this.depo.Name = "depo";
+            this.depo.Size = new System.Drawing.Size(182, 21);
+            this.depo.TabIndex = 30;
+            // 
+            // fiyat
+            // 
+            this.fiyat.Location = new System.Drawing.Point(88, 321);
+            this.fiyat.Name = "fiyat";
+            this.fiyat.Size = new System.Drawing.Size(100, 20);
+            this.fiyat.TabIndex = 29;
+            this.fiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fiyat_KeyPress_1);
+            // 
+            // adet
+            // 
+            this.adet.Location = new System.Drawing.Point(88, 280);
+            this.adet.Name = "adet";
+            this.adet.Size = new System.Drawing.Size(100, 20);
+            this.adet.TabIndex = 28;
+            this.adet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.adet_KeyPress_1);
             // 
             // yayinEvi
             // 
@@ -157,28 +184,52 @@
             this.yayinEvi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.yayinEvi.BackColor = System.Drawing.Color.White;
             this.yayinEvi.FormattingEnabled = true;
-            this.yayinEvi.Location = new System.Drawing.Point(90, 239);
+            this.yayinEvi.Location = new System.Drawing.Point(88, 239);
             this.yayinEvi.Name = "yayinEvi";
             this.yayinEvi.Size = new System.Drawing.Size(100, 21);
-            this.yayinEvi.TabIndex = 20;
+            this.yayinEvi.TabIndex = 27;
+            // 
+            // baskisi
+            // 
+            this.baskisi.Location = new System.Drawing.Point(88, 198);
+            this.baskisi.Name = "baskisi";
+            this.baskisi.Size = new System.Drawing.Size(100, 20);
+            this.baskisi.TabIndex = 26;
+            // 
+            // yazari
+            // 
+            this.yazari.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.yazari.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.yazari.FormattingEnabled = true;
+            this.yazari.Location = new System.Drawing.Point(89, 157);
+            this.yazari.Name = "yazari";
+            this.yazari.Size = new System.Drawing.Size(99, 21);
+            this.yazari.TabIndex = 25;
             // 
             // turu
             // 
             this.turu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.turu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.turu.FormattingEnabled = true;
-            this.turu.Location = new System.Drawing.Point(90, 116);
+            this.turu.Location = new System.Drawing.Point(89, 116);
             this.turu.Name = "turu";
             this.turu.Size = new System.Drawing.Size(100, 21);
-            this.turu.TabIndex = 19;
+            this.turu.TabIndex = 24;
             // 
-            // fiyat
+            // sayfaSayisi
             // 
-            this.fiyat.Location = new System.Drawing.Point(90, 321);
-            this.fiyat.Name = "fiyat";
-            this.fiyat.Size = new System.Drawing.Size(100, 20);
-            this.fiyat.TabIndex = 18;
-            this.fiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fiyat_KeyPress);
+            this.sayfaSayisi.Location = new System.Drawing.Point(89, 75);
+            this.sayfaSayisi.Name = "sayfaSayisi";
+            this.sayfaSayisi.Size = new System.Drawing.Size(100, 20);
+            this.sayfaSayisi.TabIndex = 23;
+            this.sayfaSayisi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sayfaSayisi_KeyPress_1);
+            // 
+            // kitapAdi
+            // 
+            this.kitapAdi.Location = new System.Drawing.Point(89, 34);
+            this.kitapAdi.Name = "kitapAdi";
+            this.kitapAdi.Size = new System.Drawing.Size(100, 20);
+            this.kitapAdi.TabIndex = 22;
             // 
             // label9
             // 
@@ -189,14 +240,6 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Tane fiyatı :";
             // 
-            // adet
-            // 
-            this.adet.Location = new System.Drawing.Point(90, 280);
-            this.adet.Name = "adet";
-            this.adet.Size = new System.Drawing.Size(100, 20);
-            this.adet.TabIndex = 16;
-            this.adet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.adet_KeyPress);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -206,17 +249,6 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Adet :";
             // 
-            // depo
-            // 
-            this.depo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.depo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.depo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.depo.FormattingEnabled = true;
-            this.depo.Location = new System.Drawing.Point(90, 362);
-            this.depo.Name = "depo";
-            this.depo.Size = new System.Drawing.Size(100, 21);
-            this.depo.TabIndex = 14;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -225,38 +257,6 @@
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "Depo seçiniz :";
-            // 
-            // kaydet
-            // 
-            this.kaydet.Location = new System.Drawing.Point(115, 400);
-            this.kaydet.Name = "kaydet";
-            this.kaydet.Size = new System.Drawing.Size(75, 23);
-            this.kaydet.TabIndex = 12;
-            this.kaydet.Text = "Kaydet";
-            this.kaydet.UseVisualStyleBackColor = true;
-            this.kaydet.Click += new System.EventHandler(this.kaydet_Click);
-            // 
-            // baskisi
-            // 
-            this.baskisi.Location = new System.Drawing.Point(90, 198);
-            this.baskisi.Name = "baskisi";
-            this.baskisi.Size = new System.Drawing.Size(100, 20);
-            this.baskisi.TabIndex = 11;
-            // 
-            // sayfaSayisi
-            // 
-            this.sayfaSayisi.Location = new System.Drawing.Point(90, 75);
-            this.sayfaSayisi.Name = "sayfaSayisi";
-            this.sayfaSayisi.Size = new System.Drawing.Size(100, 20);
-            this.sayfaSayisi.TabIndex = 9;
-            this.sayfaSayisi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sayfaSayisi_KeyPress);
-            // 
-            // kitapAdi
-            // 
-            this.kitapAdi.Location = new System.Drawing.Point(90, 34);
-            this.kitapAdi.Name = "kitapAdi";
-            this.kitapAdi.Size = new System.Drawing.Size(100, 20);
-            this.kitapAdi.TabIndex = 6;
             // 
             // label6
             // 
@@ -315,11 +315,11 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage2.Controls.Add(this.ekleDepoAdresi);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.ekleTelefonNo);
-            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.ekleDepoAdresi);
             this.tabPage2.Controls.Add(this.ekleDepoAdi);
+            this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -329,31 +329,39 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Depo ekle";
             // 
-            // ekleDepoAdresi
-            // 
-            this.ekleDepoAdresi.Location = new System.Drawing.Point(91, 72);
-            this.ekleDepoAdresi.Name = "ekleDepoAdresi";
-            this.ekleDepoAdresi.Size = new System.Drawing.Size(143, 96);
-            this.ekleDepoAdresi.TabIndex = 17;
-            this.ekleDepoAdresi.Text = "";
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(106, 235);
+            this.button2.Location = new System.Drawing.Point(123, 231);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 21;
             this.button2.Text = "Kaydet";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // ekleTelefonNo
             // 
-            this.ekleTelefonNo.Location = new System.Drawing.Point(92, 188);
+            this.ekleTelefonNo.Location = new System.Drawing.Point(90, 188);
+            this.ekleTelefonNo.MaxLength = 10;
             this.ekleTelefonNo.Name = "ekleTelefonNo";
             this.ekleTelefonNo.Size = new System.Drawing.Size(142, 20);
-            this.ekleTelefonNo.TabIndex = 15;
-            this.ekleTelefonNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.ekleTelefonNo.TabIndex = 20;
+            this.ekleTelefonNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ekleTelefonNo_KeyPress);
+            // 
+            // ekleDepoAdresi
+            // 
+            this.ekleDepoAdresi.Location = new System.Drawing.Point(90, 69);
+            this.ekleDepoAdresi.Name = "ekleDepoAdresi";
+            this.ekleDepoAdresi.Size = new System.Drawing.Size(143, 96);
+            this.ekleDepoAdresi.TabIndex = 19;
+            this.ekleDepoAdresi.Text = "";
+            // 
+            // ekleDepoAdi
+            // 
+            this.ekleDepoAdi.Location = new System.Drawing.Point(90, 28);
+            this.ekleDepoAdi.Name = "ekleDepoAdi";
+            this.ekleDepoAdi.Size = new System.Drawing.Size(142, 20);
+            this.ekleDepoAdi.TabIndex = 18;
             // 
             // label12
             // 
@@ -363,13 +371,6 @@
             this.label12.Size = new System.Drawing.Size(66, 13);
             this.label12.TabIndex = 14;
             this.label12.Text = "Telefon No :";
-            // 
-            // ekleDepoAdi
-            // 
-            this.ekleDepoAdi.Location = new System.Drawing.Point(92, 28);
-            this.ekleDepoAdi.Name = "ekleDepoAdi";
-            this.ekleDepoAdi.Size = new System.Drawing.Size(142, 20);
-            this.ekleDepoAdi.TabIndex = 12;
             // 
             // label10
             // 
@@ -401,15 +402,15 @@
             // 
             // personelPanel
             // 
-            this.personelPanel.Controls.Add(this.personeltelefon);
-            this.personelPanel.Controls.Add(this.label22);
-            this.personelPanel.Controls.Add(this.personeladres);
             this.personelPanel.Controls.Add(this.button1);
-            this.personelPanel.Controls.Add(this.personelgorev);
-            this.personelPanel.Controls.Add(this.personelmail);
             this.personelPanel.Controls.Add(this.personelmaas);
+            this.personelPanel.Controls.Add(this.personelgorev);
+            this.personelPanel.Controls.Add(this.personeladres);
+            this.personelPanel.Controls.Add(this.personeltelefon);
+            this.personelPanel.Controls.Add(this.personelmail);
             this.personelPanel.Controls.Add(this.personelcinsiyet);
             this.personelPanel.Controls.Add(this.personelad);
+            this.personelPanel.Controls.Add(this.label22);
             this.personelPanel.Controls.Add(this.label20);
             this.personelPanel.Controls.Add(this.label19);
             this.personelPanel.Controls.Add(this.label18);
@@ -422,13 +423,69 @@
             this.personelPanel.Size = new System.Drawing.Size(300, 432);
             this.personelPanel.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(128, 341);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Kaydet";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // personelmaas
+            // 
+            this.personelmaas.Location = new System.Drawing.Point(103, 301);
+            this.personelmaas.Name = "personelmaas";
+            this.personelmaas.Size = new System.Drawing.Size(100, 20);
+            this.personelmaas.TabIndex = 24;
+            this.personelmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelmaas_KeyPress_1);
+            // 
+            // personelgorev
+            // 
+            this.personelgorev.Location = new System.Drawing.Point(103, 238);
+            this.personelgorev.Name = "personelgorev";
+            this.personelgorev.Size = new System.Drawing.Size(100, 20);
+            this.personelgorev.TabIndex = 23;
+            // 
+            // personeladres
+            // 
+            this.personeladres.Location = new System.Drawing.Point(103, 194);
+            this.personeladres.Name = "personeladres";
+            this.personeladres.Size = new System.Drawing.Size(100, 38);
+            this.personeladres.TabIndex = 22;
+            this.personeladres.Text = "";
+            // 
             // personeltelefon
             // 
             this.personeltelefon.Location = new System.Drawing.Point(103, 159);
+            this.personeltelefon.MaxLength = 10;
             this.personeltelefon.Name = "personeltelefon";
             this.personeltelefon.Size = new System.Drawing.Size(100, 20);
-            this.personeltelefon.TabIndex = 17;
-            this.personeltelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personeltelefon_KeyPress);
+            this.personeltelefon.TabIndex = 21;
+            this.personeltelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personeltelefon_KeyPress_1);
+            // 
+            // personelmail
+            // 
+            this.personelmail.Location = new System.Drawing.Point(103, 119);
+            this.personelmail.Name = "personelmail";
+            this.personelmail.Size = new System.Drawing.Size(100, 20);
+            this.personelmail.TabIndex = 20;
+            // 
+            // personelcinsiyet
+            // 
+            this.personelcinsiyet.Location = new System.Drawing.Point(103, 79);
+            this.personelcinsiyet.Name = "personelcinsiyet";
+            this.personelcinsiyet.Size = new System.Drawing.Size(100, 20);
+            this.personelcinsiyet.TabIndex = 19;
+            // 
+            // personelad
+            // 
+            this.personelad.Location = new System.Drawing.Point(103, 39);
+            this.personelad.Name = "personelad";
+            this.personelad.Size = new System.Drawing.Size(100, 20);
+            this.personelad.TabIndex = 18;
+            this.personelad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelad_KeyPress_1);
             // 
             // label22
             // 
@@ -438,62 +495,6 @@
             this.label22.Size = new System.Drawing.Size(49, 13);
             this.label22.TabIndex = 16;
             this.label22.Text = "Telefon :";
-            // 
-            // personeladres
-            // 
-            this.personeladres.Location = new System.Drawing.Point(103, 194);
-            this.personeladres.Name = "personeladres";
-            this.personeladres.Size = new System.Drawing.Size(100, 38);
-            this.personeladres.TabIndex = 15;
-            this.personeladres.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(128, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // personelgorev
-            // 
-            this.personelgorev.Location = new System.Drawing.Point(103, 238);
-            this.personelgorev.Name = "personelgorev";
-            this.personelgorev.Size = new System.Drawing.Size(100, 20);
-            this.personelgorev.TabIndex = 13;
-            // 
-            // personelmail
-            // 
-            this.personelmail.Location = new System.Drawing.Point(103, 119);
-            this.personelmail.Name = "personelmail";
-            this.personelmail.Size = new System.Drawing.Size(100, 20);
-            this.personelmail.TabIndex = 12;
-            // 
-            // personelmaas
-            // 
-            this.personelmaas.Location = new System.Drawing.Point(103, 301);
-            this.personelmaas.Name = "personelmaas";
-            this.personelmaas.Size = new System.Drawing.Size(100, 20);
-            this.personelmaas.TabIndex = 9;
-            this.personelmaas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelmaas_KeyPress);
-            // 
-            // personelcinsiyet
-            // 
-            this.personelcinsiyet.Location = new System.Drawing.Point(103, 79);
-            this.personelcinsiyet.Name = "personelcinsiyet";
-            this.personelcinsiyet.Size = new System.Drawing.Size(100, 20);
-            this.personelcinsiyet.TabIndex = 8;
-            this.personelcinsiyet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelcinsiyet_KeyPress);
-            // 
-            // personelad
-            // 
-            this.personelad.Location = new System.Drawing.Point(103, 39);
-            this.personelad.Name = "personelad";
-            this.personelad.Size = new System.Drawing.Size(100, 20);
-            this.personelad.TabIndex = 7;
-            this.personelad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelad_KeyPress);
             // 
             // label20
             // 
@@ -561,23 +562,33 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.hayir);
             this.panel1.Controls.Add(this.evet);
             this.panel1.Controls.Add(this.sifreTekrari);
             this.panel1.Controls.Add(this.sifre);
             this.panel1.Controls.Add(this.kullaniciAdi);
+            this.panel1.Controls.Add(this.kullaniciComboBox);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.kullaniciComboBox);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 432);
             this.panel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(162, 268);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Ata";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // hayir
             // 
@@ -586,7 +597,7 @@
             this.hayir.Location = new System.Drawing.Point(169, 223);
             this.hayir.Name = "hayir";
             this.hayir.Size = new System.Drawing.Size(49, 17);
-            this.hayir.TabIndex = 11;
+            this.hayir.TabIndex = 17;
             this.hayir.TabStop = true;
             this.hayir.Text = "Hayır";
             this.hayir.UseVisualStyleBackColor = true;
@@ -597,30 +608,41 @@
             this.evet.Location = new System.Drawing.Point(116, 223);
             this.evet.Name = "evet";
             this.evet.Size = new System.Drawing.Size(47, 17);
-            this.evet.TabIndex = 10;
+            this.evet.TabIndex = 16;
             this.evet.Text = "Evet";
             this.evet.UseVisualStyleBackColor = true;
             // 
             // sifreTekrari
             // 
-            this.sifreTekrari.Location = new System.Drawing.Point(116, 179);
+            this.sifreTekrari.Location = new System.Drawing.Point(116, 178);
+            this.sifreTekrari.MaxLength = 15;
             this.sifreTekrari.Name = "sifreTekrari";
             this.sifreTekrari.Size = new System.Drawing.Size(124, 20);
-            this.sifreTekrari.TabIndex = 9;
+            this.sifreTekrari.TabIndex = 15;
             // 
             // sifre
             // 
-            this.sifre.Location = new System.Drawing.Point(116, 135);
+            this.sifre.Location = new System.Drawing.Point(116, 134);
+            this.sifre.MaxLength = 15;
             this.sifre.Name = "sifre";
             this.sifre.Size = new System.Drawing.Size(124, 20);
-            this.sifre.TabIndex = 8;
+            this.sifre.TabIndex = 14;
             // 
             // kullaniciAdi
             // 
-            this.kullaniciAdi.Location = new System.Drawing.Point(116, 91);
+            this.kullaniciAdi.Location = new System.Drawing.Point(116, 90);
             this.kullaniciAdi.Name = "kullaniciAdi";
             this.kullaniciAdi.Size = new System.Drawing.Size(124, 20);
-            this.kullaniciAdi.TabIndex = 7;
+            this.kullaniciAdi.TabIndex = 13;
+            // 
+            // kullaniciComboBox
+            // 
+            this.kullaniciComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kullaniciComboBox.FormattingEnabled = true;
+            this.kullaniciComboBox.Location = new System.Drawing.Point(116, 46);
+            this.kullaniciComboBox.Name = "kullaniciComboBox";
+            this.kullaniciComboBox.Size = new System.Drawing.Size(121, 21);
+            this.kullaniciComboBox.TabIndex = 12;
             // 
             // label27
             // 
@@ -657,24 +679,6 @@
             this.label24.Size = new System.Drawing.Size(70, 13);
             this.label24.TabIndex = 3;
             this.label24.Text = "Kullanici Adi :";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(165, 285);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Ata";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // kullaniciComboBox
-            // 
-            this.kullaniciComboBox.FormattingEnabled = true;
-            this.kullaniciComboBox.Location = new System.Drawing.Point(116, 46);
-            this.kullaniciComboBox.Name = "kullaniciComboBox";
-            this.kullaniciComboBox.Size = new System.Drawing.Size(121, 21);
-            this.kullaniciComboBox.TabIndex = 1;
             // 
             // label23
             // 
@@ -737,18 +741,9 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox yayinEvi;
-        private System.Windows.Forms.ComboBox turu;
-        private System.Windows.Forms.TextBox fiyat;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox adet;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox depo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button kaydet;
-        private System.Windows.Forms.TextBox baskisi;
-        private System.Windows.Forms.TextBox sayfaSayisi;
-        private System.Windows.Forms.TextBox kitapAdi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -756,22 +751,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox ekleDepoAdresi;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox ekleTelefonNo;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ekleDepoAdi;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox yazari;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox personelgorev;
-        private System.Windows.Forms.TextBox personelmail;
-        private System.Windows.Forms.TextBox personelmaas;
-        private System.Windows.Forms.TextBox personelcinsiyet;
-        private System.Windows.Forms.TextBox personelad;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -780,22 +764,42 @@
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.Panel personelPanel;
         public System.Windows.Forms.Label label21;
-        private System.Windows.Forms.RichTextBox personeladres;
-        private System.Windows.Forms.TextBox personeltelefon;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox depo;
+        private System.Windows.Forms.TextBox fiyat;
+        private System.Windows.Forms.TextBox adet;
+        private System.Windows.Forms.ComboBox yayinEvi;
+        private System.Windows.Forms.TextBox baskisi;
+        private System.Windows.Forms.ComboBox yazari;
+        private System.Windows.Forms.ComboBox turu;
+        private System.Windows.Forms.TextBox sayfaSayisi;
+        private System.Windows.Forms.TextBox kitapAdi;
+        private System.Windows.Forms.Button kaydet;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox ekleTelefonNo;
+        private System.Windows.Forms.RichTextBox ekleDepoAdresi;
+        private System.Windows.Forms.TextBox ekleDepoAdi;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox personelmaas;
+        private System.Windows.Forms.TextBox personelgorev;
+        private System.Windows.Forms.RichTextBox personeladres;
+        private System.Windows.Forms.TextBox personeltelefon;
+        private System.Windows.Forms.TextBox personelmail;
+        private System.Windows.Forms.TextBox personelcinsiyet;
+        private System.Windows.Forms.TextBox personelad;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RadioButton hayir;
         private System.Windows.Forms.RadioButton evet;
         private System.Windows.Forms.TextBox sifreTekrari;
         private System.Windows.Forms.TextBox sifre;
         private System.Windows.Forms.TextBox kullaniciAdi;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox kullaniciComboBox;
-        private System.Windows.Forms.Label label23;
     }
 }

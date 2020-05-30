@@ -97,7 +97,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 23);
+            this.button1.Size = new System.Drawing.Size(463, 23);
             this.button1.TabIndex = 12;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             // 
             // personelButton
             // 
-            this.personelButton.Location = new System.Drawing.Point(500, 59);
+            this.personelButton.Location = new System.Drawing.Point(771, 57);
             this.personelButton.Name = "personelButton";
             this.personelButton.Size = new System.Drawing.Size(75, 23);
             this.personelButton.TabIndex = 26;
@@ -137,7 +137,7 @@
             // 
             // kullaniciButton
             // 
-            this.kullaniciButton.Location = new System.Drawing.Point(581, 59);
+            this.kullaniciButton.Location = new System.Drawing.Point(852, 59);
             this.kullaniciButton.Name = "kullaniciButton";
             this.kullaniciButton.Size = new System.Drawing.Size(75, 23);
             this.kullaniciButton.TabIndex = 27;
@@ -159,9 +159,9 @@
             // 
             // siparisGir
             // 
-            this.siparisGir.Location = new System.Drawing.Point(272, 9);
+            this.siparisGir.Location = new System.Drawing.Point(481, 9);
             this.siparisGir.Name = "siparisGir";
-            this.siparisGir.Size = new System.Drawing.Size(220, 23);
+            this.siparisGir.Size = new System.Drawing.Size(446, 23);
             this.siparisGir.TabIndex = 31;
             this.siparisGir.Text = "Siparis gir";
             this.siparisGir.UseVisualStyleBackColor = true;
@@ -232,6 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(942, 589);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);

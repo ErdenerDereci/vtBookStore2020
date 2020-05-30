@@ -20,7 +20,7 @@ namespace vtKitapEvi2020
         {
             baglanti.Open();
             int sayac;
-            string komut = "SELECT * FROM yayinEviKodlari ORDER BY Kod DESC LIMIT 1;";
+            string komut = "SELECT yayinevi FROM kodlar ORDER BY yayinevi DESC LIMIT 1;";
             MySqlCommand command = new MySqlCommand(komut, baglanti);
             sayac = Convert.ToInt32(command.ExecuteScalar()) + 1;
             baglanti.Close();
@@ -62,7 +62,7 @@ namespace vtKitapEvi2020
                 {
                     kodsayi += yayinEviKodu[i];
                 }
-                komut = "insert into yayinEviKodlari values('" + kodsayi + "');";
+                komut = "insert into kodlar values(0,0,'" + kodsayi + "',0,0);";
                 command = new MySqlCommand(komut, baglanti);
                 command.ExecuteNonQuery();
             }

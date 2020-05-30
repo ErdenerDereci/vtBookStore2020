@@ -70,12 +70,6 @@
       <DependentUpon>SiparisEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="SiparisFonksiyonlari.cs" />
-    <Compile Include="SiparisGuncelle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SiparisGuncelle.Designer.cs">
-      <DependentUpon>SiparisGuncelle.cs</DependentUpon>
-    </Compile>
     <Compile Include="TurFonksiyolari.cs" />
     <Compile Include="YayinEviFonksiyonlari.cs" />
     <Compile Include="YazarFonksiyonlari.cs" />
@@ -90,12 +84,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KitapEkleEminMisiniz.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KitapEkleEminMisiniz.Designer.cs">
-      <DependentUpon>KitapEkleEminMisiniz.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,9 +102,6 @@
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KitapEkleEminMisiniz.resx">
-      <DependentUpon>KitapEkleEminMisiniz.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SiparisEkle.resx">
       <DependentUpon>SiparisEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SiparisGuncelle.resx">
-      <DependentUpon>SiparisGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

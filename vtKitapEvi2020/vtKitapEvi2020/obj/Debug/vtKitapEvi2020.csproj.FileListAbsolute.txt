@@ -8,7 +8,6 @@ C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.cspr
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.csproj.CoreCompileInputs.cache
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.exe
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.pdb
-C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.KitapEkleEminMisiniz.resources
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.Ekle.resources
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.SilveyaGuncelle.resources
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\bin\Debug\MySql.Data.dll
@@ -30,4 +29,3 @@ C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.cspr
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.Giris.resources
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.SiparisEkle.resources
 C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.SilGuncelle.resources
-C:\Users\fed\Desktop\vtKitapEvi2020\vtKitapEvi2020\obj\Debug\vtKitapEvi2020.SiparisGuncelle.resources
